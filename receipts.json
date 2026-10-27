@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-10-27T06:13:57.044Z",
+  "baseUrl": "http://localhost:3000",
+  "checks": [
+    {
+      "id": "gemma",
+      "partner": "Gemma (AI Studio)",
+      "status": "SKIPPED",
+      "notes": "Set GOOGLE_API_KEY to enable; rule-based fallback epitaphs until then."
+    },
+    {
+      "id": "tabpfn",
+      "partner": "TabPFN (Prior Labs)",
+      "status": "SKIPPED",
+      "notes": "Set ML_SERVICE_URL + run ml/ (TABPFN_MODE=api|local). Heuristic scorer is active meanwhile."
+    },
+    {
+      "id": "tinker",
+      "partner": "Tinker (Thinking Machines)",
+      "status": "SKIPPED",
+      "notes": "Set TINKER_API_KEY, then run ml/tinker training. See docs/tinker-results.md."
+    },
+    {
+      "id": "mastra",
+      "partner": "Mastra",
+      "status": "PASS",
+      "notes": "Autopsy + seance agents and resurrection workflow in mastra/."
+    },
+    {
+      "id": "temporal",
+      "partner": "Temporal",
+      "status": "SKIPPED",
+      "notes": "Set TEMPORAL_ADDRESS + run temporal/worker.ts; in-process pipeline is the graceful fallback."
+    },
+    {
+      "id": "mongodb",
+      "partner": "MongoDB Atlas",
+      "status": "SKIPPED",
+      "notes": "Set MONGODB_URI. File-store fallback active (data/store/)."
+    },
+    {
+      "id": "tiger",
+      "partner": "Tiger Data",
+      "status": "SKIPPED",
+      "notes": "Set DATABASE_URL (pgvector). Lexical retrieval fallback active."
+    },
+    {
+      "id": "serpapi",
+      "partner": "SerpApi",
+      "status": "SKIPPED",
+      "notes": "Obituary/successor search, budget-gated to Haunted/Departed packages."
+    },
+    {
+      "id": "browserbase",
+      "partner": "Browserbase (Stagehand)",
+      "status": "SKIPPED",
+      "notes": "Wayback + docs-site extraction for dead projects."
+    },
+    {
+      "id": "auth0",
+      "partner": "Auth0 for AI Agents",
+      "status": "SKIPPED",
+      "notes": "GitHub sign-in, Token Vault, approval-gated PR writes."
+    },
+    {
+      "id": "gemma-do",
+      "partner": "DigitalOcean (Gradient)",
+      "status": "SKIPPED",
+      "notes": "Serverless open-weight inference provider gemma-do, benchmarked vs AI Studio."
+    },
+    {
+      "id": "backboard",
+      "partner": "Backboard",
+      "status": "SKIPPED",
+      "notes": "One API key powers /arena across 3 open-weight models."
+    },
+    {
+      "id": "elevenlabs",
+      "partner": "ElevenLabs",
+      "status": "SKIPPED",
+      "notes": "Voiced seance (stock voice, never cloned). Falls back to browser speech."
+    },
+    {
+      "id": "ultramarine",
+      "partner": "Ultramarine (closed baseline)",
+      "status": "SKIPPED",
+      "notes": "Labelled baseline column in Tinker eval + arena. Never on product path."
+    },
+    {
+      "id": "sentry",
+      "partner": "Sentry (agent tracing)",
+      "status": "SKIPPED",
+      "notes": "Agent spans for every tool + LLM call with latency/token/cost."
+    },
+    {
+      "id": "entire",
+      "partner": "Entire",
+      "status": "PASS",
+      "notes": ".entire/settings.json present; session checkpoints linked in README."
+    },
+    {
+      "id": "copilot",
+      "partner": "GitHub Copilot",
+      "status": "PASS",
+      "notes": "revenant-action composite + CI/nightly workflows + Copilot-assigned issues."
+    },
+    {
+      "id": "render",
+      "partner": "Render",
+      "status": "SKIPPED",
+      "notes": "render.yaml blueprint: web + Temporal worker + ml private service + nightly cron."
+    },
+    {
+      "id": "ecosystems",
+      "partner": "ecosyste.ms (open data)",
+      "status": "PASS",
+      "notes": "Package→repo resolution + activity signals, no key required."
+    }
+  ],
+  "legend": {
+    "PASS": "genuinely working and load-bearing",
+    "DEGRADED": "works partially / code-complete pending credentials",
+    "SKIPPED": "not configured — see notes",
+    "FAIL": "configured but health check failed"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "//": "Entire session provenance config. Entire does not natively capture Devin agent sessions — see HANDOFF.md §10. A Copilot CLI session with Entire enabled will attach real checkpoints.",
+  "enabled": true,
+  "checkpointOn": ["commit"],
+  "provider": "github_copilot"
+}

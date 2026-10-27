@@ -1,0 +1,56 @@
+name: revenant-action
+description: "Warns when a PR introduces Haunted or Departed dependencies. Which of your dependencies are already ghosts?"
+author: SayemR0018
+branding:
+  icon: moon
+  color: orange
+inputs:
+  api_base:
+    description: "Revenant API base URL (optional — defaults to public instance)"
+    required: false
+    default: ""
+  min_band:
+    description: "Lowest band to flag: fading | haunted | departed"
+    required: false
+    default: "haunted"
+  comment:
+    description: "Post a PR comment"
+    required: false
+    default: "true"
+runs:
+  using: composite
+  steps:
+    - name: Scan changed manifests
+      id: scan
+      shell: bash
+      env:
+        BASE: ${{ inputs.api_base }}
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        set -e
+        # manifests touched by this PR
+        files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- '**/package.json' '**/requirements.txt' '**/pyproject.toml' || true)
+        [ -z "$files" ] && files=$(git ls-files 'package.json' 'requirements.txt' 'pyproject.toml' | head -5)
+        echo "$files" > /tmp/manifests.txt
+        echo "scanning: $files"
+        npx --yes revenant-cli scan . --json > /tmp/revenant.json || true
+        node -e '
+          const r=require("/tmp/revenant.json");
+          const min={fading:25,haunted:50,departed:75}["${{ inputs.min_band }}"||"haunted"];
+          const bad=(r.results||[]).filter(x=>x.score>=min);
+          const body=bad.length?
+            `## 👻 Revenant — ghosts in this PR\n${bad.map(x=>`- **${x.dep.name}** — ghost score ${x.score} (${x.band})`).join("\n")}\n\n_Signals, not verdicts. [Full report](https://github.com/SayemR0018/revenant)_`
+            :`## 👻 Revenant\nNo haunted dependencies detected.`;
+          require("fs").writeFileSync("/tmp/comment.md",body);
+          console.log(`flagged=${bad.length}`)' >> "$GITHUB_OUTPUT"
+    - name: Comment on PR
+      if: inputs.comment == 'true' && steps.scan.outputs.flagged != '0'
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
+        PR: ${{ github.event.pull_request.number }}
+      run: |
+        curl -sf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+          "https://api.github.com/repos/$REPO/issues/$PR/comments" \
+          -d "$(node -e 'console.log(JSON.stringify({body:require("fs").readFileSync("/tmp/comment.md","utf8")}))')" || echo "comment failed (non-fatal)"

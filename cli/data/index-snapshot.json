@@ -1,0 +1,4788 @@
+{
+ "generatedAt": "2026-10-27T06:13:25.771Z",
+ "count": 180,
+ "rows": [
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "yallist"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-04-09T19:21:44.844Z",
+    "daysSinceRelease": 930,
+    "yearsActive": 10.858091015983472,
+    "dependents": 1187300,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 260914677,
+    "downloadsTrend": 0.8212705959002526,
+    "repoUrl": "https://github.com/isaacs/yallist",
+    "archived": false,
+    "pushedAt": "2024-06-19T00:55:19.000Z",
+    "openIssues": 6,
+    "language": "TypeScript",
+    "lastCommitAt": "2024-06-19T00:55:19.000Z",
+    "daysSinceCommit": 860
+   },
+   "epitaph": "yallist did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "safe-buffer"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-05-10T16:37:30.776Z",
+    "daysSinceRelease": 2360,
+    "yearsActive": 10.78729873726139,
+    "dependents": 1261649,
+    "license": "MIT",
+    "weeklyDownloads": 263462156,
+    "downloadsTrend": 0.8217235875356397,
+    "repoUrl": "https://github.com/feross/safe-buffer",
+    "archived": false,
+    "pushedAt": "2023-06-03T11:06:05.000Z",
+    "openIssues": 16,
+    "language": "JavaScript",
+    "lastCommitAt": "2023-06-03T11:06:05.000Z",
+    "daysSinceCommit": 1241
+   },
+   "epitaph": "safe-buffer did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "json-schema-traverse"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-12-13T10:56:54.719Z",
+    "daysSinceRelease": 2143,
+    "yearsActive": 9.394863617480416,
+    "dependents": 1067963,
+    "license": "MIT",
+    "weeklyDownloads": 279428884,
+    "downloadsTrend": 0.9891906112058249,
+    "repoUrl": "https://github.com/epoberezkin/json-schema-traverse",
+    "archived": false,
+    "pushedAt": "2021-07-26T06:52:21.000Z",
+    "openIssues": 14,
+    "language": "JavaScript",
+    "lastCommitAt": "2021-07-26T06:52:21.000Z",
+    "daysSinceCommit": 1918
+   },
+   "epitaph": "json-schema-traverse did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "shebang-command"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2019-09-06T14:53:25.901Z",
+    "daysSinceRelease": 2607,
+    "yearsActive": 10.895908655664563,
+    "dependents": 1885623,
+    "license": "MIT",
+    "weeklyDownloads": 207707009,
+    "downloadsTrend": 1.0942330499955844,
+    "repoUrl": "https://github.com/kevva/shebang-command",
+    "archived": false,
+    "pushedAt": "2021-08-14T13:19:23.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2021-08-14T13:19:23.000Z",
+    "daysSinceCommit": 1899
+   },
+   "epitaph": "shebang-command did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "function-bind"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2023-10-12T19:08:19.687Z",
+    "daysSinceRelease": 1110,
+    "yearsActive": 13.361476251774533,
+    "dependents": 2177864,
+    "license": "MIT",
+    "weeklyDownloads": 178349393,
+    "downloadsTrend": 1.0008169732963894,
+    "repoUrl": "https://github.com/Raynos/function-bind",
+    "archived": false,
+    "pushedAt": "2023-10-12T19:08:08.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "lastCommitAt": "2023-10-12T19:08:08.000Z",
+    "daysSinceCommit": 1110
+   },
+   "epitaph": "function-bind did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "estraverse"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-10-25T12:18:17.722Z",
+    "daysSinceRelease": 1827,
+    "yearsActive": 14.046516382836463,
+    "dependents": 1803046,
+    "license": "BSD-2-Clause",
+    "weeklyDownloads": 186183288,
+    "downloadsTrend": 0.8120921969331676,
+    "repoUrl": "https://github.com/estools/estraverse",
+    "archived": false,
+    "pushedAt": "2022-04-04T18:32:01.000Z",
+    "openIssues": 39,
+    "language": "JavaScript",
+    "lastCommitAt": "2022-04-04T18:32:01.000Z",
+    "daysSinceCommit": 1666
+   },
+   "epitaph": "estraverse did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "yallist"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-04-09T19:21:44.844Z",
+    "daysSinceRelease": 930,
+    "yearsActive": 10.858099307076584,
+    "dependents": 1187300,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 260914677,
+    "downloadsTrend": 0.8212705959002526,
+    "repoUrl": "https://github.com/isaacs/yallist",
+    "archived": false,
+    "pushedAt": "2024-06-19T00:55:19.000Z",
+    "openIssues": 6,
+    "language": "TypeScript",
+    "lastCommitAt": "2024-06-19T00:55:19.000Z",
+    "daysSinceCommit": 860
+   },
+   "epitaph": "yallist did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "safe-buffer"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-05-10T16:37:30.776Z",
+    "daysSinceRelease": 2360,
+    "yearsActive": 10.787305844994549,
+    "dependents": 1261649,
+    "license": "MIT",
+    "weeklyDownloads": 263462156,
+    "downloadsTrend": 0.8217235875356397,
+    "repoUrl": "https://github.com/feross/safe-buffer",
+    "archived": false,
+    "pushedAt": "2023-06-03T11:06:05.000Z",
+    "openIssues": 16,
+    "language": "JavaScript",
+    "lastCommitAt": "2023-06-03T11:06:05.000Z",
+    "daysSinceCommit": 1241
+   },
+   "epitaph": "safe-buffer did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "json-schema-traverse"
+   },
+   "score": 65,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-12-13T10:56:54.719Z",
+    "daysSinceRelease": 2143,
+    "yearsActive": 9.394870513030142,
+    "dependents": 1067963,
+    "license": "MIT",
+    "weeklyDownloads": 279428884,
+    "downloadsTrend": 0.9891906112058249,
+    "repoUrl": "https://github.com/epoberezkin/json-schema-traverse",
+    "archived": false,
+    "pushedAt": "2021-07-26T06:52:21.000Z",
+    "openIssues": 14,
+    "language": "JavaScript",
+    "lastCommitAt": "2021-07-26T06:52:21.000Z",
+    "daysSinceCommit": 1918
+   },
+   "epitaph": "json-schema-traverse did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "signal-exit"
+   },
+   "score": 55,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2023-07-29T05:44:56.721Z",
+    "daysSinceRelease": 1186,
+    "yearsActive": 11.449615802944457,
+    "dependents": 1770605,
+    "license": "ISC",
+    "weeklyDownloads": 245086126,
+    "downloadsTrend": 0.8621710093278596,
+    "repoUrl": "https://github.com/tapjs/signal-exit",
+    "archived": false,
+    "pushedAt": "2025-10-25T19:21:39.000Z",
+    "openIssues": 11,
+    "language": "TypeScript",
+    "lastCommitAt": "2025-10-25T19:21:39.000Z",
+    "daysSinceCommit": 366
+   },
+   "epitaph": "signal-exit did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "picocolors"
+   },
+   "score": 55,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-10-16T18:20:03.921Z",
+    "daysSinceRelease": 740,
+    "yearsActive": 5.082084700896139,
+    "dependents": 2113229,
+    "license": "ISC",
+    "weeklyDownloads": 203079347,
+    "downloadsTrend": 1.1100434902259517,
+    "repoUrl": "https://github.com/alexeyraspopov/picocolors",
+    "archived": false,
+    "pushedAt": "2024-11-18T17:46:33.000Z",
+    "openIssues": 17,
+    "language": "JavaScript",
+    "lastCommitAt": "2024-11-18T17:46:33.000Z",
+    "daysSinceCommit": 707
+   },
+   "epitaph": "picocolors did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "convert-source-map"
+   },
+   "score": 55,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2022-10-17T22:06:48.628Z",
+    "daysSinceRelease": 1470,
+    "yearsActive": 13.622755155525136,
+    "dependents": 4241143,
+    "license": "MIT",
+    "weeklyDownloads": 182727207,
+    "downloadsTrend": 0.953596631842923,
+    "repoUrl": "https://github.com/thlorenz/convert-source-map",
+    "archived": false,
+    "pushedAt": "2025-03-27T03:08:35.000Z",
+    "openIssues": 7,
+    "language": "JavaScript",
+    "lastCommitAt": "2025-03-27T03:08:35.000Z",
+    "daysSinceCommit": 579
+   },
+   "epitaph": "convert-source-map did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "cross-spawn"
+   },
+   "score": 50,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-11-18T13:59:52.129Z",
+    "daysSinceRelease": 707,
+    "yearsActive": 12.326378615072121,
+    "dependents": 1924489,
+    "license": "MIT",
+    "weeklyDownloads": 204923605,
+    "downloadsTrend": 0.9484139713424765,
+    "repoUrl": "https://github.com/moxystudio/node-cross-spawn",
+    "archived": false,
+    "pushedAt": "2024-11-18T14:20:54.000Z",
+    "openIssues": 33,
+    "language": "JavaScript",
+    "lastCommitAt": "2024-11-18T14:20:54.000Z",
+    "daysSinceCommit": 707
+   },
+   "epitaph": "cross-spawn did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "detect-libc"
+   },
+   "score": 50,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-10-05T12:46:33.077Z",
+    "daysSinceRelease": 386,
+    "yearsActive": 9.315213205725403,
+    "dependents": 2309281,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 193745751,
+    "downloadsTrend": 1.8431723663217834,
+    "repoUrl": "https://github.com/lovell/detect-libc",
+    "archived": false,
+    "pushedAt": "2025-10-05T12:44:37.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2025-10-05T12:44:37.000Z",
+    "daysSinceCommit": 386
+   },
+   "epitaph": "detect-libc did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "h11"
+   },
+   "score": 50,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-04-24T03:35:25",
+    "daysSinceRelease": 551,
+    "yearsActive": 10.454332497686769,
+    "dependents": 39276,
+    "license": "MIT",
+    "weeklyDownloads": 164725974,
+    "repoUrl": "https://github.com/python-hyper/h11",
+    "archived": false,
+    "pushedAt": "2025-04-24T23:29:20.000Z",
+    "openIssues": 53,
+    "language": "Python",
+    "lastCommitAt": "2025-04-24T23:29:20.000Z",
+    "daysSinceCommit": 550
+   },
+   "epitaph": "h11 did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "jinja2"
+   },
+   "score": 50,
+   "band": "haunted",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-03-05T20:05:02",
+    "daysSinceRelease": 600,
+    "yearsActive": 18.381400147444673,
+    "dependents": 133056,
+    "license": "BSD License",
+    "weeklyDownloads": 123384963,
+    "repoUrl": "https://github.com/pallets/jinja",
+    "archived": false,
+    "pushedAt": "2025-06-14T20:35:04.000Z",
+    "openIssues": 105,
+    "language": "Python",
+    "lastCommitAt": "2025-06-14T20:35:04.000Z",
+    "daysSinceCommit": 499
+   },
+   "epitaph": "jinja2 did not die — it faded, release by release, until the pulse went flat."
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "string_decoder"
+   },
+   "score": 43,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2019-08-07T09:20:36.634Z",
+    "daysSinceRelease": 2637,
+    "yearsActive": 12.896404952055923,
+    "dependents": 1091725,
+    "license": "MIT",
+    "weeklyDownloads": 215959060,
+    "downloadsTrend": 0.79054825437356,
+    "repoUrl": "https://github.com/nodejs/string_decoder",
+    "archived": false,
+    "pushedAt": "2026-03-20T15:00:09.000Z",
+    "openIssues": 7,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-03-20T15:00:09.000Z",
+    "daysSinceCommit": 220
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "six"
+   },
+   "score": 38,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-12-04T17:35:28",
+    "daysSinceRelease": 691,
+    "yearsActive": 16.32765321272847,
+    "dependents": 591238,
+    "license": "MIT",
+    "weeklyDownloads": 205173899,
+    "repoUrl": "https://github.com/benjaminp/six",
+    "archived": false,
+    "pushedAt": "2026-02-23T02:19:45.000Z",
+    "openIssues": 114,
+    "language": "Python",
+    "lastCommitAt": "2026-02-23T02:19:45.000Z",
+    "daysSinceCommit": 246
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "httpcore"
+   },
+   "score": 38,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-04-24T22:06:22",
+    "daysSinceRelease": 550,
+    "yearsActive": 7.564046823237509,
+    "dependents": 12334,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 142270814,
+    "repoUrl": "https://github.com/encode/httpcore",
+    "archived": false,
+    "pushedAt": "2026-01-08T03:07:35.000Z",
+    "openIssues": 74,
+    "language": "Python",
+    "lastCommitAt": "2026-01-08T03:07:35.000Z",
+    "daysSinceCommit": 292
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ms"
+   },
+   "score": 33,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-12-08T13:54:35.223Z",
+    "daysSinceRelease": 2148,
+    "yearsActive": 14.848551694425431,
+    "dependents": 2318159,
+    "license": "MIT",
+    "weeklyDownloads": 453938263,
+    "downloadsTrend": 0.7755255491618089,
+    "repoUrl": "https://github.com/vercel/ms",
+    "archived": false,
+    "pushedAt": "2026-05-20T22:24:50Z",
+    "openIssues": 41,
+    "language": "TypeScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-05-20T22:20:35Z",
+    "_lastCommitSubject": "chore: minimumReleaseAge: 2880 (#289)",
+    "daysSinceCommit": 159
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "color-convert"
+   },
+   "score": 32,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-11-14T18:29:11.565Z",
+    "daysSinceRelease": 346,
+    "yearsActive": 15.381461158896748,
+    "dependents": 1246711,
+    "license": "MIT",
+    "weeklyDownloads": 277071594,
+    "downloadsTrend": 0.6660344179760941,
+    "repoUrl": "https://github.com/Qix-/color-convert",
+    "archived": false,
+    "pushedAt": "2025-11-14T18:26:51.000Z",
+    "openIssues": 21,
+    "language": "JavaScript",
+    "lastCommitAt": "2025-11-14T18:26:51.000Z",
+    "daysSinceCommit": 346
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "isexe"
+   },
+   "score": 32,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-09T16:28:02.924Z",
+    "daysSinceRelease": 259,
+    "yearsActive": 10.776255954286764,
+    "dependents": 5752,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 253120965,
+    "downloadsTrend": 1.2601642755677525,
+    "repoUrl": "https://github.com/isaacs/isexe",
+    "archived": false,
+    "pushedAt": "2026-02-09T16:27:47.000Z",
+    "openIssues": 6,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-02-09T16:27:47.000Z",
+    "daysSinceCommit": 259
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "minipass"
+   },
+   "score": 32,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-19T00:34:33.886Z",
+    "daysSinceRelease": 250,
+    "yearsActive": 9.621484271269045,
+    "dependents": 3331406,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 187734825,
+    "downloadsTrend": 0.6133211020958126,
+    "repoUrl": "https://github.com/isaacs/minipass",
+    "archived": false,
+    "pushedAt": "2026-02-19T00:34:22.000Z",
+    "openIssues": 4,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-02-19T00:34:22.000Z",
+    "daysSinceCommit": 250
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "color-convert"
+   },
+   "score": 32,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-11-14T18:29:11.565Z",
+    "daysSinceRelease": 346,
+    "yearsActive": 15.381468120896393,
+    "dependents": 1246711,
+    "license": "MIT",
+    "weeklyDownloads": 277071594,
+    "downloadsTrend": 0.6660344179760941,
+    "repoUrl": "https://github.com/Qix-/color-convert",
+    "archived": false,
+    "pushedAt": "2025-11-14T18:26:51.000Z",
+    "openIssues": 21,
+    "language": "JavaScript",
+    "lastCommitAt": "2025-11-14T18:26:51.000Z",
+    "daysSinceCommit": 346
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "jmespath"
+   },
+   "score": 32,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-01-22T16:35:26",
+    "daysSinceRelease": 277,
+    "yearsActive": 13.661393338561869,
+    "dependents": 63755,
+    "license": "MIT",
+    "weeklyDownloads": 115765667,
+    "repoUrl": "https://github.com/jmespath/jmespath.py",
+    "archived": false,
+    "pushedAt": "2026-04-20T23:12:00.000Z",
+    "openIssues": 86,
+    "language": "Python",
+    "lastCommitAt": "2026-04-20T23:12:00.000Z",
+    "daysSinceCommit": 189
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "escape-string-regexp"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-04-17T15:45:50.334Z",
+    "daysSinceRelease": 2018,
+    "yearsActive": 12.341200210662407,
+    "dependents": 2044639,
+    "license": "MIT",
+    "weeklyDownloads": 298153203,
+    "downloadsTrend": 0.8385703375075331,
+    "repoUrl": "https://github.com/sindresorhus/escape-string-regexp",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:05:32.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:05:32.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "has-flag"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-07-19T17:30:54.122Z",
+    "daysSinceRelease": 1925,
+    "yearsActive": 11.305425135656703,
+    "dependents": 1287734,
+    "license": "MIT",
+    "weeklyDownloads": 255780672,
+    "downloadsTrend": 0.6325249662998282,
+    "repoUrl": "https://github.com/sindresorhus/has-flag",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:07:30.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:07:30.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "path-key"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-04-09T12:04:51.822Z",
+    "daysSinceRelease": 2026,
+    "yearsActive": 10.829509039660811,
+    "dependents": 1771596,
+    "license": "MIT",
+    "weeklyDownloads": 252122022,
+    "downloadsTrend": 1.0886870725529,
+    "repoUrl": "https://github.com/sindresorhus/path-key",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:13:47.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:13:47.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "shebang-regex"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-08-13T23:09:49.954Z",
+    "daysSinceRelease": 1900,
+    "yearsActive": 11.690701124515172,
+    "dependents": 1888701,
+    "license": "MIT",
+    "weeklyDownloads": 207328909,
+    "downloadsTrend": 1.090624252334653,
+    "repoUrl": "https://github.com/sindresorhus/shebang-regex",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:15:19.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:15:19.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "resolve-from"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2019-04-15T04:06:25.601Z",
+    "daysSinceRelease": 2752,
+    "yearsActive": 12.271681362651153,
+    "dependents": 1092323,
+    "license": "MIT",
+    "weeklyDownloads": 186054880,
+    "downloadsTrend": 0.7701362514112956,
+    "repoUrl": "https://github.com/sindresorhus/resolve-from",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:14:38.000Z",
+    "openIssues": 2,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:14:38.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "path-exists"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-08-12T10:43:19.346Z",
+    "daysSinceRelease": 1901,
+    "yearsActive": 11.486129088745658,
+    "dependents": 1125905,
+    "license": "MIT",
+    "weeklyDownloads": 181031151,
+    "downloadsTrend": 0.803768207731119,
+    "repoUrl": "https://github.com/sindresorhus/path-exists",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:13:45.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:13:45.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "escape-string-regexp"
+   },
+   "score": 25,
+   "band": "fading",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-04-17T15:45:50.334Z",
+    "daysSinceRelease": 2018,
+    "yearsActive": 12.341208375731995,
+    "dependents": 2044639,
+    "license": "MIT",
+    "weeklyDownloads": 298153203,
+    "downloadsTrend": 0.8385703375075331,
+    "repoUrl": "https://github.com/sindresorhus/escape-string-regexp",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:05:32.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:05:32.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "mime-types"
+   },
+   "score": 22,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-11-20T11:12:29.693Z",
+    "daysSinceRelease": 340,
+    "yearsActive": 12.486219404485766,
+    "dependents": 2092391,
+    "license": "MIT",
+    "weeklyDownloads": 233618720,
+    "downloadsTrend": 1.063494635414161,
+    "repoUrl": "https://github.com/jshttp/mime-types",
+    "archived": false,
+    "pushedAt": "2026-06-02T16:15:48.000Z",
+    "openIssues": 26,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-06-02T16:15:48.000Z",
+    "daysSinceCommit": 146
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "js-tokens"
+   },
+   "score": 22,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-12-08T21:09:55.458Z",
+    "daysSinceRelease": 322,
+    "yearsActive": 12.636050848099982,
+    "dependents": 1940799,
+    "license": "MIT",
+    "weeklyDownloads": 220499813,
+    "downloadsTrend": 1.2980264062768936,
+    "repoUrl": "https://github.com/lydell/js-tokens",
+    "archived": false,
+    "pushedAt": "2026-06-05T17:06:44.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-06-05T17:06:44.000Z",
+    "daysSinceCommit": 143
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "rich"
+   },
+   "score": 22,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-04-12T08:24:02",
+    "daysSinceRelease": 198,
+    "yearsActive": 6.9619286957183055,
+    "dependents": 32247,
+    "license": "MIT",
+    "weeklyDownloads": 104539302,
+    "repoUrl": "https://github.com/Textualize/rich",
+    "archived": false,
+    "pushedAt": "2026-06-23T03:10:19.000Z",
+    "openIssues": 386,
+    "language": "Python",
+    "lastCommitAt": "2026-06-23T03:10:19.000Z",
+    "daysSinceCommit": 126
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "find-up"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-16T01:13:57.112Z",
+    "daysSinceRelease": 406,
+    "yearsActive": 11.153869186566785,
+    "dependents": 1124485,
+    "license": "MIT",
+    "weeklyDownloads": 266604539,
+    "downloadsTrend": 0.7847680746670149,
+    "repoUrl": "https://github.com/sindresorhus/find-up",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:06:07.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:06:07.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "locate-path"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-15T23:17:38.813Z",
+    "daysSinceRelease": 406,
+    "yearsActive": 9.93242376657287,
+    "dependents": 1089462,
+    "license": "MIT",
+    "weeklyDownloads": 260836113,
+    "downloadsTrend": 0.8042837539216664,
+    "repoUrl": "https://github.com/sindresorhus/locate-path",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:10:33.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:10:33.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "mime-db"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-03-18T15:06:44.354Z",
+    "daysSinceRelease": 587,
+    "yearsActive": 12.200752271560575,
+    "dependents": 2093532,
+    "license": "MIT",
+    "weeklyDownloads": 243354490,
+    "downloadsTrend": 1.0282976188745867,
+    "repoUrl": "https://github.com/jshttp/mime-db",
+    "archived": false,
+    "pushedAt": "2026-09-08T18:56:20.000Z",
+    "openIssues": 55,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-08T18:56:20.000Z",
+    "daysSinceCommit": 48
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@jridgewell/trace-mapping"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-10T20:12:49.468Z",
+    "daysSinceRelease": 411,
+    "yearsActive": 4.771701291701524,
+    "dependents": 1577545,
+    "license": "MIT",
+    "weeklyDownloads": 220037988,
+    "downloadsTrend": 1.0780542361017416,
+    "repoUrl": "https://github.com/jridgewell/sourcemaps",
+    "archived": false,
+    "pushedAt": "2026-08-28T01:18:29.000Z",
+    "openIssues": 8,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-08-28T01:18:29.000Z",
+    "daysSinceCommit": 60
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "is-fullwidth-code-point"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-08-31T07:37:04.805Z",
+    "daysSinceRelease": 421,
+    "yearsActive": 11.28086947930134,
+    "dependents": 1106069,
+    "license": "MIT",
+    "weeklyDownloads": 217048611,
+    "downloadsTrend": 0.7243756429803176,
+    "repoUrl": "https://github.com/sindresorhus/is-fullwidth-code-point",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:08:37.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:08:37.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "cliui"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-03-17T02:36:25.499Z",
+    "daysSinceRelease": 589,
+    "yearsActive": 11.519120494048977,
+    "dependents": 4471191,
+    "license": "ISC",
+    "weeklyDownloads": 193038105,
+    "downloadsTrend": 0.8356966891207845,
+    "repoUrl": "https://github.com/yargs/cliui",
+    "archived": false,
+    "pushedAt": "2026-09-04T06:41:37.000Z",
+    "openIssues": 12,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-04T06:41:37.000Z",
+    "daysSinceCommit": 52
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "find-up"
+   },
+   "score": 20,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-16T01:13:57.112Z",
+    "daysSinceRelease": 406,
+    "yearsActive": 11.15387687758258,
+    "dependents": 1124485,
+    "license": "MIT",
+    "weeklyDownloads": 266604539,
+    "downloadsTrend": 0.7847680746670149,
+    "repoUrl": "https://github.com/sindresorhus/find-up",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:06:07.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:06:07.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "minimatch"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-27T19:00:09.469Z",
+    "daysSinceRelease": 91,
+    "yearsActive": 15.282358902831648,
+    "dependents": 2198462,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 590181338,
+    "downloadsTrend": 0.8966915645439433,
+    "repoUrl": "https://github.com/isaacs/minimatch",
+    "archived": false,
+    "pushedAt": "2026-07-27T18:59:54Z",
+    "openIssues": 21,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-07-27T18:59:48Z",
+    "_lastCommitSubject": "10.2.6",
+    "daysSinceCommit": 91
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "commander"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-29T09:16:23.076Z",
+    "daysSinceRelease": 150,
+    "yearsActive": 15.201431798077166,
+    "dependents": 1082389,
+    "license": "MIT",
+    "weeklyDownloads": 433553569,
+    "downloadsTrend": 0.9528051459642777,
+    "repoUrl": "https://github.com/tj/commander.js",
+    "archived": false,
+    "pushedAt": "2026-10-26T22:50:09Z",
+    "openIssues": 10,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     4,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-05-29T09:03:21Z",
+    "_lastCommitSubject": "Fix release dates in changelog (#2523)",
+    "daysSinceCommit": 150
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "which"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-08T18:30:58.733Z",
+    "daysSinceRelease": 171,
+    "yearsActive": 15.221021047449742,
+    "dependents": 4804,
+    "license": "ISC",
+    "weeklyDownloads": 293114401,
+    "downloadsTrend": 1.031097626237028,
+    "repoUrl": "https://github.com/npm/node-which",
+    "archived": false,
+    "pushedAt": "2026-07-02T03:32:40.000Z",
+    "openIssues": 8,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-07-02T03:32:40.000Z",
+    "daysSinceCommit": 117
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "color-name"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-22T15:38:35.512Z",
+    "daysSinceRelease": 96,
+    "yearsActive": 11.924910822179127,
+    "dependents": 1252925,
+    "license": "MIT",
+    "weeklyDownloads": 283782617,
+    "downloadsTrend": 0.6813786703476462,
+    "repoUrl": "https://github.com/colorjs/color-name",
+    "archived": false,
+    "pushedAt": "2026-07-22T15:39:11.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-07-22T15:39:11.000Z",
+    "daysSinceCommit": 96
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "cookie"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-06-30T22:15:13.965Z",
+    "daysSinceRelease": 118,
+    "yearsActive": 14.412753540795244,
+    "dependents": 2444047,
+    "license": "MIT",
+    "weeklyDownloads": 188650557,
+    "downloadsTrend": 1.106696629536332,
+    "repoUrl": "https://github.com/jshttp/cookie",
+    "archived": false,
+    "pushedAt": "2026-07-08T18:36:49.000Z",
+    "openIssues": 14,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-07-08T18:36:49.000Z",
+    "daysSinceCommit": 110
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "which"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-08T18:30:58.733Z",
+    "daysSinceRelease": 171,
+    "yearsActive": 15.221028366225568,
+    "dependents": 4804,
+    "license": "ISC",
+    "weeklyDownloads": 293114401,
+    "downloadsTrend": 1.031097626237028,
+    "repoUrl": "https://github.com/npm/node-which",
+    "archived": false,
+    "pushedAt": "2026-07-02T03:32:40.000Z",
+    "openIssues": 8,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-07-02T03:32:40.000Z",
+    "daysSinceCommit": 117
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "color-name"
+   },
+   "score": 18,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-22T15:38:35.512Z",
+    "daysSinceRelease": 96,
+    "yearsActive": 11.92491799962608,
+    "dependents": 1252925,
+    "license": "MIT",
+    "weeklyDownloads": 283782617,
+    "downloadsTrend": 0.6813786703476462,
+    "repoUrl": "https://github.com/colorjs/color-name",
+    "archived": false,
+    "pushedAt": "2026-07-22T15:39:11.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-07-22T15:39:11.000Z",
+    "daysSinceCommit": 96
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "glob-parent"
+   },
+   "score": 15,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-09-29T22:14:24.467Z",
+    "daysSinceRelease": 1853,
+    "yearsActive": 11.787535282816183,
+    "dependents": 6788,
+    "license": "ISC",
+    "weeklyDownloads": 268116938,
+    "downloadsTrend": 0.9069883122707655,
+    "repoUrl": "https://github.com/gulpjs/glob-parent",
+    "archived": false,
+    "pushedAt": "2026-10-22T19:20:23.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-22T19:20:23.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "isarray"
+   },
+   "score": 15,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2019-07-08T13:21:22.377Z",
+    "daysSinceRelease": 2667,
+    "yearsActive": 13.430405242508936,
+    "dependents": 2097979,
+    "license": "MIT",
+    "weeklyDownloads": 211639851,
+    "downloadsTrend": 0.7563960942375164,
+    "repoUrl": "https://github.com/juliangruber/isarray",
+    "archived": false,
+    "pushedAt": "2026-10-13T09:22:07.000Z",
+    "openIssues": 2,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-13T09:22:07.000Z",
+    "daysSinceCommit": 13
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "json5"
+   },
+   "score": 15,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2022-12-31T17:11:32.047Z",
+    "daysSinceRelease": 1395,
+    "yearsActive": 14.415877220352625,
+    "dependents": 1074368,
+    "license": "MIT",
+    "weeklyDownloads": 196508549,
+    "downloadsTrend": 0.9484497581383373,
+    "repoUrl": "https://github.com/json5/json5",
+    "archived": false,
+    "pushedAt": "2026-10-19T07:17:52.000Z",
+    "openIssues": 26,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-19T07:17:52.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "glob-parent"
+   },
+   "score": 15,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2021-09-29T22:14:24.467Z",
+    "daysSinceRelease": 1853,
+    "yearsActive": 11.78754183578599,
+    "dependents": 6788,
+    "license": "ISC",
+    "weeklyDownloads": 268116938,
+    "downloadsTrend": 0.9069883122707655,
+    "repoUrl": "https://github.com/gulpjs/glob-parent",
+    "archived": false,
+    "pushedAt": "2026-10-22T19:20:23.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-22T19:20:23.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "mdurl"
+   },
+   "score": 15,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2022-08-14T12:40:10",
+    "daysSinceRelease": 1534,
+    "yearsActive": 5.269928298698253,
+    "dependents": 11693,
+    "license": "MIT License",
+    "weeklyDownloads": 98705815,
+    "repoUrl": "https://github.com/executablebooks/mdurl",
+    "archived": false,
+    "pushedAt": "2026-10-19T16:44:31.000Z",
+    "openIssues": 2,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T16:44:31.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "strip-ansi"
+   },
+   "score": 14,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-26T13:51:11.099Z",
+    "daysSinceRelease": 242,
+    "yearsActive": 12.88507254838771,
+    "dependents": 2069298,
+    "license": "MIT",
+    "weeklyDownloads": 429502426,
+    "downloadsTrend": 0.7191892950220832,
+    "repoUrl": "https://github.com/chalk/strip-ansi",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:15:54Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:15:52Z",
+    "_lastCommitSubject": "Meta tweaks",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ajv"
+   },
+   "score": 14,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-04-24T15:22:16.529Z",
+    "daysSinceRelease": 185,
+    "yearsActive": 11.412218925710446,
+    "dependents": 1087714,
+    "license": "MIT",
+    "weeklyDownloads": 319609528,
+    "downloadsTrend": 1.0063511308556536,
+    "repoUrl": "https://github.com/ajv-validator/ajv",
+    "archived": false,
+    "pushedAt": "2026-09-06T19:59:32.000Z",
+    "openIssues": 394,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-09-06T19:59:32.000Z",
+    "daysSinceCommit": 50
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "p-locate"
+   },
+   "score": 14,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-03T07:57:49.916Z",
+    "daysSinceRelease": 265,
+    "yearsActive": 9.93246185153497,
+    "dependents": 1089447,
+    "license": "MIT",
+    "weeklyDownloads": 259722447,
+    "downloadsTrend": 0.8007129606266244,
+    "repoUrl": "https://github.com/sindresorhus/p-locate",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:12:46.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:12:46.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ajv"
+   },
+   "score": 14,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-04-24T15:22:16.529Z",
+    "daysSinceRelease": 185,
+    "yearsActive": 11.412227330215226,
+    "dependents": 1087714,
+    "license": "MIT",
+    "weeklyDownloads": 319609528,
+    "downloadsTrend": 1.0063511308556536,
+    "repoUrl": "https://github.com/ajv-validator/ajv",
+    "archived": false,
+    "pushedAt": "2026-09-06T19:59:32.000Z",
+    "openIssues": 394,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-09-06T19:59:32.000Z",
+    "daysSinceCommit": 50
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "protobuf"
+   },
+   "score": 14,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-15T19:06:21",
+    "daysSinceRelease": 11,
+    "yearsActive": 18.295867808927166,
+    "dependents": 107822,
+    "license": "3-Clause BSD License",
+    "weeklyDownloads": 140770570
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "filelock"
+   },
+   "score": 14,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-19T01:57:51",
+    "daysSinceRelease": 8,
+    "yearsActive": 12.309556205478236,
+    "dependents": 58293,
+    "license": "MIT",
+    "weeklyDownloads": 115235071,
+    "repoUrl": "https://github.com/tox-dev/py-filelock"
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ansi-styles"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-26T14:57:36.835Z",
+    "daysSinceRelease": 92,
+    "yearsActive": 13.238310163352093,
+    "dependents": 1274606,
+    "license": "MIT",
+    "weeklyDownloads": 562816875,
+    "downloadsTrend": 0.6914801175441025,
+    "repoUrl": "https://github.com/chalk/ansi-styles",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:02:19Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:02:17Z",
+    "_lastCommitSubject": "Meta tweaks",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "debug"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-13T17:25:19.732Z",
+    "daysSinceRelease": 408,
+    "yearsActive": 14.910888570170101,
+    "dependents": 1419208,
+    "license": "MIT",
+    "weeklyDownloads": 552053749,
+    "downloadsTrend": 0.6936686669292904,
+    "repoUrl": "https://github.com/debug-js/debug",
+    "archived": false,
+    "pushedAt": "2026-10-14T15:47:53Z",
+    "openIssues": 97,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-10-14T15:47:53Z",
+    "_lastCommitSubject": "docs: drop dead wzrd.in standalone browser build link (#1052)",
+    "daysSinceCommit": 12
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "supports-color"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-26T15:13:36.815Z",
+    "daysSinceRelease": 92,
+    "yearsActive": 12.370099365160849,
+    "dependents": 5765200,
+    "license": "MIT",
+    "weeklyDownloads": 383288018,
+    "downloadsTrend": 0.6204432371540549,
+    "repoUrl": "https://github.com/chalk/supports-color",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:16:20Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-09-18T19:16:20Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "tslib"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-10-31T22:42:48.624Z",
+    "daysSinceRelease": 725,
+    "yearsActive": 11.82440159153421,
+    "dependents": 1726336,
+    "license": "0BSD",
+    "weeklyDownloads": 354139914,
+    "downloadsTrend": 0.6908569841618779,
+    "repoUrl": "https://github.com/Microsoft/tslib",
+    "archived": false,
+    "pushedAt": "2026-10-20T20:43:44.000Z",
+    "openIssues": 59,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-20T20:43:44.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "iconv-lite"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-03T17:53:11.119Z",
+    "daysSinceRelease": 115,
+    "yearsActive": 14.963749786137095,
+    "dependents": 2198928,
+    "license": "MIT",
+    "weeklyDownloads": 251036429,
+    "downloadsTrend": 0.9601683622028724,
+    "repoUrl": "https://github.com/pillarjs/iconv-lite",
+    "archived": false,
+    "pushedAt": "2026-09-01T14:19:37.000Z",
+    "openIssues": 62,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-01T14:19:37.000Z",
+    "daysSinceCommit": 55
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "yargs-parser"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-05-26T20:12:00.864Z",
+    "daysSinceRelease": 518,
+    "yearsActive": 10.758032284679443,
+    "dependents": 4384968,
+    "license": "ISC",
+    "weeklyDownloads": 220901310,
+    "downloadsTrend": 0.8772865273946752,
+    "repoUrl": "https://github.com/yargs/yargs-parser",
+    "archived": false,
+    "pushedAt": "2026-10-11T20:40:39.000Z",
+    "openIssues": 38,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-11T20:40:39.000Z",
+    "daysSinceCommit": 15
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "hasown"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-28T18:11:39.940Z",
+    "daysSinceRelease": 151,
+    "yearsActive": 12.1477856461518,
+    "dependents": 257,
+    "license": "MIT",
+    "weeklyDownloads": 195723818,
+    "downloadsTrend": 1.2215951880386893,
+    "repoUrl": "https://github.com/inspect-js/hasOwn",
+    "archived": false,
+    "pushedAt": "2026-09-16T20:37:22.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-16T20:37:22.000Z",
+    "daysSinceCommit": 40
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "iconv-lite"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-03T17:53:11.119Z",
+    "daysSinceRelease": 115,
+    "yearsActive": 14.963756412940148,
+    "dependents": 2198928,
+    "license": "MIT",
+    "weeklyDownloads": 251036429,
+    "downloadsTrend": 0.9601683622028724,
+    "repoUrl": "https://github.com/pillarjs/iconv-lite",
+    "archived": false,
+    "pushedAt": "2026-09-01T14:19:37.000Z",
+    "openIssues": 62,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-01T14:19:37.000Z",
+    "daysSinceCommit": 55
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pyyaml"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-29T20:27:46",
+    "daysSinceRelease": 392,
+    "yearsActive": 15.3225142176528,
+    "dependents": 122440,
+    "license": "MIT",
+    "weeklyDownloads": 210281818,
+    "repoUrl": "https://github.com/yaml/pyyaml",
+    "archived": false,
+    "pushedAt": "2026-10-07T22:17:52.000Z",
+    "openIssues": 383,
+    "language": "Python",
+    "lastCommitAt": "2026-10-07T22:17:52.000Z",
+    "daysSinceCommit": 19
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "referencing"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-10-13T15:30:48",
+    "daysSinceRelease": 378,
+    "yearsActive": 3.930293906222273,
+    "dependents": 5498,
+    "license": "MIT",
+    "weeklyDownloads": 102231382,
+    "repoUrl": "https://github.com/python-jsonschema/referencing",
+    "archived": false,
+    "pushedAt": "2026-10-19T00:22:26.000Z",
+    "openIssues": 27,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T00:22:26.000Z",
+    "daysSinceCommit": 8
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "jsonschema-specifications"
+   },
+   "score": 10,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2025-09-08T01:34:59",
+    "daysSinceRelease": 414,
+    "yearsActive": 3.832141991501255,
+    "dependents": 5502,
+    "license": "MIT",
+    "weeklyDownloads": 101657474,
+    "repoUrl": "https://github.com/python-jsonschema/jsonschema-specifications",
+    "archived": false,
+    "pushedAt": "2026-10-19T19:01:33.000Z",
+    "openIssues": 1,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T19:01:33.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "lru-cache"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-18T23:46:33.023Z",
+    "daysSinceRelease": 38,
+    "yearsActive": 15.28232864558775,
+    "dependents": 1198118,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 481124428,
+    "downloadsTrend": 0.978509778975484,
+    "repoUrl": "https://github.com/isaacs/node-lru-cache",
+    "archived": false,
+    "pushedAt": "2026-09-18T23:44:52Z",
+    "openIssues": 15,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     2,
+     1,
+     8,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-09-18T23:44:47Z",
+    "_lastCommitSubject": "11.5.3",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ansi-regex"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-27T03:34:44.568Z",
+    "daysSinceRelease": 30,
+    "yearsActive": 12.39847794347479,
+    "dependents": 1239008,
+    "license": "MIT",
+    "weeklyDownloads": 415490745,
+    "downloadsTrend": 0.7621688869756199,
+    "repoUrl": "https://github.com/chalk/ansi-regex",
+    "archived": false,
+    "pushedAt": "2026-09-27T03:34:11Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-09-27T03:33:28Z",
+    "_lastCommitSubject": "6.4.0",
+    "daysSinceCommit": 30
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "string-width"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-24T14:37:52.226Z",
+    "daysSinceRelease": 32,
+    "yearsActive": 11.280848027923543,
+    "dependents": 1106583,
+    "license": "MIT",
+    "weeklyDownloads": 427377088,
+    "downloadsTrend": 0.8308098984936199,
+    "repoUrl": "https://github.com/sindresorhus/string-width",
+    "archived": false,
+    "pushedAt": "2026-09-24T14:27:39Z",
+    "openIssues": 2,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-09-24T14:27:25Z",
+    "_lastCommitSubject": "8.3.0",
+    "daysSinceCommit": 32
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "wrap-ansi"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-21T04:09:32.260Z",
+    "daysSinceRelease": 36,
+    "yearsActive": 11.188126798140543,
+    "dependents": 4485420,
+    "license": "MIT",
+    "weeklyDownloads": 363054514,
+    "downloadsTrend": 0.8193385777760169,
+    "repoUrl": "https://github.com/chalk/wrap-ansi",
+    "archived": false,
+    "pushedAt": "2026-09-21T04:07:25.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-21T04:07:25.000Z",
+    "daysSinceCommit": 36
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "emoji-regex"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-15T17:11:44.000Z",
+    "daysSinceRelease": 41,
+    "yearsActive": 12.078813627272035,
+    "dependents": 4193583,
+    "license": "MIT",
+    "weeklyDownloads": 358713033,
+    "downloadsTrend": 0.8286389815624922,
+    "repoUrl": "https://github.com/mathiasbynens/emoji-regex",
+    "archived": false,
+    "pushedAt": "2026-09-15T17:07:16.000Z",
+    "openIssues": 13,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-15T17:07:16.000Z",
+    "daysSinceCommit": 41
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "glob"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-19T17:26:33.269Z",
+    "daysSinceRelease": 249,
+    "yearsActive": 15.814725605084037,
+    "dependents": 2105034,
+    "license": "BlueOak-1.0.0",
+    "weeklyDownloads": 323572862,
+    "downloadsTrend": 0.7373541637646768,
+    "repoUrl": "https://github.com/isaacs/node-glob",
+    "archived": false,
+    "pushedAt": "2026-10-05T19:02:32.000Z",
+    "openIssues": 9,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-05T19:02:32.000Z",
+    "daysSinceCommit": 21
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "eslint-visitor-keys"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-20T14:40:47.824Z",
+    "daysSinceRelease": 248,
+    "yearsActive": 8.941499314301467,
+    "dependents": 1431349,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 328289197,
+    "downloadsTrend": 1.2027014348942058,
+    "repoUrl": "https://github.com/eslint/js",
+    "archived": false,
+    "pushedAt": "2026-10-23T08:05:05.000Z",
+    "openIssues": 8,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-23T08:05:05.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "esbuild"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-08T20:00:55.454Z",
+    "daysSinceRelease": 79,
+    "yearsActive": 8.917202882348468,
+    "dependents": 491246,
+    "license": "MIT",
+    "weeklyDownloads": 248144706,
+    "downloadsTrend": 1.680867995516278,
+    "repoUrl": "https://github.com/evanw/esbuild",
+    "archived": false,
+    "pushedAt": "2026-08-09T17:20:12.000Z",
+    "openIssues": 635,
+    "language": "Go",
+    "lastCommitAt": "2026-08-09T17:20:12.000Z",
+    "daysSinceCommit": 78
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "p-limit"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-18T18:27:54.962Z",
+    "daysSinceRelease": 38,
+    "yearsActive": 10.014840209078004,
+    "dependents": 1094175,
+    "license": "MIT",
+    "weeklyDownloads": 261356301,
+    "downloadsTrend": 0.8087159284034205,
+    "repoUrl": "https://github.com/sindresorhus/p-limit",
+    "archived": false,
+    "pushedAt": "2026-09-18T19:12:42.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-18T19:12:42.000Z",
+    "daysSinceCommit": 38
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@esbuild/linux-x64"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-08T19:58:48.257Z",
+    "daysSinceRelease": 79,
+    "yearsActive": 3.89119110997034,
+    "dependents": 308244,
+    "license": "MIT",
+    "weeklyDownloads": 223697649,
+    "downloadsTrend": 1.7084995139298342,
+    "repoUrl": "https://github.com/evanw/esbuild",
+    "archived": false,
+    "pushedAt": "2026-08-09T17:20:12.000Z",
+    "openIssues": 635,
+    "language": "Go",
+    "lastCommitAt": "2026-08-09T17:20:12.000Z",
+    "daysSinceCommit": 78
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "agent-base"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-04-01T06:57:34.221Z",
+    "daysSinceRelease": 208,
+    "yearsActive": 13.298866621099197,
+    "dependents": 1575522,
+    "license": "MIT",
+    "weeklyDownloads": 233332053,
+    "downloadsTrend": 1.105575278034301,
+    "repoUrl": "https://github.com/TooTallNate/proxy-agents",
+    "archived": false,
+    "pushedAt": "2026-10-23T00:33:02.000Z",
+    "openIssues": 42,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-23T00:33:02.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "yaml"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-11T20:30:10.905Z",
+    "daysSinceRelease": 45,
+    "yearsActive": 15.53338846315943,
+    "dependents": 1894156,
+    "license": "ISC",
+    "weeklyDownloads": 176097261,
+    "downloadsTrend": 1.0971339080240456,
+    "repoUrl": "https://github.com/eemeli/yaml",
+    "archived": false,
+    "pushedAt": "2026-09-23T03:13:23.000Z",
+    "openIssues": 40,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-09-23T03:13:23.000Z",
+    "daysSinceCommit": 34
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "readdirp"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-06T06:26:38.975Z",
+    "daysSinceRelease": 81,
+    "yearsActive": 14.274513892596396,
+    "dependents": 4905460,
+    "license": "MIT",
+    "weeklyDownloads": 169751616,
+    "downloadsTrend": 0.9816410439661519,
+    "repoUrl": "https://github.com/paulmillr/readdirp",
+    "archived": false,
+    "pushedAt": "2026-08-06T06:11:03.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-08-06T06:11:03.000Z",
+    "daysSinceCommit": 81
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "webidl-conversions"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-01-02T12:56:45.580Z",
+    "daysSinceRelease": 297,
+    "yearsActive": 12.19818112270895,
+    "dependents": 2433200,
+    "license": "BSD-2-Clause",
+    "weeklyDownloads": 193916028,
+    "downloadsTrend": 0.9477329050495082,
+    "repoUrl": "https://github.com/jsdom/webidl-conversions",
+    "archived": false,
+    "pushedAt": "2026-10-04T08:05:16.000Z",
+    "openIssues": 2,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-04T08:05:16.000Z",
+    "daysSinceCommit": 22
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "fs-extra"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-22T16:20:08.500Z",
+    "daysSinceRelease": 34,
+    "yearsActive": 14.944142018562882,
+    "dependents": 3606808,
+    "license": "MIT",
+    "weeklyDownloads": 183452313,
+    "downloadsTrend": 0.7752894193763503,
+    "repoUrl": "https://github.com/jprichardson/node-fs-extra",
+    "archived": false,
+    "pushedAt": "2026-09-22T16:18:34.000Z",
+    "openIssues": 17,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-09-22T16:18:34.000Z",
+    "daysSinceCommit": 34
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "eslint-visitor-keys"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-02-20T14:40:47.824Z",
+    "daysSinceRelease": 248,
+    "yearsActive": 8.941507798216595,
+    "dependents": 1431349,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 328289197,
+    "downloadsTrend": 1.2027014348942058,
+    "repoUrl": "https://github.com/eslint/js",
+    "archived": false,
+    "pushedAt": "2026-10-23T08:05:05.000Z",
+    "openIssues": 8,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-23T08:05:05.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "esbuild"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-08T20:00:55.454Z",
+    "daysSinceRelease": 79,
+    "yearsActive": 8.917209375491165,
+    "dependents": 491246,
+    "license": "MIT",
+    "weeklyDownloads": 248144706,
+    "downloadsTrend": 1.680867995516278,
+    "repoUrl": "https://github.com/evanw/esbuild",
+    "archived": false,
+    "pushedAt": "2026-08-09T17:20:12.000Z",
+    "openIssues": 635,
+    "language": "Go",
+    "lastCommitAt": "2026-08-09T17:20:12.000Z",
+    "daysSinceCommit": 78
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "attrs"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-03-19T14:22:25",
+    "daysSinceRelease": 221,
+    "yearsActive": 11.679837973229903,
+    "dependents": 226649,
+    "license": "MIT",
+    "weeklyDownloads": 159982367,
+    "repoUrl": "https://github.com/python-attrs/attrs",
+    "archived": false,
+    "pushedAt": "2026-10-13T13:57:52.000Z",
+    "openIssues": 174,
+    "language": "Python",
+    "lastCommitAt": "2026-10-13T13:57:52.000Z",
+    "daysSinceCommit": 13
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pathspec"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-04-27T01:46:08",
+    "daysSinceRelease": 183,
+    "yearsActive": 12.85913356440287,
+    "dependents": 70325,
+    "license": "Mozilla Public License 2.0 (MPL 2.0)",
+    "weeklyDownloads": 116638149,
+    "repoUrl": "https://github.com/cpburnz/python-pathspec",
+    "archived": false,
+    "pushedAt": "2026-10-23T11:47:50.000Z",
+    "openIssues": 9,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T11:47:50.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "jsonschema"
+   },
+   "score": 4,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-01-07T13:41:07",
+    "daysSinceRelease": 292,
+    "yearsActive": 14.8181994589259,
+    "dependents": 108834,
+    "license": "MIT",
+    "weeklyDownloads": 108800276,
+    "repoUrl": "https://github.com/python-jsonschema/jsonschema",
+    "archived": false,
+    "pushedAt": "2026-10-19T19:01:54.000Z",
+    "openIssues": 60,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T19:01:54.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "semver"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-06-19T18:32:48.972Z",
+    "daysSinceRelease": 129,
+    "yearsActive": 15.704961643692803,
+    "dependents": 1325167,
+    "license": "ISC",
+    "weeklyDownloads": 708739444,
+    "downloadsTrend": 0.797981072582092,
+    "repoUrl": "https://github.com/npm/node-semver",
+    "archived": false,
+    "pushedAt": "2026-10-26T19:48:57Z",
+    "openIssues": 79,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     5,
+     0,
+     3,
+     0,
+     2,
+     4,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "lastCommitAt": "2026-10-20T17:07:01Z",
+    "_lastCommitSubject": "chore: cover comparator normalization (#917)",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "brace-expansion"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-14T21:59:00.288Z",
+    "daysSinceRelease": 42,
+    "yearsActive": 13.036853842370776,
+    "dependents": 1303119,
+    "license": "MIT",
+    "weeklyDownloads": 514034100,
+    "downloadsTrend": 1.0665687652614906,
+    "repoUrl": "https://github.com/juliangruber/brace-expansion",
+    "archived": false,
+    "pushedAt": "2026-10-22T17:56:00Z",
+    "openIssues": 6,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     2,
+     2,
+     2,
+     0,
+     0,
+     0,
+     2,
+     0,
+     6,
+     0,
+     2,
+     5,
+     4,
+     2,
+     1,
+     0,
+     0,
+     0,
+     0,
+     7,
+     0,
+     3,
+     0,
+     0,
+     1,
+     0
+    ],
+    "lastCommitAt": "2026-10-22T17:55:56Z",
+    "_lastCommitSubject": "Bump markdown-it from 14.3.2 to 14.3.3 (#161)",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "chalk"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-27T03:40:44.397Z",
+    "daysSinceRelease": 30,
+    "yearsActive": 13.232681550244632,
+    "dependents": 1291351,
+    "license": "MIT",
+    "weeklyDownloads": 402335751,
+    "downloadsTrend": 0.6209640404012385,
+    "repoUrl": "https://github.com/chalk/chalk",
+    "archived": false,
+    "pushedAt": "2026-10-22T21:24:45Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     3,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     2,
+     0,
+     0,
+     0,
+     0
+    ],
+    "lastCommitAt": "2026-10-22T21:24:38Z",
+    "_lastCommitSubject": "Meta tweaks",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "balanced-match"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-16T17:24:59.672Z",
+    "daysSinceRelease": 10,
+    "yearsActive": 13.03691758866327,
+    "dependents": 1303263,
+    "license": "MIT",
+    "weeklyDownloads": 344117037,
+    "downloadsTrend": 1.9742563068306198,
+    "repoUrl": "https://github.com/juliangruber/balanced-match",
+    "archived": false,
+    "pushedAt": "2026-10-22T17:56:08Z",
+    "openIssues": 10,
+    "language": "TypeScript",
+    "commitsPerWeek": [
+     0,
+     1,
+     0,
+     2,
+     0,
+     0,
+     2,
+     0,
+     4,
+     0,
+     1,
+     2,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     1,
+     2,
+     1,
+     0
+    ],
+    "lastCommitAt": "2026-10-22T17:56:08Z",
+    "_lastCommitSubject": "Bump markdown-it from 14.3.2 to 14.3.3 (#87)",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@types/node"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-09T18:46:47.657Z",
+    "daysSinceRelease": 17,
+    "yearsActive": 10.443487435292925,
+    "dependents": 1060374,
+    "license": "MIT",
+    "weeklyDownloads": 376115520,
+    "downloadsTrend": 1.0856180772924526,
+    "repoUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "archived": false,
+    "pushedAt": "2026-10-26T18:27:39Z",
+    "openIssues": 726,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-26T18:27:39Z",
+    "_lastCommitSubject": "🤖 Merge PR #75652 [k6] Add QUERY method support (http.query, browser metric.tag) by @MarcoB95-lab",
+    "daysSinceCommit": 0
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "picomatch"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-24T14:36:23.690Z",
+    "daysSinceRelease": 63,
+    "yearsActive": 7.97466792671179,
+    "dependents": 1888591,
+    "license": "MIT",
+    "weeklyDownloads": 427180964,
+    "downloadsTrend": 1.2917448966401848,
+    "repoUrl": "https://github.com/micromatch/picomatch",
+    "archived": false,
+    "pushedAt": "2026-10-08T04:42:11.000Z",
+    "openIssues": 67,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-08T04:42:11.000Z",
+    "daysSinceCommit": 19
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "type-fest"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-17T09:11:18.201Z",
+    "daysSinceRelease": 39,
+    "yearsActive": 7.624387866345983,
+    "dependents": 3278996,
+    "license": "(MIT OR CC0-1.0)",
+    "weeklyDownloads": 316827042,
+    "downloadsTrend": 0.7204298248432413,
+    "repoUrl": "https://github.com/sindresorhus/type-fest",
+    "archived": false,
+    "pushedAt": "2026-10-20T21:29:38.000Z",
+    "openIssues": 65,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-20T21:29:38.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "source-map"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-20T05:45:25.965Z",
+    "daysSinceRelease": 99,
+    "yearsActive": 15.157917225898041,
+    "dependents": 1103771,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 298770123,
+    "downloadsTrend": 0.7220718995964476,
+    "repoUrl": "https://github.com/mozilla/source-map",
+    "archived": false,
+    "pushedAt": "2026-10-12T09:32:46.000Z",
+    "openIssues": 73,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-12T09:32:46.000Z",
+    "daysSinceCommit": 14
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "react-is"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-14T16:47:50.866Z",
+    "daysSinceRelease": 12,
+    "yearsActive": 9.021063909454458,
+    "dependents": 2549171,
+    "license": "MIT",
+    "weeklyDownloads": 300122506,
+    "downloadsTrend": 0.950533512249957,
+    "repoUrl": "https://github.com/react/react",
+    "archived": false,
+    "pushedAt": "2026-10-20T21:16:35.000Z",
+    "openIssues": 1481,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-20T21:16:35.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "readable-stream"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-08T08:21:05.681Z",
+    "daysSinceRelease": 18,
+    "yearsActive": 14.250660560055264,
+    "dependents": 1100152,
+    "license": "MIT",
+    "weeklyDownloads": 293054707,
+    "downloadsTrend": 0.7576172699584829,
+    "repoUrl": "https://github.com/nodejs/readable-stream",
+    "archived": false,
+    "pushedAt": "2026-10-08T08:19:10.000Z",
+    "openIssues": 17,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-08T08:19:10.000Z",
+    "daysSinceCommit": 18
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "undici-types"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-19T14:07:58.069Z",
+    "daysSinceRelease": 7,
+    "yearsActive": 3.1036867719661823,
+    "dependents": 0,
+    "license": "MIT",
+    "weeklyDownloads": 289145414,
+    "downloadsTrend": 1.3685147708570018,
+    "repoUrl": "https://github.com/nodejs/undici",
+    "archived": false,
+    "pushedAt": "2026-10-20T12:31:34.000Z",
+    "openIssues": 398,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-20T12:31:34.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ignore"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-23T23:24:50.714Z",
+    "daysSinceRelease": 3,
+    "yearsActive": 13.149731143844907,
+    "dependents": 1698122,
+    "license": "MIT",
+    "weeklyDownloads": 269255545,
+    "downloadsTrend": 1.176978046760377,
+    "repoUrl": "https://github.com/kaelzhang/node-ignore",
+    "archived": false,
+    "pushedAt": "2026-10-22T15:50:39.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-22T15:50:39.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "zod"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-12T16:29:37.778Z",
+    "daysSinceRelease": 14,
+    "yearsActive": 6.637549646646133,
+    "dependents": 122785,
+    "license": "MIT",
+    "weeklyDownloads": 276684868,
+    "downloadsTrend": 2.3695228293358688,
+    "repoUrl": "https://github.com/colinhacks/zod",
+    "archived": false,
+    "pushedAt": "2026-10-19T22:46:10.000Z",
+    "openIssues": 93,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-19T22:46:10.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "entities"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-07T22:42:04.929Z",
+    "daysSinceRelease": 49,
+    "yearsActive": 14.783533951726367,
+    "dependents": 3284033,
+    "license": "BSD-2-Clause",
+    "weeklyDownloads": 264773377,
+    "downloadsTrend": 1.3438118389906577,
+    "repoUrl": "https://github.com/fb55/entities",
+    "archived": false,
+    "pushedAt": "2026-10-15T20:37:05.000Z",
+    "openIssues": 3,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-15T20:37:05.000Z",
+    "daysSinceCommit": 11
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "typescript"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-08T15:55:18.431Z",
+    "daysSinceRelease": 110,
+    "yearsActive": 14.068731105217127,
+    "dependents": 2104747,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 250250640,
+    "downloadsTrend": 1.2554581952654764,
+    "repoUrl": "https://github.com/microsoft/TypeScript",
+    "archived": false,
+    "pushedAt": "2026-10-26T00:58:12.000Z",
+    "openIssues": 5204,
+    "language": "Go",
+    "lastCommitAt": "2026-10-26T00:58:12.000Z",
+    "daysSinceCommit": 1
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "postcss"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-26T20:36:42.832Z",
+    "daysSinceRelease": 0,
+    "yearsActive": 12.975784760342991,
+    "dependents": 3705251,
+    "license": "MIT",
+    "weeklyDownloads": 250541693,
+    "downloadsTrend": 1.2012199211082069,
+    "repoUrl": "https://github.com/postcss/postcss",
+    "archived": false,
+    "pushedAt": "2026-10-26T20:32:37.000Z",
+    "openIssues": 29,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-26T20:32:37.000Z",
+    "daysSinceCommit": 0
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "js-yaml"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-15T23:28:37.500Z",
+    "daysSinceRelease": 11,
+    "yearsActive": 14.984732009246583,
+    "dependents": 1075506,
+    "license": "MIT",
+    "weeklyDownloads": 244595591,
+    "downloadsTrend": 0.9047958914112979,
+    "repoUrl": "https://github.com/nodeca/js-yaml",
+    "archived": false,
+    "pushedAt": "2026-10-15T23:26:47.000Z",
+    "openIssues": 4,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-15T23:26:47.000Z",
+    "daysSinceCommit": 11
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "uuid"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-10T00:30:19.423Z",
+    "daysSinceRelease": 17,
+    "yearsActive": 15.575391716005019,
+    "dependents": 1006437,
+    "license": "MIT",
+    "weeklyDownloads": 246211011,
+    "downloadsTrend": 0.7365093265853968,
+    "repoUrl": "https://github.com/uuidjs/uuid",
+    "archived": false,
+    "pushedAt": "2026-10-23T03:48:04.000Z",
+    "openIssues": 7,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-23T03:48:04.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ws"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-26T15:00:57.748Z",
+    "daysSinceRelease": 30,
+    "yearsActive": 14.89613979931934,
+    "dependents": 900116,
+    "license": "MIT",
+    "weeklyDownloads": 234259644,
+    "downloadsTrend": 0.9915471167738699,
+    "repoUrl": "https://github.com/websockets/ws",
+    "archived": false,
+    "pushedAt": "2026-10-23T14:27:58.000Z",
+    "openIssues": 8,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-23T14:27:58.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@babel/code-frame"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-18T13:47:35.800Z",
+    "daysSinceRelease": 38,
+    "yearsActive": 8.989679763606865,
+    "dependents": 943567,
+    "license": "MIT",
+    "weeklyDownloads": 204662543,
+    "downloadsTrend": 1.1308459663310213,
+    "repoUrl": "https://github.com/babel/babel",
+    "archived": false,
+    "pushedAt": "2026-10-24T22:21:51.000Z",
+    "openIssues": 812,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-24T22:21:51.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@babel/parser"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-23T14:50:46.977Z",
+    "daysSinceRelease": 3,
+    "yearsActive": 8.42559411837402,
+    "dependents": 3782849,
+    "license": "MIT",
+    "weeklyDownloads": 211362767,
+    "downloadsTrend": 1.1834875059558905,
+    "repoUrl": "https://github.com/babel/babel",
+    "archived": false,
+    "pushedAt": "2026-10-24T22:21:51.000Z",
+    "openIssues": 812,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-24T22:21:51.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "nanoid"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-05T21:23:00.134Z",
+    "daysSinceRelease": 21,
+    "yearsActive": 9.223937525065278,
+    "dependents": 1618762,
+    "license": "MIT",
+    "weeklyDownloads": 223446121,
+    "downloadsTrend": 1.6323489059991456,
+    "repoUrl": "https://github.com/ai/nanoid",
+    "archived": false,
+    "pushedAt": "2026-10-16T13:01:49.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-16T13:01:49.000Z",
+    "daysSinceCommit": 10
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "https-proxy-agent"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-06-08T16:47:28.029Z",
+    "daysSinceRelease": 140,
+    "yearsActive": 13.29880861427992,
+    "dependents": 1575850,
+    "license": "MIT",
+    "weeklyDownloads": 221939284,
+    "downloadsTrend": 1.1229191580345836,
+    "repoUrl": "https://github.com/TooTallNate/proxy-agents",
+    "archived": false,
+    "pushedAt": "2026-10-23T00:33:02.000Z",
+    "openIssues": 42,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-23T00:33:02.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "yargs"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-20T22:34:11.798Z",
+    "daysSinceRelease": 36,
+    "yearsActive": 12.92499847789439,
+    "dependents": 4893685,
+    "license": "MIT",
+    "weeklyDownloads": 220429170,
+    "downloadsTrend": 0.8933434748577962,
+    "repoUrl": "https://github.com/yargs/yargs",
+    "archived": false,
+    "pushedAt": "2026-10-20T13:16:52.000Z",
+    "openIssues": 200,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-20T13:16:52.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@babel/types"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-23T14:49:30.970Z",
+    "daysSinceRelease": 3,
+    "yearsActive": 8.98967893857581,
+    "dependents": 4673471,
+    "license": "MIT",
+    "weeklyDownloads": 201087497,
+    "downloadsTrend": 1.0369620571174103,
+    "repoUrl": "https://github.com/babel/babel",
+    "archived": false,
+    "pushedAt": "2026-10-24T22:21:51.000Z",
+    "openIssues": 812,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-24T22:21:51.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "globals"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-01T03:57:11.938Z",
+    "daysSinceRelease": 26,
+    "yearsActive": 13.978810541739549,
+    "dependents": 1094003,
+    "license": "MIT",
+    "weeklyDownloads": 212742790,
+    "downloadsTrend": 0.8633437222060922,
+    "repoUrl": "https://github.com/sindresorhus/globals",
+    "archived": false,
+    "pushedAt": "2026-10-01T03:56:16.000Z",
+    "openIssues": 9,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-01T03:56:16.000Z",
+    "daysSinceCommit": 26
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "argparse"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-24T07:16:22.794Z",
+    "daysSinceRelease": 2,
+    "yearsActive": 14.44602280674069,
+    "dependents": 1075818,
+    "license": "PSF-2.0",
+    "weeklyDownloads": 206223205,
+    "downloadsTrend": 0.8170813124798764,
+    "repoUrl": "https://github.com/nodeca/argparse",
+    "archived": false,
+    "pushedAt": "2026-10-24T07:11:22.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-24T07:11:22.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "content-type"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-17T17:22:57.746Z",
+    "daysSinceRelease": 39,
+    "yearsActive": 13.051161325956347,
+    "dependents": 1866290,
+    "license": "MIT",
+    "weeklyDownloads": 203826730,
+    "downloadsTrend": 2.2308170684650226,
+    "repoUrl": "https://github.com/jshttp/content-type",
+    "archived": false,
+    "pushedAt": "2026-10-12T20:57:27.000Z",
+    "openIssues": 2,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-12T20:57:27.000Z",
+    "daysSinceCommit": 14
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@types/estree"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-06T21:01:00.975Z",
+    "daysSinceRelease": 173,
+    "yearsActive": 10.445043046302635,
+    "dependents": 1849638,
+    "license": "MIT",
+    "weeklyDownloads": 187917252,
+    "downloadsTrend": 1.2367831242712908,
+    "repoUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "archived": false,
+    "pushedAt": "2026-10-26T18:27:39Z",
+    "openIssues": 726,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-26T18:27:39Z",
+    "_lastCommitSubject": "🤖 Merge PR #75652 [k6] Add QUERY method support (http.query, browser metric.tag) by @MarcoB95-lab",
+    "daysSinceCommit": 0
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "@babel/helper-validator-identifier"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-18T13:50:38.494Z",
+    "daysSinceRelease": 38,
+    "yearsActive": 6.602608018385428,
+    "dependents": 579219,
+    "license": "MIT",
+    "weeklyDownloads": 216767912,
+    "downloadsTrend": null,
+    "repoUrl": "https://github.com/babel/babel",
+    "archived": false,
+    "pushedAt": "2026-10-24T22:21:51.000Z",
+    "openIssues": 812,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-24T22:21:51.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "whatwg-url"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-14T03:17:26.751Z",
+    "daysSinceRelease": 13,
+    "yearsActive": 11.396868726265621,
+    "dependents": 1350571,
+    "license": "MIT",
+    "weeklyDownloads": 202277228,
+    "downloadsTrend": 1.010465002616696,
+    "repoUrl": "https://github.com/jsdom/whatwg-url",
+    "archived": false,
+    "pushedAt": "2026-10-14T03:14:58.000Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-14T03:14:58.000Z",
+    "daysSinceCommit": 13
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "pretty-format"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-01T07:58:05.173Z",
+    "daysSinceRelease": 55,
+    "yearsActive": 11.638746502363931,
+    "dependents": 2218177,
+    "license": "MIT",
+    "weeklyDownloads": 184472669,
+    "downloadsTrend": 0.7545404351692455,
+    "repoUrl": "https://github.com/jestjs/jest",
+    "archived": false,
+    "pushedAt": "2026-10-24T17:33:01.000Z",
+    "openIssues": 243,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-24T17:33:01.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "acorn"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-05T12:51:20.979Z",
+    "daysSinceRelease": 21,
+    "yearsActive": 14.088517114799604,
+    "dependents": 1121780,
+    "license": "MIT",
+    "weeklyDownloads": 194886314,
+    "downloadsTrend": 0.805007428868161,
+    "repoUrl": "https://github.com/acornjs/acorn",
+    "archived": false,
+    "pushedAt": "2026-10-21T04:54:03.000Z",
+    "openIssues": 16,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-21T04:54:03.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "magic-string"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-27T05:36:50.800Z",
+    "daysSinceRelease": 0,
+    "yearsActive": 11.976923636398205,
+    "dependents": 972985,
+    "license": "MIT",
+    "weeklyDownloads": 202351876,
+    "downloadsTrend": 1.5955902473602452,
+    "repoUrl": "https://github.com/Rich-Harris/magic-string",
+    "archived": false,
+    "pushedAt": "2026-10-05T04:50:49.000Z",
+    "openIssues": 5,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-05T04:50:49.000Z",
+    "daysSinceCommit": 22
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "resolve"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-06T22:20:24.156Z",
+    "daysSinceRelease": 20,
+    "yearsActive": 15.358877037702486,
+    "dependents": 5229428,
+    "license": "MIT",
+    "weeklyDownloads": 192258014,
+    "downloadsTrend": 0.8126184838051332,
+    "repoUrl": "https://github.com/browserify/resolve",
+    "archived": false,
+    "pushedAt": "2026-10-06T22:27:41.000Z",
+    "openIssues": 16,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-06T22:27:41.000Z",
+    "daysSinceCommit": 20
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "tr46"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-04T08:33:21.295Z",
+    "daysSinceRelease": 22,
+    "yearsActive": 11.392077158243973,
+    "dependents": 2433040,
+    "license": "MIT",
+    "weeklyDownloads": 189608041,
+    "downloadsTrend": 0.9743959041093408,
+    "repoUrl": "https://github.com/jsdom/tr46",
+    "archived": false,
+    "pushedAt": "2026-10-04T08:32:09.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-04T08:32:09.000Z",
+    "daysSinceCommit": 22
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "caniuse-lite"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-22T08:00:40.232Z",
+    "daysSinceRelease": 4,
+    "yearsActive": 9.74561574340254,
+    "dependents": 4039789,
+    "license": "CC-BY-4.0",
+    "weeklyDownloads": 171545699,
+    "downloadsTrend": 1.0965227692884985,
+    "repoUrl": "https://github.com/browserslist/caniuse-lite",
+    "archived": false,
+    "pushedAt": "2026-10-22T07:56:51.000Z",
+    "openIssues": 6,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-22T07:56:51.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "type-fest"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-17T09:11:18.201Z",
+    "daysSinceRelease": 39,
+    "yearsActive": 7.624396556328745,
+    "dependents": 3278996,
+    "license": "(MIT OR CC0-1.0)",
+    "weeklyDownloads": 316827042,
+    "downloadsTrend": 0.7204298248432413,
+    "repoUrl": "https://github.com/sindresorhus/type-fest",
+    "archived": false,
+    "pushedAt": "2026-10-20T21:29:38.000Z",
+    "openIssues": 65,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-20T21:29:38.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "source-map"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-20T05:45:25.965Z",
+    "daysSinceRelease": 99,
+    "yearsActive": 15.157925808775065,
+    "dependents": 1103771,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 298770123,
+    "downloadsTrend": 0.7220718995964476,
+    "repoUrl": "https://github.com/mozilla/source-map",
+    "archived": false,
+    "pushedAt": "2026-10-12T09:32:46.000Z",
+    "openIssues": 73,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-12T09:32:46.000Z",
+    "daysSinceCommit": 14
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "react-is"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-14T16:47:50.866Z",
+    "daysSinceRelease": 12,
+    "yearsActive": 9.021071922769792,
+    "dependents": 2549171,
+    "license": "MIT",
+    "weeklyDownloads": 300122506,
+    "downloadsTrend": 0.950533512249957,
+    "repoUrl": "https://github.com/react/react",
+    "archived": false,
+    "pushedAt": "2026-10-20T21:16:35.000Z",
+    "openIssues": 1481,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-20T21:16:35.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "readable-stream"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-08T08:21:05.681Z",
+    "daysSinceRelease": 18,
+    "yearsActive": 14.250668072540371,
+    "dependents": 1100152,
+    "license": "MIT",
+    "weeklyDownloads": 293054707,
+    "downloadsTrend": 0.7576172699584829,
+    "repoUrl": "https://github.com/nodejs/readable-stream",
+    "archived": false,
+    "pushedAt": "2026-10-08T08:19:10.000Z",
+    "openIssues": 17,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-08T08:19:10.000Z",
+    "daysSinceCommit": 18
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "undici-types"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-19T14:07:58.069Z",
+    "daysSinceRelease": 7,
+    "yearsActive": 3.1036938002573073,
+    "dependents": 0,
+    "license": "MIT",
+    "weeklyDownloads": 289145414,
+    "downloadsTrend": 1.3685147708570018,
+    "repoUrl": "https://github.com/nodejs/undici",
+    "archived": false,
+    "pushedAt": "2026-10-20T12:31:34.000Z",
+    "openIssues": 398,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-20T12:31:34.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "ignore"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-23T23:24:50.714Z",
+    "daysSinceRelease": 3,
+    "yearsActive": 13.149737949368774,
+    "dependents": 1698122,
+    "license": "MIT",
+    "weeklyDownloads": 269255545,
+    "downloadsTrend": 1.176978046760377,
+    "repoUrl": "https://github.com/kaelzhang/node-ignore",
+    "archived": false,
+    "pushedAt": "2026-10-22T15:50:39.000Z",
+    "openIssues": 3,
+    "language": "JavaScript",
+    "lastCommitAt": "2026-10-22T15:50:39.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "npm",
+    "name": "zod"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-12T16:29:37.778Z",
+    "daysSinceRelease": 14,
+    "yearsActive": 6.6375563653129515,
+    "dependents": 122785,
+    "license": "MIT",
+    "weeklyDownloads": 276684868,
+    "downloadsTrend": 2.3695228293358688,
+    "repoUrl": "https://github.com/colinhacks/zod",
+    "archived": false,
+    "pushedAt": "2026-10-19T22:46:10.000Z",
+    "openIssues": 93,
+    "language": "TypeScript",
+    "lastCommitAt": "2026-10-19T22:46:10.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "boto3"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-26T19:25:58",
+    "daysSinceRelease": 0,
+    "yearsActive": 11.957977356389586,
+    "dependents": 80369,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 564975370,
+    "repoUrl": "https://github.com/boto/boto3",
+    "archived": false,
+    "pushedAt": "2026-10-21T15:15:24.000Z",
+    "openIssues": 171,
+    "language": "Python",
+    "lastCommitAt": "2026-10-21T15:15:24.000Z",
+    "daysSinceCommit": 5
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "packaging"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-04T18:15:28",
+    "daysSinceRelease": 83,
+    "yearsActive": 12.14370367626182,
+    "dependents": 215810,
+    "license": "Apache-2.0 OR BSD-2-Clause",
+    "weeklyDownloads": 349161950,
+    "repoUrl": "https://github.com/pypa/packaging",
+    "archived": false,
+    "pushedAt": "2026-10-22T19:12:06.000Z",
+    "openIssues": 114,
+    "language": "Python",
+    "lastCommitAt": "2026-10-22T19:12:06.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "typing-extensions"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-02T08:40:05",
+    "daysSinceRelease": 117,
+    "yearsActive": 9.108797629192335,
+    "dependents": 120765,
+    "license": "PSF-2.0",
+    "weeklyDownloads": 322511564,
+    "repoUrl": "https://github.com/python/typing_extensions",
+    "archived": false,
+    "pushedAt": "2026-10-23T06:44:40.000Z",
+    "openIssues": 22,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T06:44:40.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "idna"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-17T14:11:04",
+    "daysSinceRelease": 39,
+    "yearsActive": 13.280475223844652,
+    "dependents": 408607,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 310240187,
+    "repoUrl": "https://github.com/kjd/idna",
+    "archived": false,
+    "pushedAt": "2026-10-22T09:13:15.000Z",
+    "openIssues": 3,
+    "language": "Python",
+    "lastCommitAt": "2026-10-22T09:13:15.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "urllib3"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-15T19:29:36",
+    "daysSinceRelease": 41,
+    "yearsActive": 16.87660876793546,
+    "dependents": 422295,
+    "license": "MIT",
+    "weeklyDownloads": 305671060,
+    "repoUrl": "https://github.com/urllib3/urllib3",
+    "archived": false,
+    "pushedAt": "2026-10-21T19:23:47.000Z",
+    "openIssues": 257,
+    "language": "Python",
+    "lastCommitAt": "2026-10-21T19:23:47.000Z",
+    "daysSinceCommit": 5
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "certifi"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-23T11:36:16",
+    "daysSinceRelease": 4,
+    "yearsActive": 14.831471650727558,
+    "dependents": 415524,
+    "license": "MPL-2.0",
+    "weeklyDownloads": 297178108,
+    "repoUrl": "https://github.com/certifi/python-certifi",
+    "archived": false,
+    "pushedAt": "2026-10-24T11:45:54.000Z",
+    "openIssues": 4,
+    "language": "Python",
+    "lastCommitAt": "2026-10-24T11:45:54.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "requests"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-14T19:25:27",
+    "daysSinceRelease": 165,
+    "yearsActive": 15.699214487476867,
+    "dependents": 679836,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 277777667,
+    "repoUrl": "https://github.com/psf/requests",
+    "archived": false,
+    "pushedAt": "2026-09-28T16:55:48.000Z",
+    "openIssues": 244,
+    "language": "Python",
+    "lastCommitAt": "2026-09-28T16:55:48.000Z",
+    "daysSinceCommit": 28
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "charset-normalizer"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-30T04:39:23",
+    "daysSinceRelease": 27,
+    "yearsActive": 7.235692235657972,
+    "dependents": 127252,
+    "license": "MIT",
+    "weeklyDownloads": 274354578,
+    "repoUrl": "https://github.com/jawah/charset_normalizer",
+    "archived": false,
+    "pushedAt": "2026-10-25T09:17:59.000Z",
+    "openIssues": 1,
+    "language": "Python",
+    "lastCommitAt": "2026-10-25T09:17:59.000Z",
+    "daysSinceCommit": 1
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "cryptography"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-30T15:30:04",
+    "daysSinceRelease": 26,
+    "yearsActive": 12.798180372873729,
+    "dependents": 131580,
+    "license": "Apache-2.0 OR BSD-3-Clause",
+    "weeklyDownloads": 246692507,
+    "repoUrl": "https://github.com/pyca/cryptography",
+    "archived": false,
+    "pushedAt": "2026-10-19T11:17:53.000Z",
+    "openIssues": 49,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T11:17:53.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "cffi"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-03T21:21:18",
+    "daysSinceRelease": 84,
+    "yearsActive": 14.356975390238802,
+    "dependents": 166881,
+    "license": "MIT-0",
+    "weeklyDownloads": 218718048,
+    "repoUrl": "https://github.com/python-cffi/cffi",
+    "archived": false,
+    "pushedAt": "2026-10-19T14:43:29.000Z",
+    "openIssues": 43,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T14:43:29.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "setuptools"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-20T19:01:37",
+    "daysSinceRelease": 6,
+    "yearsActive": 20.458754483198977,
+    "dependents": 97511,
+    "license": "MIT",
+    "weeklyDownloads": 216282352,
+    "repoUrl": "https://github.com/pypa/setuptools",
+    "archived": false,
+    "pushedAt": "2026-10-20T22:22:00.000Z",
+    "openIssues": 708,
+    "language": "Python",
+    "lastCommitAt": "2026-10-20T22:22:00.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pygments"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-17T08:02:48",
+    "daysSinceRelease": 71,
+    "yearsActive": 19.99198513701929,
+    "dependents": 70561,
+    "license": "BSD-2-Clause",
+    "weeklyDownloads": 212299753,
+    "repoUrl": "https://github.com/pygments/pygments",
+    "archived": false,
+    "pushedAt": "2026-09-27T07:00:56.000Z",
+    "openIssues": 771,
+    "language": "Python",
+    "lastCommitAt": "2026-09-27T07:00:56.000Z",
+    "daysSinceCommit": 29
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "python-dateutil"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-21T23:41:45",
+    "daysSinceRelease": 5,
+    "yearsActive": 18.222331084714934,
+    "dependents": 338574,
+    "license": "Dual License",
+    "weeklyDownloads": 207691312,
+    "repoUrl": "https://github.com/dateutil/dateutil",
+    "archived": false,
+    "pushedAt": "2026-10-23T23:53:43.000Z",
+    "openIssues": 502,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T23:53:43.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pluggy"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-15T09:50:58",
+    "daysSinceRelease": 12,
+    "yearsActive": 11.474624226493777,
+    "dependents": 130622,
+    "license": "MIT",
+    "weeklyDownloads": 197767025,
+    "repoUrl": "https://github.com/pytest-dev/pluggy",
+    "archived": false,
+    "pushedAt": "2026-10-21T05:48:58.000Z",
+    "openIssues": 47,
+    "language": "Python",
+    "lastCommitAt": "2026-10-21T05:48:58.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "botocore"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "yearsActive": 13.846667134477906,
+    "dependents": 60835,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 194962129,
+    "repoUrl": "https://github.com/boto/botocore",
+    "archived": false,
+    "pushedAt": "2026-10-23T22:35:12.000Z",
+    "openIssues": 203,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T22:35:12.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pydantic"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "yearsActive": 9.482224129750044,
+    "dependents": 49355,
+    "license": "MIT",
+    "weeklyDownloads": 194561650,
+    "repoUrl": "https://github.com/pydantic/pydantic",
+    "archived": false,
+    "pushedAt": "2026-10-23T14:58:28.000Z",
+    "openIssues": 593,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T14:58:28.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pycparser"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-22T13:40:03",
+    "daysSinceRelease": 4,
+    "yearsActive": 15.688329755019392,
+    "dependents": 163284,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 193883667,
+    "repoUrl": "https://github.com/eliben/pycparser",
+    "archived": false,
+    "pushedAt": "2026-10-22T13:41:02.000Z",
+    "openIssues": 6,
+    "language": "Python",
+    "lastCommitAt": "2026-10-22T13:41:02.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "click"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-26T13:33:14",
+    "daysSinceRelease": 61,
+    "yearsActive": 12.498377790864959,
+    "dependents": 316082,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 188795923,
+    "repoUrl": "https://github.com/pallets/click",
+    "archived": false,
+    "pushedAt": "2026-10-06T20:58:59.000Z",
+    "openIssues": 86,
+    "language": "Python",
+    "lastCommitAt": "2026-10-06T20:58:59.000Z",
+    "daysSinceCommit": 20
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pydantic_core"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "yearsActive": 4.518955480264659,
+    "dependents": 0,
+    "license": "MIT",
+    "weeklyDownloads": 186574076,
+    "repoUrl": "https://github.com/pydantic/pydantic",
+    "archived": false,
+    "pushedAt": "2026-10-23T14:58:28.000Z",
+    "openIssues": 593,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T14:58:28.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "anyio"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "yearsActive": 8.040618766699623,
+    "dependents": 41037,
+    "license": "MIT",
+    "weeklyDownloads": 185332848,
+    "repoUrl": "https://github.com/agronholm/anyio",
+    "archived": false,
+    "pushedAt": "2026-10-25T00:15:03.000Z",
+    "openIssues": 140,
+    "language": "Python",
+    "lastCommitAt": "2026-10-25T00:15:03.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "numpy"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-10T20:05:31",
+    "daysSinceRelease": 16,
+    "yearsActive": 19.902582747832536,
+    "dependents": 487463,
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "weeklyDownloads": 185255333,
+    "repoUrl": "https://github.com/numpy/numpy",
+    "archived": false,
+    "pushedAt": "2026-10-26T08:18:16.000Z",
+    "openIssues": 2239,
+    "language": "Python",
+    "lastCommitAt": "2026-10-26T08:18:16.000Z",
+    "daysSinceCommit": 0
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pytest"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-06-19T10:58:32",
+    "daysSinceRelease": 130,
+    "yearsActive": 15.91959446640429,
+    "dependents": 283154,
+    "license": "MIT",
+    "weeklyDownloads": 175974603,
+    "repoUrl": "https://github.com/pytest-dev/pytest",
+    "archived": false,
+    "pushedAt": "2026-10-24T19:56:07.000Z",
+    "openIssues": 892,
+    "language": "Python",
+    "lastCommitAt": "2026-10-24T19:56:07.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "iniconfig"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-06T22:48:38",
+    "daysSinceRelease": 20,
+    "yearsActive": 16.04043705769767,
+    "dependents": 72636,
+    "license": "MIT",
+    "weeklyDownloads": 170432580,
+    "repoUrl": "https://github.com/pytest-dev/iniconfig",
+    "archived": false,
+    "pushedAt": "2026-10-19T22:19:47.000Z",
+    "openIssues": 3,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T22:19:47.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "annotated-types"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-07-23T20:16:13",
+    "daysSinceRelease": 95,
+    "yearsActive": 4.486705447784369,
+    "dependents": 2461,
+    "license": "MIT",
+    "weeklyDownloads": 168505855,
+    "repoUrl": "https://github.com/annotated-types/annotated-types",
+    "archived": false,
+    "pushedAt": "2026-10-25T15:21:10.000Z",
+    "openIssues": 12,
+    "language": "Python",
+    "lastCommitAt": "2026-10-25T15:21:10.000Z",
+    "daysSinceCommit": 1
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "typing-inspection"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-12T12:37:25",
+    "daysSinceRelease": 75,
+    "yearsActive": 1.7004057520217,
+    "dependents": 0,
+    "license": "MIT",
+    "weeklyDownloads": 162055848,
+    "repoUrl": "https://github.com/pydantic/typing-inspection",
+    "archived": false,
+    "pushedAt": "2026-10-14T18:38:28.000Z",
+    "openIssues": 7,
+    "language": "Python",
+    "lastCommitAt": "2026-10-14T18:38:28.000Z",
+    "daysSinceCommit": 12
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "s3transfer"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-19T19:19:49",
+    "daysSinceRelease": 7,
+    "yearsActive": 10.772246826913326,
+    "dependents": 52800,
+    "license": "Apache License 2.0",
+    "weeklyDownloads": 146865355,
+    "repoUrl": "https://github.com/boto/s3transfer",
+    "archived": false,
+    "pushedAt": "2026-10-23T04:26:02.000Z",
+    "openIssues": 73,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T04:26:02.000Z",
+    "daysSinceCommit": 4
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "httpx"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-08-31T17:59:55",
+    "daysSinceRelease": 56,
+    "yearsActive": 7.274216638242452,
+    "dependents": 28516,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 142840737,
+    "repoUrl": "https://github.com/encode/httpx",
+    "archived": false,
+    "pushedAt": "2026-10-02T12:53:43.000Z",
+    "openIssues": 140,
+    "language": "Python",
+    "lastCommitAt": "2026-10-02T12:53:43.000Z",
+    "daysSinceCommit": 24
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "markupsafe"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-02T23:07:22",
+    "daysSinceRelease": 24,
+    "yearsActive": 16.346822529279795,
+    "dependents": 110052,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 142594668,
+    "repoUrl": "https://github.com/pallets/markupsafe",
+    "archived": false,
+    "pushedAt": "2026-10-03T00:01:45.000Z",
+    "openIssues": 6,
+    "language": "Python",
+    "lastCommitAt": "2026-10-03T00:01:45.000Z",
+    "daysSinceCommit": 24
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "aiobotocore"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-23T10:44:50",
+    "daysSinceRelease": 4,
+    "yearsActive": 10.320692488560601,
+    "dependents": 1982,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 141349193,
+    "repoUrl": "https://github.com/aio-libs/aiobotocore",
+    "archived": false,
+    "pushedAt": "2026-10-23T13:37:31.000Z",
+    "openIssues": 24,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T13:37:31.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "python-dotenv"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-01T05:36:10",
+    "daysSinceRelease": 26,
+    "yearsActive": 12.13459167373311,
+    "dependents": 115434,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 134454922,
+    "repoUrl": "https://github.com/theskumar/python-dotenv",
+    "archived": false,
+    "pushedAt": "2026-10-01T07:34:37.000Z",
+    "openIssues": 131,
+    "language": "Python",
+    "lastCommitAt": "2026-10-01T07:34:37.000Z",
+    "daysSinceCommit": 25
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pyjwt"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-28T18:40:42",
+    "daysSinceRelease": 28,
+    "yearsActive": 15.670356386480595,
+    "dependents": 34706,
+    "license": "MIT",
+    "weeklyDownloads": 132702131,
+    "repoUrl": "https://github.com/jpadilla/pyjwt",
+    "archived": false,
+    "pushedAt": "2026-10-19T22:45:55.000Z",
+    "openIssues": 62,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T22:45:55.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "platformdirs"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-19T01:02:11",
+    "daysSinceRelease": 8,
+    "yearsActive": 5.456589153801303,
+    "dependents": 62842,
+    "license": "MIT",
+    "weeklyDownloads": 128662551,
+    "repoUrl": "https://github.com/tox-dev/platformdirs",
+    "archived": false,
+    "pushedAt": "2026-10-21T23:44:37.000Z",
+    "openIssues": 7,
+    "language": "Python",
+    "lastCommitAt": "2026-10-21T23:44:37.000Z",
+    "daysSinceCommit": 5
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "fsspec"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-18T17:50:42",
+    "daysSinceRelease": 38,
+    "yearsActive": 7.815906476886709,
+    "dependents": 11589,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 128609905,
+    "repoUrl": "https://github.com/fsspec/filesystem_spec",
+    "archived": false,
+    "pushedAt": "2026-10-21T14:26:43.000Z",
+    "openIssues": 393,
+    "language": "Python",
+    "lastCommitAt": "2026-10-21T14:26:43.000Z",
+    "daysSinceCommit": 5
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pandas"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "yearsActive": 16.835753279210078,
+    "dependents": 310870,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 126309486,
+    "repoUrl": "https://github.com/pandas-dev/pandas",
+    "archived": false,
+    "pushedAt": "2026-10-20T22:45:57.000Z",
+    "openIssues": 2144,
+    "language": "Python",
+    "lastCommitAt": "2026-10-20T22:45:57.000Z",
+    "daysSinceCommit": 6
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "starlette"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-24T15:04:12",
+    "daysSinceRelease": 2,
+    "yearsActive": 8.339376622461785,
+    "dependents": 29789,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 115695493,
+    "repoUrl": "https://github.com/Kludex/starlette",
+    "archived": false,
+    "pushedAt": "2026-10-21T13:57:51.000Z",
+    "openIssues": 58,
+    "language": "Python",
+    "lastCommitAt": "2026-10-21T13:57:51.000Z",
+    "daysSinceCommit": 5
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "uvicorn"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-25T06:52:37",
+    "daysSinceRelease": 32,
+    "yearsActive": 9.39364123393414,
+    "dependents": 50440,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 115257518,
+    "repoUrl": "https://github.com/Kludex/uvicorn",
+    "archived": false,
+    "pushedAt": "2026-10-24T21:52:44.000Z",
+    "openIssues": 106,
+    "language": "Python",
+    "lastCommitAt": "2026-10-24T21:52:44.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "multidict"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "yearsActive": 10.685322819257484,
+    "dependents": 41832,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 109183741,
+    "repoUrl": "https://github.com/aio-libs/multidict",
+    "archived": false,
+    "pushedAt": "2026-10-24T07:44:47.000Z",
+    "openIssues": 15,
+    "language": "Python",
+    "lastCommitAt": "2026-10-24T07:44:47.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "rpds-py"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-04T16:32:36",
+    "daysSinceRelease": 22,
+    "yearsActive": 3.6584193889269145,
+    "dependents": 13009,
+    "license": "MIT",
+    "weeklyDownloads": 108595537,
+    "repoUrl": "https://github.com/crate-py/rpds",
+    "archived": false,
+    "pushedAt": "2026-10-26T22:13:49.000Z",
+    "openIssues": 6,
+    "language": "Rust",
+    "lastCommitAt": "2026-10-26T22:13:49.000Z",
+    "daysSinceCommit": 0
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "yarl"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-15T19:35:02",
+    "daysSinceRelease": 41,
+    "yearsActive": 10.158273826209852,
+    "dependents": 41018,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 106178596,
+    "repoUrl": "https://github.com/aio-libs/yarl",
+    "archived": false,
+    "pushedAt": "2026-10-23T12:01:59.000Z",
+    "openIssues": 69,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T12:01:59.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "aiohttp"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-11T01:05:12",
+    "daysSinceRelease": 16,
+    "yearsActive": 13.00409879838771,
+    "dependents": 66431,
+    "license": "Apache-2.0 AND MIT",
+    "weeklyDownloads": 104888051,
+    "repoUrl": "https://github.com/aio-libs/aiohttp",
+    "archived": false,
+    "pushedAt": "2026-10-23T11:23:34.000Z",
+    "openIssues": 261,
+    "language": "Python",
+    "lastCommitAt": "2026-10-23T11:23:34.000Z",
+    "daysSinceCommit": 3
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "markdown-it-py"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-07T12:08:28",
+    "daysSinceRelease": 173,
+    "yearsActive": 6.589382750747839,
+    "dependents": 11935,
+    "license": "MIT License",
+    "weeklyDownloads": 103574797,
+    "repoUrl": "https://github.com/executablebooks/markdown-it-py",
+    "archived": false,
+    "pushedAt": "2026-10-12T16:43:58.000Z",
+    "openIssues": 37,
+    "language": "Python",
+    "lastCommitAt": "2026-10-12T16:43:58.000Z",
+    "daysSinceCommit": 14
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "tomlkit"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-16T04:07:09",
+    "daysSinceRelease": 11,
+    "yearsActive": 8.299602675552007,
+    "dependents": 13686,
+    "license": "MIT",
+    "weeklyDownloads": 102776317,
+    "repoUrl": "https://github.com/python-poetry/tomlkit",
+    "archived": false,
+    "pushedAt": "2026-10-19T22:24:24.000Z",
+    "openIssues": 73,
+    "language": "Python",
+    "lastCommitAt": "2026-10-19T22:24:24.000Z",
+    "daysSinceCommit": 7
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "opentelemetry-api"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-06T17:32:58",
+    "daysSinceRelease": 20,
+    "yearsActive": 7.073195548108855,
+    "dependents": 3395,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 102475633,
+    "repoUrl": "https://github.com/open-telemetry/opentelemetry-python",
+    "archived": false,
+    "pushedAt": "2026-10-25T02:37:29.000Z",
+    "openIssues": 422,
+    "language": "Python",
+    "lastCommitAt": "2026-10-25T02:37:29.000Z",
+    "daysSinceCommit": 2
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "propcache"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-16T00:17:14",
+    "daysSinceRelease": 41,
+    "yearsActive": 2.0668313217418306,
+    "dependents": 0,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 102398686,
+    "repoUrl": "https://github.com/aio-libs/propcache",
+    "archived": false,
+    "pushedAt": "2026-10-14T05:51:37.000Z",
+    "openIssues": 3,
+    "language": "Python",
+    "lastCommitAt": "2026-10-14T05:51:37.000Z",
+    "daysSinceCommit": 13
+   }
+  },
+  {
+   "dep": {
+    "ecosystem": "pypi",
+    "name": "pillow"
+   },
+   "score": 0,
+   "band": "alive",
+   "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-16T22:18:09",
+    "daysSinceRelease": 10,
+    "yearsActive": 16.24159516138743,
+    "dependents": 88899,
+    "license": "MIT-CMU",
+    "weeklyDownloads": 100801598,
+    "repoUrl": "https://github.com/python-pillow/Pillow",
+    "archived": false,
+    "pushedAt": "2026-10-20T05:41:16.000Z",
+    "openIssues": 134,
+    "language": "Python",
+    "lastCommitAt": "2026-10-20T05:41:16.000Z",
+    "daysSinceCommit": 7
+   }
+  }
+ ]
+}

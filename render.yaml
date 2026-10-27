@@ -1,0 +1,85 @@
+# Render Blueprint — one-click deploy of the whole Revenant stack.
+# Dashboard: New > Blueprint > point at this repo.
+services:
+  - type: web
+    name: revenant-web
+    runtime: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ML_SERVICE_URL
+        value: https://revenant-ml.onrender.com
+      - key: TABPFN_MODE
+        value: api
+      - key: TEMPORAL_ADDRESS
+        sync: false
+      - key: TEMPORAL_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_SENTRY_DSN
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: REVENANT_DATA_DIR
+        value: /var/revenant/data
+
+  - type: worker
+    name: revenant-worker
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npx tsx temporal/worker.ts
+    envVars:
+      - key: TEMPORAL_ADDRESS
+        sync: false
+      - key: TEMPORAL_API_KEY
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+
+  - type: pserv
+    name: revenant-ml
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r ml/requirements.txt
+    startCommand: uvicorn ml.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: TABPFN_MODE
+        value: api
+      - key: PRIORLABS_API_KEY
+        sync: false
+      - key: TINKER_API_KEY
+        sync: false
+      - key: EMB_MODEL
+        value: "google/embeddinggemma-300m"
+
+  - type: cron
+    name: revenant-nightly
+    runtime: node
+    schedule: "0 3 * * *"
+    buildCommand: npm ci
+    startCommand: npx tsx scripts/nightly-refresh.ts
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: REVENANT_DATA_DIR
+        value: /var/revenant/data

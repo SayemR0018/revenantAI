@@ -1,0 +1,25 @@
+name: nightly-index
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - name: rebuild graveyard index snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.REVENANT_GH_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npx tsx scripts/seed-cementerio.ts --npm 2000 --pypi 1000
+      - name: publish snapshot as release asset (for CLI --offline)
+        run: |
+          tag="index-$(date +%Y%m%d)"
+          cp data/cementerio.json cli/data/index-snapshot.json || mkdir -p cli/data && cp data/cementerio.json cli/data/index-snapshot.json
+          gh release create "$tag" cli/data/index-snapshot.json --latest --title "Index snapshot $(date +%F)" || \
+            gh release upload "$tag" cli/data/index-snapshot.json --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
