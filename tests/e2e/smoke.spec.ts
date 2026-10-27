@@ -14,7 +14,7 @@ test('scan → report → tombstone → OG → badge', async ({ page, request })
   // tombstone page renders vital signs
   await page.goto('/grave/npm/left-pad');
   await expect(page.getByRole('heading', { name: 'Vital signs' })).toBeVisible({ timeout: 60_000 });
-  await expect(page.getByText('Ofrenda')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Ofrenda' })).toBeVisible();
 
   // OG image + badge endpoints respond with images
   const og = await request.get('/api/og/npm/left-pad');
