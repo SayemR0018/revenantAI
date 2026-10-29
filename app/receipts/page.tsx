@@ -16,7 +16,8 @@ export default async function ReceiptsPage() {
         Honest status for every integration — checked live, right now. PASS means genuinely working and
         load-bearing. SKIPPED means not configured, with exactly what to set. Nothing is faked.
       </p>
-      <table className="mt-6 w-full text-sm">
+      <div className="mt-6 overflow-x-auto">
+        <table className="w-full text-sm">
         <thead>
           <tr className="text-left text-xs uppercase tracking-wider" style={{ color: 'var(--violet-mute)' }}>
             <th className="py-2 pr-4">status</th><th className="py-2 pr-4">integration</th><th className="py-2">evidence / notes</th>
@@ -35,6 +36,7 @@ export default async function ReceiptsPage() {
           ))}
         </tbody>
       </table>
+      </div>
       <p className="font-mono-data mt-6 text-xs" style={{ color: 'var(--violet-mute)' }}>
         machine-readable: <a className="underline" href="/api/health/integrations">/api/health/integrations</a>
       </p>

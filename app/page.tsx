@@ -8,7 +8,7 @@ export default function Home() {
         <p className="font-mono-data text-sm uppercase tracking-[0.3em]" style={{ color: 'var(--marigold)' }}>
           ghost in the machine
         </p>
-        <h1 className="font-display mt-4 text-5xl leading-tight md:text-7xl">
+        <h1 className="font-display mt-4 text-3xl leading-tight sm:text-5xl md:text-7xl">
           Which of your dependencies
           <br />
           are already <em style={{ color: 'var(--departed)' }}>ghosts</em>?

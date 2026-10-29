@@ -9,9 +9,13 @@
   --violet-mute: #9a90c4;
   --marigold: #f2a33c;
   --marigold-deep: #c2410c;
+  --haunted: #ff8c42;
   --candle: #ffb757;
-  --departed: #b06cf0;
-  --alive: #3fae5a;
+  --departed: #b87cff;
+  --alive: #4cc366;
+  --unknown: #9e96bf;
+  --papel-magenta: #e05297;
+  --papel-turquoise: #38bdf8;
 }
 
 html { background: var(--ink); }
@@ -80,6 +84,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .candle::before { animation: none; }
   .ghost-float { animation: none !important; }
+  .papel-banner { animation: none !important; }
   * { scroll-behavior: auto !important; }
 }
 
@@ -89,10 +94,32 @@ body {
 }
 .ghost-float { animation: floaty 5s ease-in-out infinite; }
 
+@keyframes papelSway {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(1.5px); }
+}
+.papel-banner { animation: papelSway 6s ease-in-out infinite; }
+
 .band-alive { color: var(--alive); }
-.band-fading { color: #e8b33c; }
-.band-haunted { color: var(--marigold-deep); }
+.band-fading { color: #f2bd49; }
+.band-haunted { color: var(--haunted); }
 .band-departed { color: var(--departed); }
+.band-unknown { color: var(--unknown); }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 100;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--marigold);
+  color: var(--ink);
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 16px;
+}
 
 .card {
   background: var(--ink-2);

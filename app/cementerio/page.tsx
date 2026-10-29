@@ -67,37 +67,43 @@ export default async function Cementerio({ searchParams }: { searchParams: Promi
         </section>
       )}
 
-      <table className="mt-8 w-full text-sm">
-        <thead>
-          <tr className="text-left text-xs uppercase tracking-wider" style={{ color: 'var(--violet-mute)' }}>
-            <th className="py-2 pr-3">#</th><th className="py-2 pr-3">package</th><th className="py-2 pr-3">eco</th>
-            <th className="py-2 pr-3">score</th><th className="py-2 pr-3">band</th><th className="py-2 pr-3">last commit</th>
-            <th className="py-2 pr-3">downloads/wk</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filtered.slice(0, 300).map((r, i) => (
-            <tr key={`${r.dep.ecosystem}/${r.dep.name}`} className="border-t border-[#241f45]">
-              <td className="font-mono-data py-2 pr-3 text-xs" style={{ color: 'var(--violet-mute)' }}>{i + 1}</td>
-              <td className="py-2 pr-3">
-                <Link className="font-mono-data hover:text-[var(--marigold)]" href={`/grave/${r.dep.ecosystem}/${encodeURIComponent(r.dep.name)}`}>
-                  {r.dep.name}
-                </Link>
-              </td>
-              <td className="py-2 pr-3" style={{ color: 'var(--violet-mute)' }}>{r.dep.ecosystem}</td>
-              <td className={`font-mono-data py-2 pr-3 band-${r.band}`}>{r.score}</td>
-              <td className={`py-2 pr-3 capitalize band-${r.band}`}>{BAND_LABEL[r.band as ScoredDep['band']]}</td>
-              <td className="font-mono-data py-2 pr-3" style={{ color: 'var(--bone-dim)' }}>
-                {r.vitals.daysSinceCommit !== undefined ? `${r.vitals.daysSinceCommit}d` : '—'}
-                {r.vitals.archived ? ' ✝' : ''}{r.vitals.deprecated ? ' ⚠' : ''}
-              </td>
-              <td className="font-mono-data py-2" style={{ color: 'var(--bone-dim)' }}>
-                {r.vitals.weeklyDownloads != null ? r.vitals.weeklyDownloads.toLocaleString() : '—'}
-              </td>
+      <div className="mt-8 overflow-x-auto rounded-lg border border-[#241f45]">
+        <table className="w-full min-w-[540px] text-sm">
+          <thead>
+            <tr className="border-b border-[#241f45] bg-[#14112b] text-left text-xs uppercase tracking-wider" style={{ color: 'var(--violet-mute)' }}>
+              <th className="py-2.5 pl-3 pr-3">#</th>
+              <th className="sticky left-0 bg-[#14112b] py-2.5 pr-3">package</th>
+              <th className="py-2.5 pr-3">eco</th>
+              <th className="py-2.5 pr-3">score</th>
+              <th className="py-2.5 pr-3">band</th>
+              <th className="py-2.5 pr-3">last commit</th>
+              <th className="py-2.5 pr-3">downloads/wk</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filtered.slice(0, 300).map((r, i) => (
+              <tr key={`${r.dep.ecosystem}/${r.dep.name}-${i}`} className="border-t border-[#241f45]">
+                <td className="font-mono-data py-2 pl-3 pr-3 text-xs" style={{ color: 'var(--violet-mute)' }}>{i + 1}</td>
+                <td className="sticky left-0 bg-[#0d0b1e] py-2 pr-3">
+                  <Link className="font-mono-data hover:text-[var(--marigold)]" href={`/grave/${r.dep.ecosystem}/${encodeURIComponent(r.dep.name)}`}>
+                    {r.dep.name}
+                  </Link>
+                </td>
+                <td className="py-2 pr-3" style={{ color: 'var(--violet-mute)' }}>{r.dep.ecosystem}</td>
+                <td className={`font-mono-data py-2 pr-3 band-${r.band}`}>{r.score}</td>
+                <td className={`py-2 pr-3 capitalize band-${r.band}`}>{BAND_LABEL[r.band as ScoredDep['band']]}</td>
+                <td className="font-mono-data py-2 pr-3" style={{ color: 'var(--bone-dim)' }}>
+                  {r.vitals.daysSinceCommit !== undefined ? `${r.vitals.daysSinceCommit}d` : '—'}
+                  {r.vitals.archived ? ' ✝' : ''}{r.vitals.deprecated ? ' ⚠' : ''}
+                </td>
+                <td className="font-mono-data py-2 pr-3" style={{ color: 'var(--bone-dim)' }}>
+                  {r.vitals.weeklyDownloads != null ? r.vitals.weeklyDownloads.toLocaleString() : '—'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       {!filtered.length && <p className="mt-8" style={{ color: 'var(--violet-mute)' }}>The cemetery is empty for that filter — the index refresh may not have run yet.</p>}
     </div>
   );

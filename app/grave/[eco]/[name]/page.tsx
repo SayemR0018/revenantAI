@@ -48,7 +48,7 @@ function Tombstone({ t }: { t: ScoredDep }) {
 
         <div>
           <p className="font-mono-data text-sm" style={{ color: 'var(--marigold)' }}>{t.dep.ecosystem} package</p>
-          <h1 className="font-display mt-1 text-5xl">{t.dep.name}</h1>
+          <h1 className="font-display mt-1 break-words text-3xl sm:text-5xl">{t.dep.name}</h1>
           {t.autopsy?.epitaph && (
             <blockquote className="font-display mt-4 border-l-2 pl-4 text-xl italic" style={{ borderColor: 'var(--marigold)', color: 'var(--bone-dim)' }}>
               {t.autopsy.epitaph}
