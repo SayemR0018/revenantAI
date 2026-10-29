@@ -6,7 +6,12 @@ import { Metadata } from 'next';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+interface Props {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ band?: string; eco?: string; sort?: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const r = await getReport(id);
   if (!r) return {};
@@ -29,9 +34,17 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-export default async function ReportPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ReportPage({ params, searchParams }: Props) {
   const { id } = await params;
+  const sp = await searchParams;
   const r = await getReport(id);
   if (!r) notFound();
-  return <ReportView initial={r} />;
+  return (
+    <ReportView
+      initial={r}
+      initialBand={sp.band ?? ''}
+      initialEco={sp.eco ?? ''}
+      initialSort={sp.sort ?? 'score'}
+    />
+  );
 }
