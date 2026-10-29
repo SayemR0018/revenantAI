@@ -6,6 +6,7 @@ import { PulseSparkline } from '@/components/PulseSparkline';
 import { Ofrenda } from '@/components/Ofrenda';
 import { SeanceChat } from '@/components/SeanceChat';
 import { SupportLinks } from '@/components/SupportLinks';
+import { TombstoneShare } from '@/components/TombstoneShare';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -16,10 +17,21 @@ interface Props { params: Promise<{ eco: string; name: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { eco, name } = await params;
   const n = decodeURIComponent(name);
+  const ogImg = `/api/og/${eco}/${encodeURIComponent(n)}`;
   return {
     title: `${n} — tombstone`,
     description: `Ghost score, cause of death, epitaph and ofrenda for ${n} (${eco}).`,
-    openGraph: { images: [`/api/og/${eco}/${encodeURIComponent(n)}`] },
+    openGraph: {
+      title: `${n} (${eco}) — Revenant Tombstone`,
+      description: `Ghost score, cause of death, epitaph and ofrenda for ${n} (${eco}). Signals, not verdicts.`,
+      images: [{ url: ogImg, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${n} (${eco}) — Revenant Tombstone`,
+      description: `Ghost score, cause of death, epitaph and ofrenda for ${n} (${eco}).`,
+      images: [ogImg],
+    },
   };
 }
 
@@ -139,21 +151,17 @@ function Tombstone({ t }: { t: ScoredDep }) {
         <SeanceChat eco={t.dep.ecosystem} name={t.dep.name} />
         <div className="space-y-6">
           <SupportLinks repoUrl={v.repoUrl} />
-          <div className="card p-6">
-            <h2 className="font-display text-2xl">Share the tombstone</h2>
-            <p className="font-mono-data mt-3 break-all rounded bg-[#0d0b1e] p-3 text-xs">
-              ![ghost risk](https://revenant.example.com/badge/{t.dep.ecosystem}/{encodeURIComponent(t.dep.name)}.svg)
-            </p>
-            <div className="mt-3 flex gap-2">
-              <a className="card px-3 py-2 text-sm hover:text-[var(--marigold)]" target="_blank" rel="noreferrer"
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${t.dep.name}: ghost score ${t.score}/100 (${BAND_LABEL[t.band]}). Signals, not verdicts.`)}`}>
-                share
-              </a>
-              <a className="card px-3 py-2 text-sm hover:text-[var(--marigold)]" href={`/api/og/${t.dep.ecosystem}/${encodeURIComponent(t.dep.name)}`} target="_blank" rel="noreferrer">
-                OG card
-              </a>
-            </div>
-          </div>
+          <TombstoneShare
+            eco={t.dep.ecosystem}
+            name={t.dep.name}
+            score={t.error ? '?' : t.score}
+            bandLabel={BAND_LABEL[vb]}
+            fallbackBaseUrl={
+              process.env.NEXT_PUBLIC_BASE_URL ||
+              process.env.RENDER_EXTERNAL_URL ||
+              'http://localhost:3000'
+            }
+          />
         </div>
       </div>
     </article>

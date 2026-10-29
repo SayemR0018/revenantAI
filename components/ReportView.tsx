@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Report, ScoredDep, BAND_LABEL, visualBandFor } from '@/lib/types';
 import { PulseSparkline } from './PulseSparkline';
@@ -130,27 +130,56 @@ function DepRow({ d }: { d: ScoredDep }) {
   );
 }
 
+const emptySubscribe = () => () => {};
+
 function ShareBlock({ id }: { id: string }) {
   const [copied, setCopied] = useState(false);
+  const origin = useSyncExternalStore(
+    emptySubscribe,
+    () => window.location.origin,
+    () => process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000',
+  );
+  const canNativeShare = useSyncExternalStore(
+    emptySubscribe,
+    () => typeof navigator !== 'undefined' && typeof navigator.share === 'function',
+    () => false,
+  );
+
+  const reportUrl = `${origin.replace(/\/$/, '')}/r/${id}`;
+  const shareText = 'My dependency tree has ghosts. Haunting report (signals, not verdicts):';
+
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-wrap gap-2">
       <button
+        type="button"
         onClick={() => {
-          navigator.clipboard.writeText(location.href);
+          navigator.clipboard.writeText(reportUrl);
           setCopied(true);
           setTimeout(() => setCopied(false), 1500);
         }}
-        className="card px-3 py-2 text-sm hover:text-[var(--marigold)]"
+        className="card min-h-[40px] px-3 py-2 text-sm hover:border-[var(--marigold)] hover:text-[var(--marigold)]"
       >
-        {copied ? 'copied' : 'copy link'}
+        {copied ? '✓ copied' : 'copy link'}
       </button>
       <a
-        className="card px-3 py-2 text-sm hover:text-[var(--marigold)]"
-        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('My dependency tree has ghosts. Haunting report:')}&url=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL ?? ''}/r/${id}`)}`}
-        target="_blank" rel="noreferrer"
+        className="card inline-flex min-h-[40px] items-center px-3 py-2 text-sm hover:border-[var(--marigold)] hover:text-[var(--marigold)]"
+        href={`https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(reportUrl)}`}
+        target="_blank"
+        rel="noreferrer"
       >
-        share
+        share on X
       </a>
+      {canNativeShare && (
+        <button
+          type="button"
+          onClick={() => {
+            navigator.share?.({ title: 'Revenant Haunting Report', text: shareText, url: reportUrl }).catch(() => {});
+          }}
+          className="card min-h-[40px] px-3 py-2 text-sm hover:border-[var(--marigold)] hover:text-[var(--marigold)]"
+        >
+          share…
+        </button>
+      )}
     </div>
   );
 }

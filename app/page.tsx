@@ -1,5 +1,25 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ScanForm } from '@/components/ScanForm';
+
+export const metadata: Metadata = {
+  title: 'Revenant — ghosts in your dependency tree',
+  description:
+    'Which of your dependencies are already ghosts? Revenant predicts which open-source projects are about to die, holds a funeral for the ones that did, and helps you resurrect your code.',
+  openGraph: {
+    title: 'Revenant — ghosts in your dependency tree',
+    description:
+      'Predict which open-source projects are about to die, honor departed packages with a dignified ofrenda, and resurrect your code with living successors.',
+    type: 'website',
+    images: [{ url: '/api/og/home', width: 1200, height: 630, alt: 'Revenant — Ghost in the Machine' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Revenant — ghosts in your dependency tree',
+    description: 'Which of your dependencies are already ghosts? Signals, not verdicts.',
+    images: ['/api/og/home'],
+  },
+};
 
 export default function Home() {
   return (

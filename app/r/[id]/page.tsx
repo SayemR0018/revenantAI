@@ -11,10 +11,21 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const r = await getReport(id);
   if (!r) return {};
   const ghosts = r.summary.haunted + r.summary.departed;
+  const ogImg = `/api/og-report/${id}`;
   return {
     title: `Haunting Report — ${r.sourceLabel}`,
     description: `${ghosts} ghosts among ${r.summary.total} dependencies. Signals, not verdicts.`,
-    openGraph: { images: [`/api/og-report/${id}`] },
+    openGraph: {
+      title: `Haunting Report — ${r.sourceLabel}`,
+      description: `${ghosts} ghosts among ${r.summary.total} dependencies. Signals, not verdicts.`,
+      images: [{ url: ogImg, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Haunting Report — ${r.sourceLabel}`,
+      description: `${ghosts} ghosts among ${r.summary.total} dependencies. Signals, not verdicts.`,
+      images: [ogImg],
+    },
   };
 }
 
