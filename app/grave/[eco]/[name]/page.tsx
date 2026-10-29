@@ -75,6 +75,7 @@ function Tombstone({ t }: { t: ScoredDep }) {
           )}
           <p className="font-mono-data mt-3 text-xs" style={{ color: 'var(--violet-mute)' }}>
             epitaph by {t.autopsy?.generatedBy ?? '—'} · signals, not verdicts
+            {t.snapshotAt ? ` · snapshot from ${t.snapshotAt.slice(0, 10)}` : ''}
           </p>
           {t.autopsy?.lastWords && (
             <p className="mt-4 text-sm" style={{ color: 'var(--violet-mute)' }}>

@@ -1,0 +1,168 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "gulp-util"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "gulpjs",
+    "repo": "gulp-util",
+    "url": "https://github.com/gulpjs/gulp-util"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5",
+    "lastReleaseAt": "2016-12-26T23:11:10.645Z",
+    "daysSinceRelease": 3593,
+    "yearsActive": 13.315496096629655,
+    "dependents": 390115,
+    "license": "MIT",
+    "weeklyDownloads": 732852,
+    "downloadsTrend": 0.45474125326949955,
+    "repoUrl": "https://github.com/gulpjs/gulp-util",
+    "archived": true,
+    "pushedAt": "2020-10-31T11:18:21Z",
+    "openIssues": 0,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2019-11-23T04:34:38Z",
+    "_lastCommitSubject": "Scaffold: Add FUNDING.yml",
+    "daysSinceCommit": 2532
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "archived",
+      "points": 70
+    },
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5",
+      "at": "2016-12-26T23:11:10.645Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "yocontra",
+      "commits": 25,
+      "url": "https://github.com/yocontra"
+    },
+    {
+      "handle": "mtscout6",
+      "commits": 16,
+      "url": "https://github.com/mtscout6"
+    },
+    {
+      "handle": "sindresorhus",
+      "commits": 14,
+      "url": "https://github.com/sindresorhus"
+    },
+    {
+      "handle": "phated",
+      "commits": 9,
+      "url": "https://github.com/phated"
+    },
+    {
+      "handle": "shinnn",
+      "commits": 8,
+      "url": "https://github.com/shinnn"
+    },
+    {
+      "handle": "stringparser",
+      "commits": 4,
+      "url": "https://github.com/stringparser"
+    },
+    {
+      "handle": "milang",
+      "commits": 4,
+      "url": "https://github.com/milang"
+    },
+    {
+      "handle": "ben-eb",
+      "commits": 3,
+      "url": "https://github.com/ben-eb"
+    },
+    {
+      "handle": "floatdrop",
+      "commits": 3,
+      "url": "https://github.com/floatdrop"
+    },
+    {
+      "handle": "sttk",
+      "commits": 3,
+      "url": "https://github.com/sttk"
+    },
+    {
+      "handle": "makky3939",
+      "commits": 2,
+      "url": "https://github.com/makky3939"
+    },
+    {
+      "handle": "jonschlinkert",
+      "commits": 1,
+      "url": "https://github.com/jonschlinkert"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "gulp-util stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "lastWords": "Scaffold: Add FUNDING.yml",
+    "lastWordsUrl": "https://github.com/gulpjs/gulp-util",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

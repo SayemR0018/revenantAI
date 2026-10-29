@@ -1,0 +1,99 @@
+{
+  "dep": {
+    "ecosystem": "pypi",
+    "name": "six"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "benjaminp",
+    "repo": "six",
+    "url": "https://github.com/benjaminp/six"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2024-12-04T17:35:28",
+    "daysSinceRelease": 694,
+    "yearsActive": 16.33462371983294,
+    "dependents": 591238,
+    "license": "MIT",
+    "weeklyDownloads": 205173899,
+    "repoUrl": "https://github.com/benjaminp/six",
+    "archived": false,
+    "pushedAt": "2026-02-23T02:19:45.000Z",
+    "openIssues": 114,
+    "language": "Python",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2026-02-23T02:19:45.000Z",
+    "daysSinceCommit": 248
+  },
+  "score": 38,
+  "band": "fading",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "daysSinceCommit",
+      "points": 18
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 10
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "commit",
+      "label": "Commit activity paused ~6 months",
+      "detail": "Last commit 2026-02-23T02:19:45.000Z",
+      "url": "https://github.com/benjaminp/six",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "gutworth",
+      "url": "https://pypi.org/user/gutworth/"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "slow_decay",
+    "epitaph": "six did not die — it faded, release by release, until the pulse went flat.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

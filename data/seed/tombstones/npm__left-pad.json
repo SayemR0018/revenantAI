@@ -1,0 +1,193 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "left-pad"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "stevemao",
+    "repo": "left-pad",
+    "url": "https://github.com/stevemao/left-pad"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "use String.prototype.padStart()",
+    "lastReleaseAt": "2018-04-09T01:10:45.796Z",
+    "daysSinceRelease": 3125,
+    "yearsActive": 12.628118622106877,
+    "dependents": 1195353,
+    "license": "WTFPL",
+    "weeklyDownloads": 2811194,
+    "downloadsTrend": 0.908395177338928,
+    "repoUrl": "https://github.com/stevemao/left-pad",
+    "archived": true,
+    "pushedAt": "2019-04-19T14:16:20Z",
+    "openIssues": 10,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2019-03-14T23:18:45Z",
+    "_lastCommitSubject": "Merge pull request #64 from lexjacobs/master",
+    "daysSinceCommit": 2785
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "archived",
+      "points": 70
+    },
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "use String.prototype.padStart()",
+      "at": "2018-04-09T01:10:45.796Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "stevemao",
+      "commits": 30,
+      "url": "https://github.com/stevemao"
+    },
+    {
+      "handle": "camwest",
+      "commits": 7,
+      "url": "https://github.com/camwest"
+    },
+    {
+      "handle": "spectejb",
+      "commits": 5,
+      "url": "https://github.com/spectejb"
+    },
+    {
+      "handle": "zehua",
+      "commits": 4,
+      "url": "https://github.com/zehua"
+    },
+    {
+      "handle": "dubzzz",
+      "commits": 2,
+      "url": "https://github.com/dubzzz"
+    },
+    {
+      "handle": "100Errors",
+      "commits": 1,
+      "url": "https://github.com/100Errors"
+    },
+    {
+      "handle": "lexjacobs",
+      "commits": 1,
+      "url": "https://github.com/lexjacobs"
+    },
+    {
+      "handle": "benjamingr",
+      "commits": 1,
+      "url": "https://github.com/benjamingr"
+    },
+    {
+      "handle": "haoel",
+      "commits": 1,
+      "url": "https://github.com/haoel"
+    },
+    {
+      "handle": "kirushyk",
+      "commits": 1,
+      "url": "https://github.com/kirushyk"
+    },
+    {
+      "handle": "anhthii",
+      "commits": 1,
+      "url": "https://github.com/anhthii"
+    },
+    {
+      "handle": "doersino",
+      "commits": 1,
+      "url": "https://github.com/doersino"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "left-pad stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "lastWords": "Merge pull request #64 from lexjacobs/master",
+    "lastWordsUrl": "https://github.com/stevemao/left-pad",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "String.prototype.padStart",
+      "reason": "Named in the official deprecation notice",
+      "source": "registry_pointer",
+      "weeklyDownloads": 3645473
+    },
+    {
+      "ecosystem": "npm",
+      "name": "mnk-works/left-pad-enterprise",
+      "reason": "Active project — pushed 2d ago",
+      "url": "https://github.com/mnk-works/left-pad-enterprise",
+      "source": "search"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "DevExpress-Examples/winforms-richedit-adjust-left-document-padding",
+      "reason": "Active project — pushed 9d ago",
+      "url": "https://github.com/DevExpress-Examples/winforms-richedit-adjust-left-document-padding",
+      "source": "search"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "stdlib-js/string-base-left-pad",
+      "reason": "Active project — pushed 13d ago",
+      "url": "https://github.com/stdlib-js/string-base-left-pad",
+      "source": "search"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

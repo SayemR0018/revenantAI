@@ -1,0 +1,171 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "moment"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "moment",
+    "repo": "moment",
+    "url": "https://github.com/moment/moment"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-09-15T01:07:26.131Z",
+    "daysSinceRelease": 44,
+    "yearsActive": 15.005692028069308,
+    "dependents": 1006179,
+    "license": "MIT",
+    "weeklyDownloads": 33787344,
+    "downloadsTrend": 0.7056103498016729,
+    "repoUrl": "https://github.com/moment/moment",
+    "archived": false,
+    "pushedAt": "2026-10-08T16:26:56Z",
+    "openIssues": 68,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      5,
+      0,
+      25,
+      16,
+      3,
+      3,
+      2,
+      10,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2026-10-08T16:26:53Z",
+    "_lastCommitSubject": "[bugfix] Bound chooseLocale prefix walk for long locale names (#6458)",
+    "daysSinceCommit": 21
+  },
+  "score": 0,
+  "band": "alive",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "recentActivity",
+      "points": -10
+    },
+    {
+      "feature": "recentRelease",
+      "points": -6
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [],
+  "contributors": [
+    {
+      "handle": "ichernev",
+      "commits": 1363,
+      "url": "https://github.com/ichernev"
+    },
+    {
+      "handle": "timrwood",
+      "commits": 807,
+      "url": "https://github.com/timrwood"
+    },
+    {
+      "handle": "icambron",
+      "commits": 220,
+      "url": "https://github.com/icambron"
+    },
+    {
+      "handle": "marwahaha",
+      "commits": 101,
+      "url": "https://github.com/marwahaha"
+    },
+    {
+      "handle": "mattjohnsonpint",
+      "commits": 72,
+      "url": "https://github.com/mattjohnsonpint"
+    },
+    {
+      "handle": "TracyGJG",
+      "commits": 35,
+      "url": "https://github.com/TracyGJG"
+    },
+    {
+      "handle": "ashsearle",
+      "commits": 31,
+      "url": "https://github.com/ashsearle"
+    },
+    {
+      "handle": "caillou",
+      "commits": 23,
+      "url": "https://github.com/caillou"
+    },
+    {
+      "handle": "mbad0la",
+      "commits": 20,
+      "url": "https://github.com/mbad0la"
+    },
+    {
+      "handle": "Xotic750",
+      "commits": 17,
+      "url": "https://github.com/Xotic750"
+    },
+    {
+      "handle": "nrbgt",
+      "commits": 16,
+      "url": "https://github.com/nrbgt"
+    },
+    {
+      "handle": "Alanscut",
+      "commits": 16,
+      "url": "https://github.com/Alanscut"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "alive",
+    "epitaph": "moment still has a pulse. Long may it commit.",
+    "evidenceIds": [],
+    "lastWords": "[bugfix] Bound chooseLocale prefix walk for long locale names (#6458)",
+    "lastWordsUrl": "https://github.com/moment/moment",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "dayjs",
+      "reason": "Moment-compatible API, actively maintained",
+      "url": "https://github.com/iamkun/dayjs",
+      "source": "curated"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "date-fns",
+      "reason": "Modular, tree-shakeable",
+      "url": "https://github.com/date-fns/date-fns",
+      "source": "curated"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "luxon",
+      "reason": "From the Moment team; modern Intl-based",
+      "url": "https://github.com/moment/luxon",
+      "source": "curated"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

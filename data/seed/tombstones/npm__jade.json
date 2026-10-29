@@ -1,0 +1,197 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "jade"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "jadejs",
+    "repo": "jade",
+    "url": "https://github.com/jadejs/jade"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "Jade has been renamed to pug, please install the latest version of pug instead of jade",
+    "lastReleaseAt": "2015-06-12T05:13:07.515Z",
+    "daysSinceRelease": 4157,
+    "yearsActive": 15.859984728369712,
+    "dependents": 242384,
+    "license": "MIT",
+    "weeklyDownloads": 352738,
+    "downloadsTrend": 0.3449352961970778,
+    "repoUrl": "https://github.com/jadejs/jade",
+    "archived": false,
+    "pushedAt": "2026-03-13T15:12:43Z",
+    "openIssues": 336,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2026-03-13T15:10:03Z",
+    "_lastCommitSubject": "ci: fix permissions",
+    "daysSinceCommit": 230
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 18
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "Jade has been renamed to pug, please install the latest version of pug instead of jade",
+      "at": "2015-06-12T05:13:07.515Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "tj",
+      "commits": 1246,
+      "url": "https://github.com/tj"
+    },
+    {
+      "handle": "ForbesLindesay",
+      "commits": 434,
+      "url": "https://github.com/ForbesLindesay"
+    },
+    {
+      "handle": "TimothyGu",
+      "commits": 261,
+      "url": "https://github.com/TimothyGu"
+    },
+    {
+      "handle": "chowey",
+      "commits": 44,
+      "url": "https://github.com/chowey"
+    },
+    {
+      "handle": "hemanth",
+      "commits": 25,
+      "url": "https://github.com/hemanth"
+    },
+    {
+      "handle": "alubbe",
+      "commits": 21,
+      "url": "https://github.com/alubbe"
+    },
+    {
+      "handle": "jserme",
+      "commits": 12,
+      "url": "https://github.com/jserme"
+    },
+    {
+      "handle": "conancat",
+      "commits": 10,
+      "url": "https://github.com/conancat"
+    },
+    {
+      "handle": "rauchg",
+      "commits": 10,
+      "url": "https://github.com/rauchg"
+    },
+    {
+      "handle": "tricknotes",
+      "commits": 8,
+      "url": "https://github.com/tricknotes"
+    },
+    {
+      "handle": "pavel",
+      "commits": 8,
+      "url": "https://github.com/pavel"
+    },
+    {
+      "handle": "caseywebdev",
+      "commits": 7,
+      "url": "https://github.com/caseywebdev"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "jade stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "lastWords": "ci: fix permissions",
+    "lastWordsUrl": "https://github.com/jadejs/jade",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "the",
+      "reason": "Named in the official deprecation notice",
+      "source": "registry_pointer",
+      "weeklyDownloads": 3575
+    },
+    {
+      "ecosystem": "npm",
+      "name": "lucky-edgelord/jade-fleet",
+      "reason": "Active project — pushed 0d ago",
+      "url": "https://github.com/lucky-edgelord/jade-fleet",
+      "source": "search"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "lucky-edgelord/jade-vault",
+      "reason": "Active project — pushed 0d ago",
+      "url": "https://github.com/lucky-edgelord/jade-vault",
+      "source": "search"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "za24400561/handson6-jade-regresion",
+      "reason": "Active project — pushed 0d ago",
+      "url": "https://github.com/za24400561/handson6-jade-regresion",
+      "source": "search"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

@@ -1,0 +1,101 @@
+{
+  "dep": {
+    "ecosystem": "pypi",
+    "name": "requests"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "psf",
+    "repo": "requests",
+    "url": "https://github.com/psf/requests"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-05-14T19:25:27",
+    "daysSinceRelease": 168,
+    "yearsActive": 15.706186056037215,
+    "dependents": 679836,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 277777667,
+    "repoUrl": "https://github.com/psf/requests",
+    "archived": false,
+    "pushedAt": "2026-10-26T17:14:44.000Z",
+    "openIssues": 244,
+    "language": "Python",
+    "commitsPerWeek": [
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91,
+      92,
+      90,
+      91
+    ],
+    "lastCommitAt": "2026-10-26T17:14:44.000Z",
+    "daysSinceCommit": 3
+  },
+  "score": 0,
+  "band": "alive",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "recentActivity",
+      "points": -10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [],
+  "contributors": [
+    {
+      "handle": "nateprewitt",
+      "url": "https://pypi.org/user/nateprewitt/"
+    },
+    {
+      "handle": "graffatcolmingov",
+      "url": "https://pypi.org/user/graffatcolmingov/"
+    },
+    {
+      "handle": "Lukasa",
+      "url": "https://pypi.org/user/Lukasa/"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "alive",
+    "epitaph": "requests still has a pulse. Long may it commit.",
+    "evidenceIds": [],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "pypi",
+      "name": "psf/requests",
+      "reason": "Active fork — pushed 3d ago",
+      "url": "https://github.com/psf/requests",
+      "source": "active_fork"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

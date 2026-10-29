@@ -1,0 +1,110 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "ms"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "vercel",
+    "repo": "ms",
+    "url": "https://github.com/vercel/ms"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-12-08T13:54:35.223Z",
+    "daysSinceRelease": 2151,
+    "yearsActive": 14.855534160392425,
+    "dependents": 2318159,
+    "license": "MIT",
+    "weeklyDownloads": 488210519,
+    "downloadsTrend": 0.8536809912677289,
+    "repoUrl": "https://github.com/vercel/ms",
+    "archived": false,
+    "pushedAt": "2026-05-20T22:24:50.000Z",
+    "openIssues": 41,
+    "language": "TypeScript",
+    "commitsPerWeek": [
+      2,
+      3,
+      4,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2026-05-20T22:24:50.000Z",
+    "daysSinceCommit": 161
+  },
+  "score": 33,
+  "band": "fading",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "daysSinceCommit",
+      "points": 8
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [],
+  "contributors": [
+    {
+      "handle": "rauchg",
+      "url": "https://www.npmjs.com/~rauchg"
+    },
+    {
+      "handle": "vercel-release-bot",
+      "url": "https://www.npmjs.com/~vercel-release-bot"
+    },
+    {
+      "handle": "nick.tracey",
+      "url": "https://www.npmjs.com/~nick.tracey"
+    },
+    {
+      "handle": "matt.straka",
+      "url": "https://www.npmjs.com/~matt.straka"
+    },
+    {
+      "handle": "zeit-bot",
+      "url": "https://www.npmjs.com/~zeit-bot"
+    },
+    {
+      "handle": "matheuss",
+      "url": "https://www.npmjs.com/~matheuss"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "alive",
+    "epitaph": "ms still has a pulse. Long may it commit.",
+    "evidenceIds": [],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

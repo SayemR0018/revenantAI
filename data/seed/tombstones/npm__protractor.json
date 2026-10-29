@@ -1,0 +1,113 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "protractor"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "angular",
+    "repo": "protractor",
+    "url": "https://github.com/angular/protractor"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "We have news to share - Protractor is deprecated and will reach end-of-life by Summer 2023. To learn more and find out about other options please refer to this post on the Angular blog. Thank you for using and contributing to Protractor. https://goo.gle/state-of-e2e-in-angular",
+    "lastReleaseAt": "2020-05-13T20:32:00.170Z",
+    "daysSinceRelease": 2359,
+    "yearsActive": 13.680456279818491,
+    "dependents": 615722,
+    "license": "MIT",
+    "weeklyDownloads": 436642,
+    "downloadsTrend": 0.34648922770925084,
+    "repoUrl": "https://github.com/angular/protractor",
+    "archived": true,
+    "pushedAt": "2023-05-24T20:07:37.000Z",
+    "openIssues": 684,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2023-05-24T20:07:37.000Z",
+    "daysSinceCommit": 1253
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "archived",
+      "points": 70
+    },
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "We have news to share - Protractor is deprecated and will reach end-of-life by Summer 2023. To learn more and find out about other options please refer to this post on the Angular blog. Thank you for using and contributing to Protractor. https://goo.gle/state-of-e2e-in-angular",
+      "at": "2020-05-13T20:32:00.170Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "angular",
+      "url": "https://www.npmjs.com/~angular"
+    },
+    {
+      "handle": "google-wombot",
+      "url": "https://www.npmjs.com/~google-wombot"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "protractor stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

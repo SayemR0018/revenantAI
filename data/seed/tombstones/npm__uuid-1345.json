@@ -1,0 +1,101 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "uuid-1345"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "scravy",
+    "repo": "uuid-1345",
+    "url": "https://github.com/scravy/uuid-1345"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2020-05-22T06:46:09.834Z",
+    "daysSinceRelease": 2351,
+    "yearsActive": 11.583415051493143,
+    "dependents": 1665,
+    "license": "MIT",
+    "weeklyDownloads": 61705,
+    "downloadsTrend": 1.1338668406231194,
+    "repoUrl": "https://github.com/scravy/uuid-1345",
+    "archived": false,
+    "pushedAt": "2024-02-21T00:42:49.000Z",
+    "openIssues": 1,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2024-02-21T00:42:49.000Z",
+    "daysSinceCommit": 981
+  },
+  "score": 65,
+  "band": "haunted",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "commit",
+      "label": "No commits in 2+ years",
+      "detail": "Last commit 2024-02-21T00:42:49.000Z",
+      "url": "https://github.com/scravy/uuid-1345",
+      "at": "2024-02-21T00:42:49.000Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "scravy",
+      "url": "https://www.npmjs.com/~scravy"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "slow_decay",
+    "epitaph": "uuid-1345 did not die — it faded, release by release, until the pulse went flat.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

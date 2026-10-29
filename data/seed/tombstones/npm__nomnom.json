@@ -1,0 +1,109 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "nomnom"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "harthur",
+    "repo": "nomnom",
+    "url": "https://github.com/harthur/nomnom"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "Package no longer supported. Contact support@npmjs.com for more info.",
+    "lastReleaseAt": "2014-11-07T18:17:52.473Z",
+    "daysSinceRelease": 4374,
+    "yearsActive": 15.561508730987148,
+    "dependents": 105854,
+    "license": "mit",
+    "weeklyDownloads": 470822,
+    "downloadsTrend": 0.40405590786778844,
+    "repoUrl": "https://github.com/harthur/nomnom",
+    "archived": true,
+    "pushedAt": "2021-09-01T13:37:36.000Z",
+    "openIssues": 51,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2021-09-01T13:37:36.000Z",
+    "daysSinceCommit": 1884
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "archived",
+      "points": 70
+    },
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "Package no longer supported. Contact support@npmjs.com for more info.",
+      "at": "2014-11-07T18:17:52.473Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "npm",
+      "url": "https://www.npmjs.com/~npm"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "nomnom stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

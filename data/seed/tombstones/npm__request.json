@@ -1,0 +1,190 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "request"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "request",
+    "repo": "request",
+    "url": "https://github.com/request/request"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "request has been deprecated, see https://github.com/request/request/issues/3142",
+    "lastReleaseAt": "2020-02-11T16:35:36.122Z",
+    "daysSinceRelease": 2452,
+    "yearsActive": 15.769409085766979,
+    "dependents": 847768,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 10440128,
+    "downloadsTrend": 0.3863220649490088,
+    "repoUrl": "https://github.com/request/request",
+    "archived": false,
+    "pushedAt": "2024-08-14T00:09:41Z",
+    "openIssues": 145,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2020-02-11T23:39:46Z",
+    "_lastCommitSubject": "README: typo in deprecation message (#3268)",
+    "daysSinceCommit": 2451
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "request has been deprecated, see https://github.com/request/request/issues/3142",
+      "at": "2020-02-11T16:35:36.122Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "mikeal",
+      "commits": 623,
+      "url": "https://github.com/mikeal"
+    },
+    {
+      "handle": "simov",
+      "commits": 475,
+      "url": "https://github.com/simov"
+    },
+    {
+      "handle": "nylen",
+      "commits": 300,
+      "url": "https://github.com/nylen"
+    },
+    {
+      "handle": "greenkeeperio-bot",
+      "commits": 49,
+      "url": "https://github.com/greenkeeperio-bot"
+    },
+    {
+      "handle": "seanstrom",
+      "commits": 46,
+      "url": "https://github.com/seanstrom"
+    },
+    {
+      "handle": "FredKSchott",
+      "commits": 38,
+      "url": "https://github.com/FredKSchott"
+    },
+    {
+      "handle": "isaacs",
+      "commits": 32,
+      "url": "https://github.com/isaacs"
+    },
+    {
+      "handle": "eiriksm",
+      "commits": 21,
+      "url": "https://github.com/eiriksm"
+    },
+    {
+      "handle": "lalitkapoor",
+      "commits": 15,
+      "url": "https://github.com/lalitkapoor"
+    },
+    {
+      "handle": "mscdex",
+      "commits": 15,
+      "url": "https://github.com/mscdex"
+    },
+    {
+      "handle": "mmalecki",
+      "commits": 14,
+      "url": "https://github.com/mmalecki"
+    },
+    {
+      "handle": "ahmadnassri",
+      "commits": 13,
+      "url": "https://github.com/ahmadnassri"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "request stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "lastWords": "README: typo in deprecation message (#3268)",
+    "lastWordsUrl": "https://github.com/request/request",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "undici",
+      "reason": "Officially recommended successor to request",
+      "url": "https://github.com/nodejs/undici",
+      "source": "curated"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "node-fetch",
+      "reason": "Fetch API surface for Node",
+      "url": "https://github.com/node-fetch/node-fetch",
+      "source": "curated"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "axios",
+      "reason": "Widely maintained HTTP client",
+      "url": "https://github.com/axios/axios",
+      "source": "curated"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

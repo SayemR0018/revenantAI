@@ -51,12 +51,13 @@ The one closed model (Ultramarine) appears only as a clearly labelled comparison
 
 ```bash
 npm install
+npm run seed           # optional: refresh data/seed/cementerio.json & showcase tombstones
 npm run dev            # http://localhost:3000
 npx tsx temporal/worker.ts        # optional: durable scans (needs TEMPORAL_*)
 cd ml && pip install -r requirements.txt && uvicorn ml.app:app   # optional: TabPFN
 ```
 
-No keys needed for the core demo — ecosyste.ms + registry data carry it. See `.env.example` for the full partner map.
+Pre-warmed seed data (`data/seed/cementerio.json` with 180 unique packages and `data/seed/tombstones/*.json` for 20 showcase packages) ships in-repo so a brand-new checkout works immediately with zero env vars. No keys needed for the core demo — ecosyste.ms + registry data carry it. See `.env.example` for the full partner map.
 
 ## CLI & Action
 

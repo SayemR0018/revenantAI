@@ -1,0 +1,160 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "bower"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "bower",
+    "repo": "bower",
+    "url": "https://github.com/bower/bower"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2022-03-14T15:41:33.586Z",
+    "daysSinceRelease": 1690,
+    "yearsActive": 14.148672492648364,
+    "dependents": 167938,
+    "license": "MIT",
+    "weeklyDownloads": 309389,
+    "downloadsTrend": 0.575667220988243,
+    "repoUrl": "https://github.com/bower/bower",
+    "archived": false,
+    "pushedAt": "2024-10-13T10:45:05Z",
+    "openIssues": 15,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2024-10-13T10:45:04Z",
+    "_lastCommitSubject": "CI: add Node.js 18, 20 & 22 (#2630)",
+    "daysSinceCommit": 746
+  },
+  "score": 65,
+  "band": "haunted",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "commit",
+      "label": "No commits in 2+ years",
+      "detail": "Last commit 2024-10-13T10:45:04Z",
+      "url": "https://github.com/bower/bower",
+      "at": "2024-10-13T10:45:04Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "satazor",
+      "commits": 1327,
+      "url": "https://github.com/satazor"
+    },
+    {
+      "handle": "sheerun",
+      "commits": 556,
+      "url": "https://github.com/sheerun"
+    },
+    {
+      "handle": "sindresorhus",
+      "commits": 130,
+      "url": "https://github.com/sindresorhus"
+    },
+    {
+      "handle": "wibblymat",
+      "commits": 76,
+      "url": "https://github.com/wibblymat"
+    },
+    {
+      "handle": "svnlto",
+      "commits": 58,
+      "url": "https://github.com/svnlto"
+    },
+    {
+      "handle": "fat",
+      "commits": 28,
+      "url": "https://github.com/fat"
+    },
+    {
+      "handle": "necolas",
+      "commits": 27,
+      "url": "https://github.com/necolas"
+    },
+    {
+      "handle": "josh",
+      "commits": 23,
+      "url": "https://github.com/josh"
+    },
+    {
+      "handle": "desandro",
+      "commits": 23,
+      "url": "https://github.com/desandro"
+    },
+    {
+      "handle": "paulirish",
+      "commits": 20,
+      "url": "https://github.com/paulirish"
+    },
+    {
+      "handle": "marcooliveira",
+      "commits": 20,
+      "url": "https://github.com/marcooliveira"
+    },
+    {
+      "handle": "benschwarz",
+      "commits": 19,
+      "url": "https://github.com/benschwarz"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "slow_decay",
+    "epitaph": "bower did not die — it faded, release by release, until the pulse went flat.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "lastWords": "CI: add Node.js 18, 20 & 22 (#2630)",
+    "lastWordsUrl": "https://github.com/bower/bower",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

@@ -1,0 +1,153 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "lodash"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "lodash",
+    "repo": "lodash",
+    "url": "https://github.com/lodash/lodash"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-04-01T21:01:20.458Z",
+    "daysSinceRelease": 210,
+    "yearsActive": 14.516385402438715,
+    "dependents": 1936033,
+    "license": "MIT",
+    "weeklyDownloads": 141241425,
+    "downloadsTrend": 0.954876741987472,
+    "repoUrl": "https://github.com/lodash/lodash",
+    "archived": false,
+    "pushedAt": "2026-10-01T23:04:09Z",
+    "openIssues": 123,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2026-09-11T18:02:53Z",
+    "_lastCommitSubject": "ci: update actions to latest versions (#6279)",
+    "daysSinceCommit": 48
+  },
+  "score": 14,
+  "band": "alive",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "daysSinceRelease",
+      "points": 4
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [],
+  "contributors": [
+    {
+      "handle": "jdalton",
+      "commits": 6569,
+      "url": "https://github.com/jdalton"
+    },
+    {
+      "handle": "jashkenas",
+      "commits": 423,
+      "url": "https://github.com/jashkenas"
+    },
+    {
+      "handle": "greenkeeperio-bot",
+      "commits": 46,
+      "url": "https://github.com/greenkeeperio-bot"
+    },
+    {
+      "handle": "bnjmnt4n",
+      "commits": 45,
+      "url": "https://github.com/bnjmnt4n"
+    },
+    {
+      "handle": "braddunbar",
+      "commits": 24,
+      "url": "https://github.com/braddunbar"
+    },
+    {
+      "handle": "ratbeard",
+      "commits": 22,
+      "url": "https://github.com/ratbeard"
+    },
+    {
+      "handle": "ryantenney",
+      "commits": 22,
+      "url": "https://github.com/ryantenney"
+    },
+    {
+      "handle": "UlisesGascon",
+      "commits": 19,
+      "url": "https://github.com/UlisesGascon"
+    },
+    {
+      "handle": "megawac",
+      "commits": 19,
+      "url": "https://github.com/megawac"
+    },
+    {
+      "handle": "jfmengels",
+      "commits": 18,
+      "url": "https://github.com/jfmengels"
+    },
+    {
+      "handle": "mathiasbynens",
+      "commits": 16,
+      "url": "https://github.com/mathiasbynens"
+    },
+    {
+      "handle": "jonchurch",
+      "commits": 12,
+      "url": "https://github.com/jonchurch"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "alive",
+    "epitaph": "lodash still has a pulse. Long may it commit.",
+    "evidenceIds": [],
+    "lastWords": "ci: update actions to latest versions (#6279)",
+    "lastWordsUrl": "https://github.com/lodash/lodash",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "lodash/lodash",
+      "reason": "Active fork — pushed 27d ago",
+      "url": "https://github.com/lodash/lodash",
+      "source": "active_fork"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

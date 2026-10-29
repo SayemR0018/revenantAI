@@ -1,0 +1,117 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "istanbul"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "gotwarlost",
+    "repo": "istanbul",
+    "url": "https://github.com/gotwarlost/istanbul"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "This module is no longer maintained, try this instead:\n  npm i nyc\nVisit https://istanbul.js.org/integrations for other alternatives.",
+    "lastReleaseAt": "2016-08-21T20:02:09.468Z",
+    "daysSinceRelease": 3720,
+    "yearsActive": 14.12782426388572,
+    "dependents": 240976,
+    "license": "BSD-3-Clause",
+    "weeklyDownloads": 671655,
+    "downloadsTrend": 0.3920464685628732,
+    "repoUrl": "https://github.com/gotwarlost/istanbul",
+    "archived": true,
+    "pushedAt": "2024-12-08T15:50:22.000Z",
+    "openIssues": 399,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2024-12-08T15:50:22.000Z",
+    "daysSinceCommit": 690
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "archived",
+      "points": 70
+    },
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 30
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "This module is no longer maintained, try this instead:\n  npm i nyc\nVisit https://istanbul.js.org/integrations for other alternatives.",
+      "at": "2016-08-21T20:02:09.468Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "bcoe",
+      "url": "https://www.npmjs.com/~bcoe"
+    },
+    {
+      "handle": "davglass",
+      "url": "https://www.npmjs.com/~davglass"
+    },
+    {
+      "handle": "gotwarlost",
+      "url": "https://www.npmjs.com/~gotwarlost"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "istanbul stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

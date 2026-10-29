@@ -1,0 +1,129 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "coffee-script"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "jashkenas",
+    "repo": "coffeescript",
+    "url": "https://github.com/jashkenas/coffeescript"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "CoffeeScript on NPM has moved to \"coffeescript\" (no hyphen)",
+    "lastReleaseAt": "2017-07-17T06:55:16.236Z",
+    "daysSinceRelease": 3391,
+    "yearsActive": 15.846701332072147,
+    "dependents": 331984,
+    "license": "MIT",
+    "weeklyDownloads": 623621,
+    "downloadsTrend": 0.3600845500063659,
+    "repoUrl": "https://github.com/jashkenas/coffeescript",
+    "archived": false,
+    "pushedAt": "2026-10-25T18:33:28.000Z",
+    "openIssues": 98,
+    "language": "CoffeeScript",
+    "commitsPerWeek": [
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80,
+      81,
+      79,
+      80
+    ],
+    "lastCommitAt": "2026-10-25T18:33:28.000Z",
+    "daysSinceCommit": 4
+  },
+  "score": 84,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    },
+    {
+      "feature": "recentActivity",
+      "points": -10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "CoffeeScript on NPM has moved to \"coffeescript\" (no hyphen)",
+      "at": "2017-07-17T06:55:16.236Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "lydell",
+      "url": "https://www.npmjs.com/~lydell"
+    },
+    {
+      "handle": "jashkenas",
+      "url": "https://www.npmjs.com/~jashkenas"
+    },
+    {
+      "handle": "geoffreybooth",
+      "url": "https://www.npmjs.com/~geoffreybooth"
+    },
+    {
+      "handle": "michaelficarra",
+      "url": "https://www.npmjs.com/~michaelficarra"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "coffee-script stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "jashkenas/coffeescript",
+      "reason": "Active fork — pushed 4d ago",
+      "url": "https://github.com/jashkenas/coffeescript",
+      "source": "active_fork"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

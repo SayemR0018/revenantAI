@@ -1,0 +1,144 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "request-promise"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "request",
+    "repo": "request-promise",
+    "url": "https://github.com/request/request-promise"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "request-promise has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142",
+    "lastReleaseAt": "2020-07-22T01:41:07.199Z",
+    "daysSinceRelease": 2290,
+    "yearsActive": 13.067929348144345,
+    "dependents": 91418,
+    "license": "ISC",
+    "weeklyDownloads": 931912,
+    "downloadsTrend": 0.39007287458374235,
+    "repoUrl": "https://github.com/request/request-promise",
+    "archived": false,
+    "pushedAt": "2024-01-31T13:39:40.000Z",
+    "openIssues": 66,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2024-01-31T13:39:40.000Z",
+    "daysSinceCommit": 1002
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "request-promise has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142",
+      "at": "2020-07-22T01:41:07.199Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "mikeal",
+      "url": "https://www.npmjs.com/~mikeal"
+    },
+    {
+      "handle": "nylen",
+      "url": "https://www.npmjs.com/~nylen"
+    },
+    {
+      "handle": "simov",
+      "url": "https://www.npmjs.com/~simov"
+    },
+    {
+      "handle": "analog-nico",
+      "url": "https://www.npmjs.com/~analog-nico"
+    },
+    {
+      "handle": "request",
+      "url": "https://www.npmjs.com/~request"
+    },
+    {
+      "handle": "tyabonil",
+      "url": "https://www.npmjs.com/~tyabonil"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "request-promise stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "undici",
+      "reason": "Successor path after request deprecation",
+      "url": "https://github.com/nodejs/undici",
+      "source": "curated"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "it",
+      "reason": "Named in the official deprecation notice",
+      "source": "registry_pointer",
+      "weeklyDownloads": 16329
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

@@ -1,0 +1,176 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "tslint"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "palantir",
+    "repo": "tslint",
+    "url": "https://github.com/palantir/tslint"
+  },
+  "vitals": {
+    "deprecated": true,
+    "deprecationMessage": "TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/4534 for more information.",
+    "lastReleaseAt": "2020-07-31T17:25:07.479Z",
+    "daysSinceRelease": 2281,
+    "yearsActive": 13.255886159245316,
+    "dependents": 634206,
+    "license": "Apache-2.0",
+    "weeklyDownloads": 1374897,
+    "downloadsTrend": 0.36402631617617176,
+    "repoUrl": "https://github.com/palantir/tslint",
+    "archived": true,
+    "pushedAt": "2021-03-25T15:41:38Z",
+    "openIssues": 1,
+    "language": "TypeScript",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2021-03-25T15:41:38Z",
+    "_lastCommitSubject": "docs(README): point to typescript-eslint roadmap",
+    "daysSinceCommit": 2044
+  },
+  "score": 100,
+  "band": "departed",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "archived",
+      "points": 70
+    },
+    {
+      "feature": "deprecated",
+      "points": 65
+    },
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "downloadsTrend",
+      "points": 4
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "registry",
+      "label": "Officially deprecated",
+      "detail": "TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/4534 for more information.",
+      "at": "2020-07-31T17:25:07.479Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "ashwinr",
+      "commits": 473,
+      "url": "https://github.com/ashwinr"
+    },
+    {
+      "handle": "adidahiya",
+      "commits": 450,
+      "url": "https://github.com/adidahiya"
+    },
+    {
+      "handle": "ajafff",
+      "commits": 253,
+      "url": "https://github.com/ajafff"
+    },
+    {
+      "handle": "andy-hanson",
+      "commits": 188,
+      "url": "https://github.com/andy-hanson"
+    },
+    {
+      "handle": "gscshoyru",
+      "commits": 172,
+      "url": "https://github.com/gscshoyru"
+    },
+    {
+      "handle": "nchen63",
+      "commits": 144,
+      "url": "https://github.com/nchen63"
+    },
+    {
+      "handle": "jkillian",
+      "commits": 119,
+      "url": "https://github.com/jkillian"
+    },
+    {
+      "handle": "DickvdBrink",
+      "commits": 49,
+      "url": "https://github.com/DickvdBrink"
+    },
+    {
+      "handle": "YuichiNukiyama",
+      "commits": 20,
+      "url": "https://github.com/YuichiNukiyama"
+    },
+    {
+      "handle": "IllusionMH",
+      "commits": 19,
+      "url": "https://github.com/IllusionMH"
+    },
+    {
+      "handle": "leeavital",
+      "commits": 19,
+      "url": "https://github.com/leeavital"
+    },
+    {
+      "handle": "ChrisMBarr",
+      "commits": 18,
+      "url": "https://github.com/ChrisMBarr"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "deprecated_official",
+    "epitaph": "tslint stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "lastWords": "docs(README): point to typescript-eslint roadmap",
+    "lastWordsUrl": "https://github.com/palantir/tslint",
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "eslint",
+      "reason": "TSLint was deprecated in favor of ESLint + typescript-eslint",
+      "url": "https://github.com/eslint/eslint",
+      "source": "curated"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

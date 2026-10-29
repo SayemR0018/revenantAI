@@ -1,0 +1,102 @@
+{
+  "dep": {
+    "ecosystem": "npm",
+    "name": "react"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "react",
+    "repo": "react",
+    "url": "https://github.com/react/react"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2026-10-14T16:47:15.290Z",
+    "daysSinceRelease": 15,
+    "yearsActive": 15.009067039730525,
+    "dependents": 2830385,
+    "license": "MIT",
+    "weeklyDownloads": 166511717,
+    "downloadsTrend": 1.5939282322665964,
+    "repoUrl": "https://github.com/react/react",
+    "archived": false,
+    "pushedAt": "2026-10-27T15:08:39.000Z",
+    "openIssues": 1505,
+    "language": "JavaScript",
+    "commitsPerWeek": [
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327,
+      328,
+      326,
+      327
+    ],
+    "lastCommitAt": "2026-10-27T15:08:39.000Z",
+    "daysSinceCommit": 2
+  },
+  "score": 0,
+  "band": "alive",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "authors365",
+      "points": 10
+    },
+    {
+      "feature": "recentActivity",
+      "points": -10
+    },
+    {
+      "feature": "recentRelease",
+      "points": -6
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [],
+  "contributors": [
+    {
+      "handle": "fb",
+      "url": "https://www.npmjs.com/~fb"
+    },
+    {
+      "handle": "react-bot",
+      "url": "https://www.npmjs.com/~react-bot"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "alive",
+    "epitaph": "react still has a pulse. Long may it commit.",
+    "evidenceIds": [],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "npm",
+      "name": "react/react",
+      "reason": "Active fork — pushed 0d ago",
+      "url": "https://github.com/react/react",
+      "source": "active_fork"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

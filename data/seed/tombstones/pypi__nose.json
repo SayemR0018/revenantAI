@@ -1,0 +1,116 @@
+{
+  "dep": {
+    "ecosystem": "pypi",
+    "name": "nose"
+  },
+  "repo": {
+    "host": "github",
+    "owner": "nose-devs",
+    "repo": "nose",
+    "url": "https://github.com/nose-devs/nose"
+  },
+  "vitals": {
+    "deprecated": false,
+    "lastReleaseAt": "2015-06-02T09:12:40",
+    "daysSinceRelease": 4167,
+    "yearsActive": 15.87427726417725,
+    "dependents": 72099,
+    "license": "GNU LGPL",
+    "weeklyDownloads": 1400175,
+    "repoUrl": "https://github.com/nose-devs/nose",
+    "archived": false,
+    "pushedAt": "2023-11-06T17:25:08.000Z",
+    "openIssues": 451,
+    "language": "Python",
+    "commitsPerWeek": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lastCommitAt": "2023-11-06T17:25:08.000Z",
+    "daysSinceCommit": 1088
+  },
+  "score": 65,
+  "band": "haunted",
+  "confidence": "high",
+  "contributions": [
+    {
+      "feature": "daysSinceCommit",
+      "points": 40
+    },
+    {
+      "feature": "daysSinceRelease",
+      "points": 15
+    },
+    {
+      "feature": "authors365",
+      "points": 10
+    }
+  ],
+  "model": "heuristic-v1",
+  "evidence": [
+    {
+      "kind": "commit",
+      "label": "No commits in 2+ years",
+      "detail": "Last commit 2023-11-06T17:25:08.000Z",
+      "url": "https://github.com/nose-devs/nose",
+      "at": "2023-11-06T17:25:08.000Z",
+      "id": "ev1"
+    }
+  ],
+  "contributors": [
+    {
+      "handle": "jpellerin",
+      "url": "https://pypi.org/user/jpellerin/"
+    },
+    {
+      "handle": "kumar303",
+      "url": "https://pypi.org/user/kumar303/"
+    },
+    {
+      "handle": "jszakmeister",
+      "url": "https://pypi.org/user/jszakmeister/"
+    }
+  ],
+  "autopsy": {
+    "causeOfDeath": "slow_decay",
+    "epitaph": "nose did not die — it faded, release by release, until the pulse went flat.",
+    "evidenceIds": [
+      "ev1"
+    ],
+    "generatedBy": "fallback-rules"
+  },
+  "successors": [
+    {
+      "ecosystem": "pypi",
+      "name": "pytest",
+      "reason": "The standard modern Python test runner",
+      "url": "https://github.com/pytest-dev/pytest",
+      "source": "curated"
+    }
+  ],
+  "snapshotAt": "2026-10-29T19:14:36.786Z"
+}

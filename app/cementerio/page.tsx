@@ -1,32 +1,14 @@
-import { promises as fs } from 'fs';
-import path from 'path';
 import Link from 'next/link';
 import { ScoredDep, BAND_LABEL } from '@/lib/types';
+import { loadCementerioIndex } from '@/lib/cementerio';
 
 export const metadata = { title: 'Cementerio — the Graveyard Index' };
 export const dynamic = 'force-dynamic';
 
-interface Row {
-  dep: { ecosystem: string; name: string };
-  score: number;
-  band: string;
-  vitals: { daysSinceCommit?: number; weeklyDownloads?: number | null; archived?: boolean; deprecated?: boolean };
-  epitaph?: string;
-  error?: string;
-}
-
-async function loadIndex(): Promise<{ generatedAt: string; rows: Row[] }> {
-  try {
-    const raw = await fs.readFile(path.join(process.cwd(), 'data', 'cementerio.json'), 'utf8');
-    return JSON.parse(raw);
-  } catch {
-    return { generatedAt: '', rows: [] };
-  }
-}
-
 export default async function Cementerio({ searchParams }: { searchParams: Promise<{ band?: string; q?: string }> }) {
   const { band, q } = await searchParams;
-  const { generatedAt, rows } = await loadIndex();
+  const { generatedAt, isSeed, rows } = await loadCementerioIndex();
+  const snapDate = generatedAt ? generatedAt.slice(0, 10) : '';
   const filtered = rows.filter(
     (r) => (!band || r.band === band) && (!q || r.dep.name.toLowerCase().includes(q.toLowerCase())),
   );
@@ -34,10 +16,17 @@ export default async function Cementerio({ searchParams }: { searchParams: Promi
 
   return (
     <div>
-      <h1 className="font-display text-4xl">Cementerio</h1>
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h1 className="font-display text-4xl">Cementerio</h1>
+        {snapDate && (
+          <span className="font-mono-data rounded border border-[#35305c] bg-[#14112b] px-2.5 py-1 text-xs" style={{ color: 'var(--violet-mute)' }}>
+            {isSeed ? `snapshot from ${snapDate}` : `live index · ${snapDate}`} · {rows.length} packages
+          </span>
+        )}
+      </div>
       <p className="mt-2 max-w-2xl" style={{ color: 'var(--bone-dim)' }}>
         The Graveyard Index — the most-depended-on packages in npm and PyPI, ranked by ghost risk.
-        Refreshed nightly by the Temporal cron job. {generatedAt && `Snapshot ${new Date(generatedAt).toLocaleDateString()}, ${rows.length} packages.`}
+        Refreshed nightly by the Temporal cron job.
       </p>
 
       <form className="mt-6 flex flex-wrap gap-2" method="get">

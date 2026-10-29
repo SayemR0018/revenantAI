@@ -14,11 +14,17 @@ interface EvalResults {
 }
 
 async function loadEval(): Promise<EvalResults | null> {
-  try {
-    return JSON.parse(await fs.readFile(path.join(process.cwd(), 'data', 'eval-results.json'), 'utf8'));
-  } catch {
-    return null;
+  for (const rel of [
+    ['data', 'eval-results.json'],
+    ['data', 'seed', 'eval-results.json'],
+  ]) {
+    try {
+      return JSON.parse(await fs.readFile(path.join(process.cwd(), ...rel), 'utf8'));
+    } catch {
+      /* next */
+    }
   }
+  return null;
 }
 
 export default async function SciencePage() {
