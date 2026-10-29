@@ -69,6 +69,12 @@ export async function POST(req: NextRequest) {
 
     if (!deps.length) return NextResponse.json({ error: 'no dependencies found in input' }, { status: 422 });
     const capped = deps.slice(0, 200);
+    const manifestSpecs: Record<string, string> = {};
+    for (const d of capped) {
+      if (d.versionSpec) {
+        manifestSpecs[`${d.ecosystem}/${d.name}`] = d.versionSpec;
+      }
+    }
 
     const report: Report & { _deps?: DepRef[] } = {
       id: randomUUID().slice(0, 8),
@@ -80,6 +86,7 @@ export async function POST(req: NextRequest) {
       results: [],
       summary: { total: capped.length, alive: 0, fading: 0, haunted: 0, departed: 0, unknown: 0 },
       isPublic: body.isPublic === true,
+      manifestSpecs,
       _deps: capped,
     };
     await saveReport(report as Report);
