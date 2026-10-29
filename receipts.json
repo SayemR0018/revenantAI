@@ -1,120 +1,192 @@
 {
-  "generatedAt": "2026-10-27T06:13:57.044Z",
+  "generatedAt": "2026-10-29T19:45:02.395Z",
   "baseUrl": "http://localhost:3000",
   "checks": [
     {
       "id": "gemma",
-      "partner": "Gemma (AI Studio)",
+      "partner": "Gemma (Google AI Studio)",
+      "category": "Open-Weight AI & Agents",
       "status": "SKIPPED",
-      "notes": "Set GOOGLE_API_KEY to enable; rule-based fallback epitaphs until then."
+      "role": "Primary open-weight model for dependency autopsies, grounded seances, and Arena bouts (rule-based fallback active when unconfigured).",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/llm.ts",
+      "enableHint": "Set GOOGLE_API_KEY in .env.local or Render environment.",
+      "notes": "Rule-based fallback epitaphs and corpus seances active until GOOGLE_API_KEY is set."
     },
     {
       "id": "tabpfn",
       "partner": "TabPFN (Prior Labs)",
+      "category": "Open-Weight AI & Agents",
       "status": "SKIPPED",
-      "notes": "Set ML_SERVICE_URL + run ml/ (TABPFN_MODE=api|local). Heuristic scorer is active meanwhile."
+      "role": "Open-weight tabular foundation model predicting P(abandoned within 12m) from 24 pre-T0 repository signals (transparent heuristic-v1 active when unconfigured).",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/ml/app.py",
+      "enableHint": "Run ml/ FastAPI service and set ML_SERVICE_URL + PRIORLABS_API_KEY.",
+      "notes": "Transparent heuristic-v1 scorer active until ML_SERVICE_URL is configured."
     },
     {
       "id": "tinker",
       "partner": "Tinker (Thinking Machines)",
+      "category": "Open-Weight AI & Agents",
       "status": "SKIPPED",
-      "notes": "Set TINKER_API_KEY, then run ml/tinker training. See docs/tinker-results.md."
+      "role": "Fine-tuned open-weight LoRA (Qwen3-8B) epitaph writer and evaluation harness.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/ml/tinker/train.py",
+      "enableHint": "Set TINKER_API_KEY and run python -m ml.tinker.train.",
+      "notes": "Training & evaluation pipeline in ml/tinker/; requires TINKER_API_KEY."
     },
     {
       "id": "mastra",
       "partner": "Mastra",
+      "category": "Open-Weight AI & Agents",
       "status": "PASS",
+      "role": "Open-source TypeScript agent framework powering AutopsyAgent, SeanceAgent, ResurrectionWorkflow, and the predictGhostScore tool.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/mastra/agents.ts",
       "notes": "Autopsy + seance agents and resurrection workflow in mastra/."
+    },
+    {
+      "id": "gemma-do",
+      "partner": "DigitalOcean (Gradient AI)",
+      "category": "Open-Weight AI & Agents",
+      "status": "SKIPPED",
+      "role": "Serverless open-weight inference provider (gemma-do) benchmarked against AI Studio.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/llm.ts",
+      "enableHint": "Set DO_MODEL_URL and DO_MODEL_TOKEN.",
+      "notes": "Serverless open-weight inference provider gemma-do."
+    },
+    {
+      "id": "backboard",
+      "partner": "Backboard",
+      "category": "Open-Weight AI & Agents",
+      "status": "SKIPPED",
+      "role": "Unified gateway running three open-weight models side by side in /arena.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/app/api/arena/route.ts",
+      "enableHint": "Set BACKBOARD_API_KEY.",
+      "notes": "One API key powers /arena across 3 open-weight models."
+    },
+    {
+      "id": "ultramarine",
+      "partner": "Ultramarine (closed baseline)",
+      "category": "Open-Weight AI & Agents",
+      "status": "SKIPPED",
+      "role": "Labelled closed-model baseline column in evaluation comparisons — never on the critical product path.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/llm.ts",
+      "enableHint": "Set ULTRAMARINE_API_KEY and ULTRAMARINE_BASE_URL.",
+      "notes": "Labelled baseline column in Tinker eval + arena. Never on product path."
+    },
+    {
+      "id": "ecosystems",
+      "partner": "ecosyste.ms (open data)",
+      "category": "Data, Durable Execution & Cloud",
+      "status": "PASS",
+      "role": "Open-data backbone resolving npm and PyPI packages to repositories, downloads, and maintainer activity without requiring an API key.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/ecosystems.ts",
+      "notes": "Package→repo resolution + activity signals, no key required."
     },
     {
       "id": "temporal",
       "partner": "Temporal",
+      "category": "Data, Durable Execution & Cloud",
       "status": "SKIPPED",
-      "notes": "Set TEMPORAL_ADDRESS + run temporal/worker.ts; in-process pipeline is the graceful fallback."
+      "role": "Durable ExhumeWorkflow with fan-out activities, rate-limit backoff, progress queries, and chaos recovery (in-process pipeline fallback active).",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/temporal/workflows.ts",
+      "enableHint": "Set TEMPORAL_ADDRESS and run npx tsx temporal/worker.ts.",
+      "notes": "In-process scan pipeline active; set TEMPORAL_ADDRESS for durable worker execution."
     },
     {
       "id": "mongodb",
       "partner": "MongoDB Atlas",
+      "category": "Data, Durable Execution & Cloud",
       "status": "SKIPPED",
-      "notes": "Set MONGODB_URI. File-store fallback active (data/store/)."
+      "role": "Persistent store for scan reports, tombstones, corpus chunks, and Arena votes (JSON file-store + seed snapshot fallback active).",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/store.ts",
+      "enableHint": "Set MONGODB_URI to a MongoDB Atlas cluster.",
+      "notes": "Local file-store and committed data/seed/ snapshot fallback active."
     },
     {
       "id": "tiger",
-      "partner": "Tiger Data",
+      "partner": "Tiger Data (Timescale / pgvector)",
+      "category": "Data, Durable Execution & Cloud",
       "status": "SKIPPED",
-      "notes": "Set DATABASE_URL (pgvector). Lexical retrieval fallback active."
+      "role": "Hybrid vector + full-text RRF retrieval over project READMEs/issues for grounded seances (lexical retrieval fallback active).",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/corpus.ts",
+      "enableHint": "Set DATABASE_URL to a Tiger Cloud Postgres instance.",
+      "notes": "Lexical corpus retrieval fallback active."
+    },
+    {
+      "id": "render",
+      "partner": "Render",
+      "category": "Data, Durable Execution & Cloud",
+      "status": "SKIPPED",
+      "role": "Cloud deployment blueprint (render.yaml) defining web, Temporal worker, FastAPI ML service, and nightly cron.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/render.yaml",
+      "enableHint": "Automatically PASS when running on Render (RENDER=true).",
+      "notes": "render.yaml blueprint: web + Temporal worker + ml private service + nightly cron."
+    },
+    {
+      "id": "copilot",
+      "partner": "GitHub Copilot & GitHub Actions",
+      "category": "Developer Workflow & Partner Integrations",
+      "status": "PASS",
+      "role": "Composite GitHub Action (action.yml) that comments on PRs introducing haunted dependencies, plus CI and nightly index workflows.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/action.yml",
+      "notes": "revenant-action composite + CI/nightly workflows."
+    },
+    {
+      "id": "entire",
+      "partner": "Entire",
+      "category": "Developer Workflow & Partner Integrations",
+      "status": "PASS",
+      "role": "Agent session provenance configuration (.entire/settings.json) tracked in-repository.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/.entire/settings.json",
+      "notes": ".entire/settings.json present; session checkpoints linked in README."
+    },
+    {
+      "id": "sentry",
+      "partner": "Sentry (agent tracing)",
+      "category": "Developer Workflow & Partner Integrations",
+      "status": "SKIPPED",
+      "role": "OpenTelemetry & agent instrumentation across Next.js server routes and LLM gateway calls.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/instrumentation.ts",
+      "enableHint": "Set SENTRY_DSN and NEXT_PUBLIC_SENTRY_DSN.",
+      "notes": "Agent spans for every tool + LLM call with latency/token/cost."
+    },
+    {
+      "id": "auth0",
+      "partner": "Auth0 for AI Agents",
+      "category": "Developer Workflow & Partner Integrations",
+      "status": "SKIPPED",
+      "role": "GitHub sign-in, Token Vault, and human approval gate before opening Resurrection pull requests.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/app/api/resurrect/route.ts",
+      "enableHint": "Set AUTH0_DOMAIN, AUTH0_CLIENT_ID, and AUTH0_CLIENT_SECRET.",
+      "notes": "GitHub sign-in, Token Vault, approval-gated PR writes."
     },
     {
       "id": "serpapi",
       "partner": "SerpApi",
+      "category": "Developer Workflow & Partner Integrations",
       "status": "SKIPPED",
+      "role": "Budget-gated obituary and living-successor discovery search for Haunted/Departed packages.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/successors.ts",
+      "enableHint": "Set SERPAPI_KEY.",
       "notes": "Obituary/successor search, budget-gated to Haunted/Departed packages."
     },
     {
       "id": "browserbase",
       "partner": "Browserbase (Stagehand)",
+      "category": "Developer Workflow & Partner Integrations",
       "status": "SKIPPED",
+      "role": "Extracts deprecation notices from archived documentation sites and Wayback snapshots.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/mastra/tools.ts",
+      "enableHint": "Set BROWSERBASE_API_KEY and BROWSERBASE_PROJECT_ID.",
       "notes": "Wayback + docs-site extraction for dead projects."
-    },
-    {
-      "id": "auth0",
-      "partner": "Auth0 for AI Agents",
-      "status": "SKIPPED",
-      "notes": "GitHub sign-in, Token Vault, approval-gated PR writes."
-    },
-    {
-      "id": "gemma-do",
-      "partner": "DigitalOcean (Gradient)",
-      "status": "SKIPPED",
-      "notes": "Serverless open-weight inference provider gemma-do, benchmarked vs AI Studio."
-    },
-    {
-      "id": "backboard",
-      "partner": "Backboard",
-      "status": "SKIPPED",
-      "notes": "One API key powers /arena across 3 open-weight models."
     },
     {
       "id": "elevenlabs",
       "partner": "ElevenLabs",
+      "category": "Developer Workflow & Partner Integrations",
       "status": "SKIPPED",
+      "role": "Stock-voice synthesis for seance replies (never clones a real person; browser SpeechSynthesis fallback active).",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/components/SeanceChat.tsx",
+      "enableHint": "Set ELEVENLABS_API_KEY.",
       "notes": "Voiced seance (stock voice, never cloned). Falls back to browser speech."
-    },
-    {
-      "id": "ultramarine",
-      "partner": "Ultramarine (closed baseline)",
-      "status": "SKIPPED",
-      "notes": "Labelled baseline column in Tinker eval + arena. Never on product path."
-    },
-    {
-      "id": "sentry",
-      "partner": "Sentry (agent tracing)",
-      "status": "SKIPPED",
-      "notes": "Agent spans for every tool + LLM call with latency/token/cost."
-    },
-    {
-      "id": "entire",
-      "partner": "Entire",
-      "status": "PASS",
-      "notes": ".entire/settings.json present; session checkpoints linked in README."
-    },
-    {
-      "id": "copilot",
-      "partner": "GitHub Copilot",
-      "status": "PASS",
-      "notes": "revenant-action composite + CI/nightly workflows + Copilot-assigned issues."
-    },
-    {
-      "id": "render",
-      "partner": "Render",
-      "status": "SKIPPED",
-      "notes": "render.yaml blueprint: web + Temporal worker + ml private service + nightly cron."
-    },
-    {
-      "id": "ecosystems",
-      "partner": "ecosyste.ms (open data)",
-      "status": "PASS",
-      "notes": "Package→repo resolution + activity signals, no key required."
     }
   ],
   "legend": {
