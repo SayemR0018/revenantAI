@@ -14,7 +14,7 @@
     "deprecationMessage": "Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.",
     "lastReleaseAt": "2023-05-20T06:03:42.097Z",
     "daysSinceRelease": 1258,
-    "yearsActive": 14.379125523550586,
+    "yearsActive": 14.379238185666845,
     "dependents": 894508,
     "license": "MIT",
     "weeklyDownloads": 743320,
@@ -155,13 +155,13 @@
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "node-sass stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "A cornerstone of the early modern web, node-sass empowered countless developers to bring style to their applications. Its legacy lives on in the tools that succeeded it.",
     "evidenceIds": [
       "ev1"
     ],
     "lastWords": "Mark end-of-life",
     "lastWordsUrl": "https://github.com/sass/node-sass",
-    "generatedBy": "fallback-rules"
+    "generatedBy": "gemma-aistudio/gemma-4-31b-it"
   },
   "successors": [
     {
@@ -179,5 +179,5 @@
       "weeklyDownloads": 127153144
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

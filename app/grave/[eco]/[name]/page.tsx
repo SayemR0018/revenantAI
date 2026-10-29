@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTombstone } from '@/lib/tombstones';
@@ -111,7 +112,10 @@ const GLOW_COLOR: Record<string, string> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { eco, name } = await params;
+  if (eco !== 'npm' && eco !== 'pypi') notFound();
   const n = decodeURIComponent(name);
+  const t = await getTombstone(eco as Ecosystem, n);
+  if (!t) notFound();
   const ogImg = `/api/og/${eco}/${encodeURIComponent(n)}`;
   return {
     title: `${n} — tombstone`,
@@ -497,7 +501,16 @@ function Tombstone({ t }: { t: ScoredDep }) {
       <div className="mt-8 grid items-start gap-8 lg:grid-cols-2">
         <SeanceChat eco={t.dep.ecosystem} name={t.dep.name} />
         <div className="space-y-6">
-          <SupportLinks repoUrl={v.repoUrl} />
+          <Suspense
+            fallback={
+              <div className="card flex items-center gap-3 p-6 text-xs" style={{ color: 'var(--violet-mute)' }}>
+                <div className="candle" aria-hidden="true" />
+                <span>Lighting the candles for maintainer support links…</span>
+              </div>
+            }
+          >
+            <SupportLinks repoUrl={v.repoUrl} />
+          </Suspense>
           <TombstoneShare
             eco={t.dep.ecosystem}
             name={t.dep.name}

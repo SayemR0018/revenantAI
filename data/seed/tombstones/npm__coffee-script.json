@@ -14,45 +14,46 @@
     "deprecationMessage": "CoffeeScript on NPM has moved to \"coffeescript\" (no hyphen)",
     "lastReleaseAt": "2017-07-17T06:55:16.236Z",
     "daysSinceRelease": 3391,
-    "yearsActive": 15.846701332072147,
+    "yearsActive": 15.846815761369687,
     "dependents": 331984,
     "license": "MIT",
     "weeklyDownloads": 623621,
     "downloadsTrend": 0.3600845500063659,
     "repoUrl": "https://github.com/jashkenas/coffeescript",
     "archived": false,
-    "pushedAt": "2026-10-25T18:33:28.000Z",
+    "pushedAt": "2026-10-25T18:33:28Z",
     "openIssues": 98,
     "language": "CoffeeScript",
     "commitsPerWeek": [
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80,
-      81,
-      79,
-      80
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
     ],
-    "lastCommitAt": "2026-10-25T18:33:28.000Z",
+    "lastCommitAt": "2026-10-25T18:33:28Z",
+    "_lastCommitSubject": "Fix Windows invocation parsing test spawn (#5508)",
     "daysSinceCommit": 4
   },
   "score": 84,
@@ -92,29 +93,75 @@
   ],
   "contributors": [
     {
-      "handle": "lydell",
-      "url": "https://www.npmjs.com/~lydell"
-    },
-    {
       "handle": "jashkenas",
-      "url": "https://www.npmjs.com/~jashkenas"
-    },
-    {
-      "handle": "geoffreybooth",
-      "url": "https://www.npmjs.com/~geoffreybooth"
+      "commits": 2356,
+      "url": "https://github.com/jashkenas"
     },
     {
       "handle": "michaelficarra",
-      "url": "https://www.npmjs.com/~michaelficarra"
+      "commits": 474,
+      "url": "https://github.com/michaelficarra"
+    },
+    {
+      "handle": "GeoffreyBooth",
+      "commits": 460,
+      "url": "https://github.com/GeoffreyBooth"
+    },
+    {
+      "handle": "satyr",
+      "commits": 166,
+      "url": "https://github.com/satyr"
+    },
+    {
+      "handle": "lydell",
+      "commits": 117,
+      "url": "https://github.com/lydell"
+    },
+    {
+      "handle": "helixbass",
+      "commits": 113,
+      "url": "https://github.com/helixbass"
+    },
+    {
+      "handle": "TrevorBurnham",
+      "commits": 68,
+      "url": "https://github.com/TrevorBurnham"
+    },
+    {
+      "handle": "geraldalewis",
+      "commits": 53,
+      "url": "https://github.com/geraldalewis"
+    },
+    {
+      "handle": "epidemian",
+      "commits": 49,
+      "url": "https://github.com/epidemian"
+    },
+    {
+      "handle": "xixixao",
+      "commits": 46,
+      "url": "https://github.com/xixixao"
+    },
+    {
+      "handle": "zdenko",
+      "commits": 43,
+      "url": "https://github.com/zdenko"
+    },
+    {
+      "handle": "alubbe",
+      "commits": 39,
+      "url": "https://github.com/alubbe"
     }
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "coffee-script stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "A pioneer that brought elegance and accessibility to the early JavaScript ecosystem. Its legacy continues through the evolution of the language it helped shape.",
     "evidenceIds": [
       "ev1"
     ],
-    "generatedBy": "fallback-rules"
+    "lastWords": "Fix Windows invocation parsing test spawn (#5508)",
+    "lastWordsUrl": "https://github.com/jashkenas/coffeescript",
+    "generatedBy": "gemma-aistudio/gemma-4-31b-it"
   },
   "successors": [
     {
@@ -125,5 +172,5 @@
       "source": "active_fork"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

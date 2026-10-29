@@ -13,7 +13,7 @@
     "deprecated": false,
     "lastReleaseAt": "2022-03-14T15:41:33.586Z",
     "daysSinceRelease": 1690,
-    "yearsActive": 14.148672492648364,
+    "yearsActive": 14.148814101230766,
     "dependents": 167938,
     "license": "MIT",
     "weeklyDownloads": 309389,
@@ -147,14 +147,14 @@
   ],
   "autopsy": {
     "causeOfDeath": "slow_decay",
-    "epitaph": "bower did not die — it faded, release by release, until the pulse went flat.",
+    "epitaph": "A venerable guide through the early days of frontend package management. Its contributions helped build the foundation upon which the modern web stands.",
     "evidenceIds": [
       "ev1"
     ],
     "lastWords": "CI: add Node.js 18, 20 & 22 (#2630)",
     "lastWordsUrl": "https://github.com/bower/bower",
-    "generatedBy": "fallback-rules"
+    "generatedBy": "gemma-aistudio/gemma-4-26b-a4b-it"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:28:04.491Z"
 }

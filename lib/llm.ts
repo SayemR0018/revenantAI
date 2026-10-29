@@ -31,7 +31,11 @@ const PROVIDERS: Record<string, ProviderDef> = {
     id: 'gemma-aistudio',
     baseUrl: () => 'https://generativelanguage.googleapis.com/v1beta/openai',
     apiKey: () => process.env.GOOGLE_API_KEY || process.env.GEMMA_API_KEY,
-    model: () => process.env.GEMMA_MODEL || 'gemma-3-27b-it',
+    model: () => {
+      const m = process.env.GEMMA_MODEL;
+      if (!m || m === 'gemma-3-27b-it') return 'gemma-4-31b-it';
+      return m;
+    },
   },
   'gemma-do': {
     id: 'gemma-do',
@@ -88,41 +92,67 @@ export function providerFor(task: Task): ProviderDef | null {
   return null;
 }
 
-export async function chat(spec: string, messages: ChatMsg[], opts: { temperature?: number; maxTokens?: number; json?: boolean } = {}): Promise<LlmResult> {
+function normalizeMessagesForGemma(messages: ChatMsg[]): ChatMsg[] {
+  const sys = messages.filter((m) => m.role === 'system').map((m) => m.content).join('\n');
+  const rest = messages.filter((m) => m.role !== 'system');
+  if (!rest.length) return [{ role: 'user', content: sys }];
+  const out = [...rest];
+  if (sys) {
+    out[0] = { ...out[0], content: `${sys}\n\n${out[0].content}` };
+  }
+  return out;
+}
+
+export async function chat(spec: string, messages: ChatMsg[], opts: { temperature?: number; maxTokens?: number; json?: boolean; modelOverride?: string } = {}): Promise<LlmResult> {
   const p = resolveProvider(spec);
   const base = p.baseUrl();
   const key = p.apiKey();
   if (!base || !key) throw new Error(`provider ${spec} not configured`);
   const t0 = Date.now();
+  const modelName = opts.modelOverride || p.model();
+  const isGemma = modelName.toLowerCase().includes('gemma');
   const res = await fetch(`${base.replace(/\/$/, '')}/chat/completions`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', authorization: `Bearer ${key}` },
     body: JSON.stringify({
-      model: p.model(),
-      messages,
+      model: modelName,
+      messages: isGemma ? normalizeMessagesForGemma(messages) : messages,
       temperature: opts.temperature ?? 0.4,
-      max_tokens: opts.maxTokens ?? 800,
-      ...(opts.json ? { response_format: { type: 'json_object' } } : {}),
+      max_tokens: opts.maxTokens ?? 2048,
+      ...(opts.json && !isGemma ? { response_format: { type: 'json_object' } } : {}),
     }),
     signal: AbortSignal.timeout(60_000),
   });
   if (!res.ok) throw new Error(`${spec} HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
   const j = (await res.json()) as { choices?: { message?: { content?: string } }[]; usage?: { prompt_tokens?: number; completion_tokens?: number } };
+  const rawContent = j.choices?.[0]?.message?.content ?? '';
+  const cleaned = rawContent.replace(/<thought>[\s\S]*?<\/thought>/gi, '').trim();
   return {
-    text: j.choices?.[0]?.message?.content ?? '',
+    text: cleaned,
     provider: p.id,
-    model: p.model(),
+    model: modelName,
     latencyMs: Date.now() - t0,
     usage: { prompt: j.usage?.prompt_tokens, completion: j.usage?.completion_tokens },
   };
 }
 
-/** Structured call: validate with zod, retry once on bad JSON, then return null. */
+/** Structured call: validate with zod, retry once on bad JSON or transient 5xx, then return null. */
 export async function chatJson<T>(spec: string, messages: ChatMsg[], schema: z.ZodType<T>): Promise<{ data: T | null; result?: LlmResult }> {
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      const r = await chat(spec, messages, { json: true, temperature: attempt ? 0.1 : 0.4 });
-      const text = r.text.replace(/^```(?:json)?\s*|\s*```$/g, '');
+      const modelOverride =
+        attempt === 1 && spec === 'gemma-aistudio' ? 'gemma-4-26b-a4b-it' : undefined;
+      const r = await chat(spec, messages, {
+        json: true,
+        temperature: attempt ? 0.1 : 0.4,
+        modelOverride,
+      });
+      let text = r.text.replace(/^```(?:json)?\s*|\s*```$/g, '').trim();
+      const firstBrace = text.indexOf('{');
+      const lastBrace = text.lastIndexOf('}');
+      if (firstBrace >= 0 && lastBrace > firstBrace) {
+        text = text.slice(firstBrace, lastBrace + 1);
+      }
       const parsed = schema.safeParse(JSON.parse(text));
       if (parsed.success) return { data: parsed.data, result: r };
     } catch {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T19:14:36.786Z",
+  "generatedAt": "2026-10-29T20:11:53.539Z",
   "count": 180,
   "rows": [
     {
@@ -18,7 +18,7 @@
         "deprecationMessage": "request has been deprecated, see https://github.com/request/request/issues/3142",
         "repoUrl": "https://github.com/request/request"
       },
-      "epitaph": "request stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "A foundational pillar of the Node.js ecosystem that carried the weight of the web for over a decade. Its legacy remains woven into the fabric of countless modern applications."
     },
     {
       "dep": {
@@ -36,7 +36,7 @@
         "deprecationMessage": "use String.prototype.padStart()",
         "repoUrl": "https://github.com/stevemao/left-pad"
       },
-      "epitaph": "left-pad stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "A humble utility that served the ecosystem with distinction for many years. Its purpose has been gracefully integrated into the language itself."
     },
     {
       "dep": {
@@ -54,7 +54,7 @@
         "deprecationMessage": "Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.",
         "repoUrl": "https://github.com/sass/node-sass"
       },
-      "epitaph": "node-sass stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "A cornerstone of the early modern web, node-sass empowered countless developers to bring style to their applications. Its legacy lives on in the tools that succeeded it."
     },
     {
       "dep": {
@@ -72,7 +72,7 @@
         "deprecationMessage": "TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/4534 for more information.",
         "repoUrl": "https://github.com/palantir/tslint"
       },
-      "epitaph": "tslint stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "TSLint paved the way for TypeScript linting and helped countless developers write cleaner code. It rests now, having gracefully passed the torch to a unified ecosystem."
     },
     {
       "dep": {
@@ -90,7 +90,7 @@
         "deprecationMessage": "gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5",
         "repoUrl": "https://github.com/gulpjs/gulp-util"
       },
-      "epitaph": "gulp-util stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "A foundational pillar of the early Gulp ecosystem that served the community with distinction. Its legacy lives on through the countless workflows it helped shape."
     },
     {
       "dep": {
@@ -162,7 +162,7 @@
         "deprecationMessage": "This module is no longer maintained, try this instead:\n  npm i nyc\nVisit https://istanbul.js.org/integrations for other alternatives.",
         "repoUrl": "https://github.com/gotwarlost/istanbul"
       },
-      "epitaph": "istanbul stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "A foundational pillar of JavaScript code coverage that shaped the industry for over a decade. Its legacy continues to empower developers through the tools it inspired."
     },
     {
       "dep": {
@@ -198,7 +198,7 @@
         "deprecationMessage": "CoffeeScript on NPM has moved to \"coffeescript\" (no hyphen)",
         "repoUrl": "https://github.com/jashkenas/coffeescript"
       },
-      "epitaph": "coffee-script stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care."
+      "epitaph": "A pioneer that brought elegance and accessibility to the early JavaScript ecosystem. Its legacy continues through the evolution of the language it helped shape."
     },
     {
       "dep": {
@@ -371,7 +371,7 @@
         "deprecated": false,
         "repoUrl": "https://github.com/bower/bower"
       },
-      "epitaph": "bower did not die — it faded, release by release, until the pulse went flat."
+      "epitaph": "A venerable guide through the early days of frontend package management. Its contributions helped build the foundation upon which the modern web stands."
     },
     {
       "dep": {
@@ -405,7 +405,7 @@
         "deprecated": false,
         "repoUrl": "https://github.com/nose-devs/nose"
       },
-      "epitaph": "nose did not die — it faded, release by release, until the pulse went flat."
+      "epitaph": "A pioneering force in Python testing that paved the way for a generation of developers. Its enduring influence remains woven into the fabric of the ecosystem it helped build."
     },
     {
       "dep": {

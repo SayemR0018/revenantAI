@@ -13,13 +13,13 @@
     "deprecated": false,
     "lastReleaseAt": "2015-06-02T09:12:40",
     "daysSinceRelease": 4167,
-    "yearsActive": 15.87427726417725,
+    "yearsActive": 15.874410421388191,
     "dependents": 72099,
     "license": "GNU LGPL",
     "weeklyDownloads": 1400175,
     "repoUrl": "https://github.com/nose-devs/nose",
     "archived": false,
-    "pushedAt": "2023-11-06T17:25:08.000Z",
+    "pushedAt": "2023-11-06T17:25:08Z",
     "openIssues": 451,
     "language": "Python",
     "commitsPerWeek": [
@@ -50,8 +50,9 @@
       0,
       0
     ],
-    "lastCommitAt": "2023-11-06T17:25:08.000Z",
-    "daysSinceCommit": 1088
+    "lastCommitAt": "2016-03-04T01:16:26Z",
+    "_lastCommitSubject": "Fix CHANGELOG.",
+    "daysSinceCommit": 3891
   },
   "score": 65,
   "band": "haunted",
@@ -74,34 +75,84 @@
   "evidence": [
     {
       "kind": "commit",
-      "label": "No commits in 2+ years",
-      "detail": "Last commit 2023-11-06T17:25:08.000Z",
+      "label": "No commits in 10+ years",
+      "detail": "Last commit 2016-03-04T01:16:26Z",
       "url": "https://github.com/nose-devs/nose",
-      "at": "2023-11-06T17:25:08.000Z",
+      "at": "2016-03-04T01:16:26Z",
       "id": "ev1"
     }
   ],
   "contributors": [
     {
       "handle": "jpellerin",
-      "url": "https://pypi.org/user/jpellerin/"
-    },
-    {
-      "handle": "kumar303",
-      "url": "https://pypi.org/user/kumar303/"
+      "commits": 369,
+      "url": "https://github.com/jpellerin"
     },
     {
       "handle": "jszakmeister",
-      "url": "https://pypi.org/user/jszakmeister/"
+      "commits": 203,
+      "url": "https://github.com/jszakmeister"
+    },
+    {
+      "handle": "kumar303",
+      "commits": 119,
+      "url": "https://github.com/kumar303"
+    },
+    {
+      "handle": "mitya57",
+      "commits": 14,
+      "url": "https://github.com/mitya57"
+    },
+    {
+      "handle": "liucougar",
+      "commits": 13,
+      "url": "https://github.com/liucougar"
+    },
+    {
+      "handle": "pzerbinos",
+      "commits": 12,
+      "url": "https://github.com/pzerbinos"
+    },
+    {
+      "handle": "jjlee",
+      "commits": 11,
+      "url": "https://github.com/jjlee"
+    },
+    {
+      "handle": "bukzor",
+      "commits": 9,
+      "url": "https://github.com/bukzor"
+    },
+    {
+      "handle": "domenkozar",
+      "commits": 6,
+      "url": "https://github.com/domenkozar"
+    },
+    {
+      "handle": "wiggin15",
+      "commits": 6,
+      "url": "https://github.com/wiggin15"
+    },
+    {
+      "handle": "bjmc",
+      "commits": 5,
+      "url": "https://github.com/bjmc"
+    },
+    {
+      "handle": "pjenvey",
+      "commits": 5,
+      "url": "https://github.com/pjenvey"
     }
   ],
   "autopsy": {
     "causeOfDeath": "slow_decay",
-    "epitaph": "nose did not die — it faded, release by release, until the pulse went flat.",
+    "epitaph": "A pioneering force in Python testing that paved the way for a generation of developers. Its enduring influence remains woven into the fabric of the ecosystem it helped build.",
     "evidenceIds": [
       "ev1"
     ],
-    "generatedBy": "fallback-rules"
+    "lastWords": "Fix CHANGELOG.",
+    "lastWordsUrl": "https://github.com/nose-devs/nose",
+    "generatedBy": "gemma-aistudio/gemma-4-31b-it"
   },
   "successors": [
     {
@@ -112,5 +163,5 @@
       "source": "curated"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:24:04.842Z"
 }

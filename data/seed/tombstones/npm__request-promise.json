@@ -14,14 +14,14 @@
     "deprecationMessage": "request-promise has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142",
     "lastReleaseAt": "2020-07-22T01:41:07.199Z",
     "daysSinceRelease": 2290,
-    "yearsActive": 13.067929348144345,
+    "yearsActive": 13.068045172002941,
     "dependents": 91418,
     "license": "ISC",
     "weeklyDownloads": 931912,
     "downloadsTrend": 0.39007287458374235,
     "repoUrl": "https://github.com/request/request-promise",
     "archived": false,
-    "pushedAt": "2024-01-31T13:39:40.000Z",
+    "pushedAt": "2024-01-31T13:39:40Z",
     "openIssues": 66,
     "language": "JavaScript",
     "commitsPerWeek": [
@@ -52,8 +52,9 @@
       0,
       0
     ],
-    "lastCommitAt": "2024-01-31T13:39:40.000Z",
-    "daysSinceCommit": 1002
+    "lastCommitAt": "2020-07-22T01:36:14Z",
+    "_lastCommitSubject": "Version 4.2.6",
+    "daysSinceCommit": 2290
   },
   "score": 100,
   "band": "departed",
@@ -92,28 +93,64 @@
   ],
   "contributors": [
     {
-      "handle": "mikeal",
-      "url": "https://www.npmjs.com/~mikeal"
-    },
-    {
-      "handle": "nylen",
-      "url": "https://www.npmjs.com/~nylen"
-    },
-    {
-      "handle": "simov",
-      "url": "https://www.npmjs.com/~simov"
-    },
-    {
       "handle": "analog-nico",
-      "url": "https://www.npmjs.com/~analog-nico"
-    },
-    {
-      "handle": "request",
-      "url": "https://www.npmjs.com/~request"
+      "commits": 229,
+      "url": "https://github.com/analog-nico"
     },
     {
       "handle": "tyabonil",
-      "url": "https://www.npmjs.com/~tyabonil"
+      "commits": 19,
+      "url": "https://github.com/tyabonil"
+    },
+    {
+      "handle": "courajs",
+      "commits": 4,
+      "url": "https://github.com/courajs"
+    },
+    {
+      "handle": "jtwb2",
+      "commits": 2,
+      "url": "https://github.com/jtwb2"
+    },
+    {
+      "handle": "luanmuniz",
+      "commits": 2,
+      "url": "https://github.com/luanmuniz"
+    },
+    {
+      "handle": "floatdrop",
+      "commits": 2,
+      "url": "https://github.com/floatdrop"
+    },
+    {
+      "handle": "raineorshine",
+      "commits": 2,
+      "url": "https://github.com/raineorshine"
+    },
+    {
+      "handle": "yamsellem",
+      "commits": 2,
+      "url": "https://github.com/yamsellem"
+    },
+    {
+      "handle": "not-an-aardvark",
+      "commits": 1,
+      "url": "https://github.com/not-an-aardvark"
+    },
+    {
+      "handle": "graingert",
+      "commits": 1,
+      "url": "https://github.com/graingert"
+    },
+    {
+      "handle": "rouanw",
+      "commits": 1,
+      "url": "https://github.com/rouanw"
+    },
+    {
+      "handle": "ratson",
+      "commits": 1,
+      "url": "https://github.com/ratson"
     }
   ],
   "autopsy": {
@@ -122,6 +159,8 @@
     "evidenceIds": [
       "ev1"
     ],
+    "lastWords": "Version 4.2.6",
+    "lastWordsUrl": "https://github.com/request/request-promise",
     "generatedBy": "fallback-rules"
   },
   "successors": [
@@ -140,5 +179,5 @@
       "weeklyDownloads": 16329
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

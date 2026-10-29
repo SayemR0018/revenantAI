@@ -13,13 +13,13 @@
     "deprecated": false,
     "lastReleaseAt": "2024-12-04T17:35:28",
     "daysSinceRelease": 694,
-    "yearsActive": 16.33462371983294,
+    "yearsActive": 16.3347504764304,
     "dependents": 591238,
     "license": "MIT",
     "weeklyDownloads": 205173899,
     "repoUrl": "https://github.com/benjaminp/six",
     "archived": false,
-    "pushedAt": "2026-02-23T02:19:45.000Z",
+    "pushedAt": "2026-02-23T02:19:45Z",
     "openIssues": 114,
     "language": "Python",
     "commitsPerWeek": [
@@ -50,7 +50,8 @@
       0,
       0
     ],
-    "lastCommitAt": "2026-02-23T02:19:45.000Z",
+    "lastCommitAt": "2026-02-23T02:19:43Z",
+    "_lastCommitSubject": "remove incorrect comma",
     "daysSinceCommit": 248
   },
   "score": 38,
@@ -75,15 +76,71 @@
     {
       "kind": "commit",
       "label": "Commit activity paused ~6 months",
-      "detail": "Last commit 2026-02-23T02:19:45.000Z",
+      "detail": "Last commit 2026-02-23T02:19:43Z",
       "url": "https://github.com/benjaminp/six",
       "id": "ev1"
     }
   ],
   "contributors": [
     {
-      "handle": "gutworth",
-      "url": "https://pypi.org/user/gutworth/"
+      "handle": "benjaminp",
+      "commits": 395,
+      "url": "https://github.com/benjaminp"
+    },
+    {
+      "handle": "msabramo",
+      "commits": 25,
+      "url": "https://github.com/msabramo"
+    },
+    {
+      "handle": "jaraco",
+      "commits": 18,
+      "url": "https://github.com/jaraco"
+    },
+    {
+      "handle": "jdufresne",
+      "commits": 12,
+      "url": "https://github.com/jdufresne"
+    },
+    {
+      "handle": "brettcannon",
+      "commits": 9,
+      "url": "https://github.com/brettcannon"
+    },
+    {
+      "handle": "asottile",
+      "commits": 7,
+      "url": "https://github.com/asottile"
+    },
+    {
+      "handle": "harlowja",
+      "commits": 6,
+      "url": "https://github.com/harlowja"
+    },
+    {
+      "handle": "alexanderlukanin13",
+      "commits": 6,
+      "url": "https://github.com/alexanderlukanin13"
+    },
+    {
+      "handle": "wolph",
+      "commits": 5,
+      "url": "https://github.com/wolph"
+    },
+    {
+      "handle": "graingert",
+      "commits": 3,
+      "url": "https://github.com/graingert"
+    },
+    {
+      "handle": "hugovk",
+      "commits": 2,
+      "url": "https://github.com/hugovk"
+    },
+    {
+      "handle": "scop",
+      "commits": 2,
+      "url": "https://github.com/scop"
     }
   ],
   "autopsy": {
@@ -92,8 +149,10 @@
     "evidenceIds": [
       "ev1"
     ],
+    "lastWords": "remove incorrect comma",
+    "lastWordsUrl": "https://github.com/benjaminp/six",
     "generatedBy": "fallback-rules"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

@@ -13,15 +13,15 @@
     "deprecated": true,
     "deprecationMessage": "This module is no longer maintained, try this instead:\n  npm i nyc\nVisit https://istanbul.js.org/integrations for other alternatives.",
     "lastReleaseAt": "2016-08-21T20:02:09.468Z",
-    "daysSinceRelease": 3720,
-    "yearsActive": 14.12782426388572,
+    "daysSinceRelease": 3721,
+    "yearsActive": 14.127942466885948,
     "dependents": 240976,
     "license": "BSD-3-Clause",
     "weeklyDownloads": 671655,
     "downloadsTrend": 0.3920464685628732,
     "repoUrl": "https://github.com/gotwarlost/istanbul",
     "archived": true,
-    "pushedAt": "2024-12-08T15:50:22.000Z",
+    "pushedAt": "2024-12-08T15:50:22Z",
     "openIssues": 399,
     "language": "JavaScript",
     "commitsPerWeek": [
@@ -52,7 +52,8 @@
       0,
       0
     ],
-    "lastCommitAt": "2024-12-08T15:50:22.000Z",
+    "lastCommitAt": "2024-12-08T15:50:18Z",
+    "_lastCommitSubject": "readme",
     "daysSinceCommit": 690
   },
   "score": 100,
@@ -92,26 +93,76 @@
   ],
   "contributors": [
     {
-      "handle": "bcoe",
-      "url": "https://www.npmjs.com/~bcoe"
+      "handle": "gotwarlost",
+      "commits": 361,
+      "url": "https://github.com/gotwarlost"
     },
     {
       "handle": "davglass",
-      "url": "https://www.npmjs.com/~davglass"
+      "commits": 33,
+      "url": "https://github.com/davglass"
     },
     {
-      "handle": "gotwarlost",
-      "url": "https://www.npmjs.com/~gotwarlost"
+      "handle": "Kami",
+      "commits": 10,
+      "url": "https://github.com/Kami"
+    },
+    {
+      "handle": "gustav-olsen-groupone",
+      "commits": 6,
+      "url": "https://github.com/gustav-olsen-groupone"
+    },
+    {
+      "handle": "ariya",
+      "commits": 5,
+      "url": "https://github.com/ariya"
+    },
+    {
+      "handle": "jason0x43",
+      "commits": 5,
+      "url": "https://github.com/jason0x43"
+    },
+    {
+      "handle": "asifrc",
+      "commits": 4,
+      "url": "https://github.com/asifrc"
+    },
+    {
+      "handle": "sterling",
+      "commits": 4,
+      "url": "https://github.com/sterling"
+    },
+    {
+      "handle": "tonylukasavage",
+      "commits": 4,
+      "url": "https://github.com/tonylukasavage"
+    },
+    {
+      "handle": "runk",
+      "commits": 3,
+      "url": "https://github.com/runk"
+    },
+    {
+      "handle": "denis-sokolov",
+      "commits": 3,
+      "url": "https://github.com/denis-sokolov"
+    },
+    {
+      "handle": "adamjmcgrath",
+      "commits": 2,
+      "url": "https://github.com/adamjmcgrath"
     }
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "istanbul stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "A foundational pillar of JavaScript code coverage that shaped the industry for over a decade. Its legacy continues to empower developers through the tools it inspired.",
     "evidenceIds": [
       "ev1"
     ],
-    "generatedBy": "fallback-rules"
+    "lastWords": "readme",
+    "lastWordsUrl": "https://github.com/gotwarlost/istanbul",
+    "generatedBy": "gemma-aistudio/gemma-4-31b-it"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

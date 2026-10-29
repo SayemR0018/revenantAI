@@ -14,7 +14,7 @@
     "deprecationMessage": "gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5",
     "lastReleaseAt": "2016-12-26T23:11:10.645Z",
     "daysSinceRelease": 3593,
-    "yearsActive": 13.315496096629655,
+    "yearsActive": 13.315637215694476,
     "dependents": 390115,
     "license": "MIT",
     "weeklyDownloads": 732852,
@@ -155,14 +155,14 @@
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "gulp-util stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "A foundational pillar of the early Gulp ecosystem that served the community with distinction. Its legacy lives on through the countless workflows it helped shape.",
     "evidenceIds": [
       "ev1"
     ],
     "lastWords": "Scaffold: Add FUNDING.yml",
     "lastWordsUrl": "https://github.com/gulpjs/gulp-util",
-    "generatedBy": "fallback-rules"
+    "generatedBy": "gemma-aistudio/gemma-4-26b-a4b-it"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:28:04.491Z"
 }

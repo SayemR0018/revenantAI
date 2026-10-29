@@ -38,3 +38,15 @@
 - TabPFN vs baselines: pending PRIORLABS_API_KEY (data/eval-results.json)
 - Tinker eval table: pending TINKER_API_KEY (docs/tinker-results.md)
 - Cost ledger (ultramarine baseline runs): pending key — SKIPPED, not faked
+
+## Frontend polish pass (verified 2026-10-30)
+- **Mobile 390px overflow fixed across all routes**: `scrollWidth = 390 <= clientWidth = 390` on `/`, `/r/<id>`, `/grave/npm/request`, `/grave/npm/react`, `/cementerio`, `/arena`, `/science`, `/receipts`.
+- **Axe-core (`@axe-core/playwright`) accessibility audit**: **0 violations** (0 critical, 0 serious, 0 moderate, 0 minor) across all 8 routes (`/`, `/r/<id>`, `/grave/npm/request`, `/grave/npm/react`, `/cementerio`, `/arena`, `/science`, `/receipts`).
+- **Real bugs caught & fixed during frontend verification**:
+  1. **Next.js 16 streaming 200 vs 404**: Outer segment `loading.tsx` boundaries commit the HTTP response stream to `200 OK` before `notFound()` inside `GravePage` executes. Fixed by checking package existence before any `<Suspense>` boundary on `/grave/[eco]/[name]`, returning a real HTTP `404` status code on `/grave/npm/zzzz-nope-xyz-nonexistent-999`.
+  2. **File-store truncation race (`lib/store.ts`)**: Non-atomic `fs.writeFile` in `saveReport` truncated `reports/<id>.json` while `runScan` updated progress at the exact millisecond `router.push('/r/' + id)` read it, causing `JSON.parse("")` to fail. Fixed with an in-memory write-through map + atomic `.tmp` rename.
+  3. **Gemma 4 model ID & `<thought>` prefix on Google AI Studio (`lib/llm.ts`)**: `gemma-3-27b-it` returned 404 on AI Studio's v1beta OpenAI endpoint, which now serves **Gemma 4** (`gemma-4-31b-it` and `gemma-4-26b-a4b-it`) and prepends `<thought>...</thought>` reasoning blocks before JSON output. Updated `lib/llm.ts` to use `gemma-4-31b-it` (with `gemma-4-26b-a4b-it` fallback), strip `<thought>` blocks, and merge system instructions cleanly.
+- **Seed index (`data/seed/cementerio.json`)**: **180 unique** npm & PyPI packages (deduplicated from 180 raw rows that previously had 20 duplicates and 0 departed): **11 Departed**, **16 Haunted**, **17 Fading**, **136 Alive** (27 of 180 = **15.0%** Haunted or worse).
+- **Showcase tombstones (`data/seed/tombstones/*.json`)**: 20 pre-warmed real packages (`request`, `left-pad`, `node-sass`, `tslint`, `gulp-util`, `bower`, `moment`, `react`, `nose`, `requests`, etc.) with real Gemma 4 (`gemma-4-31b-it` / `gemma-4-26b-a4b-it`) epitaphs, GitHub commit pulse arrays, and contributor handles.
+- **Receipts (`receipts.json`)**: **5 PASS** (`gemma`, `mastra`, `ecosystems`, `copilot`, `entire`), 14 SKIPPED, 0 FAIL.
+- **Full-page screenshots committed (`docs/screenshots/`)**: 16 PNGs (desktop 1440×900 and mobile 390×844) covering home, report, departed tombstone, alive tombstone, cementerio, arena, science, and receipts.

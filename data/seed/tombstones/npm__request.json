@@ -14,7 +14,7 @@
     "deprecationMessage": "request has been deprecated, see https://github.com/request/request/issues/3142",
     "lastReleaseAt": "2020-02-11T16:35:36.122Z",
     "daysSinceRelease": 2452,
-    "yearsActive": 15.769409085766979,
+    "yearsActive": 15.769548757003067,
     "dependents": 847768,
     "license": "Apache-2.0",
     "weeklyDownloads": 10440128,
@@ -155,13 +155,13 @@
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "request stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "A foundational pillar of the Node.js ecosystem that carried the weight of the web for over a decade. Its legacy remains woven into the fabric of countless modern applications.",
     "evidenceIds": [
       "ev1"
     ],
     "lastWords": "README: typo in deprecation message (#3268)",
     "lastWordsUrl": "https://github.com/request/request",
-    "generatedBy": "fallback-rules"
+    "generatedBy": "gemma-aistudio/gemma-4-26b-a4b-it"
   },
   "successors": [
     {
@@ -186,5 +186,5 @@
       "source": "curated"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:28:04.491Z"
 }

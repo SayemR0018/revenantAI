@@ -13,15 +13,15 @@
     "deprecated": false,
     "lastReleaseAt": "2026-10-14T16:47:15.290Z",
     "daysSinceRelease": 15,
-    "yearsActive": 15.009067039730525,
+    "yearsActive": 15.009192750019013,
     "dependents": 2830385,
     "license": "MIT",
     "weeklyDownloads": 166511717,
     "downloadsTrend": 1.5939282322665964,
     "repoUrl": "https://github.com/react/react",
     "archived": false,
-    "pushedAt": "2026-10-27T15:08:39.000Z",
-    "openIssues": 1505,
+    "pushedAt": "2026-10-29T16:05:28Z",
+    "openIssues": 1527,
     "language": "JavaScript",
     "commitsPerWeek": [
       326,
@@ -51,8 +51,9 @@
       326,
       327
     ],
-    "lastCommitAt": "2026-10-27T15:08:39.000Z",
-    "daysSinceCommit": 2
+    "lastCommitAt": "2026-10-29T15:58:39Z",
+    "_lastCommitSubject": "View Transitions: update error message classification for Chrome 153 (#38034)",
+    "daysSinceCommit": 0
   },
   "score": 0,
   "band": "alive",
@@ -75,18 +76,72 @@
   "evidence": [],
   "contributors": [
     {
-      "handle": "fb",
-      "url": "https://www.npmjs.com/~fb"
+      "handle": "sebmarkbage",
+      "commits": 1939,
+      "url": "https://github.com/sebmarkbage"
     },
     {
-      "handle": "react-bot",
-      "url": "https://www.npmjs.com/~react-bot"
+      "handle": "zpao",
+      "commits": 1778,
+      "url": "https://github.com/zpao"
+    },
+    {
+      "handle": "gaearon",
+      "commits": 1688,
+      "url": "https://github.com/gaearon"
+    },
+    {
+      "handle": "acdlite",
+      "commits": 1427,
+      "url": "https://github.com/acdlite"
+    },
+    {
+      "handle": "sophiebits",
+      "commits": 1301,
+      "url": "https://github.com/sophiebits"
+    },
+    {
+      "handle": "josephsavona",
+      "commits": 1165,
+      "url": "https://github.com/josephsavona"
+    },
+    {
+      "handle": "poteto",
+      "commits": 819,
+      "url": "https://github.com/poteto"
+    },
+    {
+      "handle": "eps1lon",
+      "commits": 478,
+      "url": "https://github.com/eps1lon"
+    },
+    {
+      "handle": "jimfb",
+      "commits": 456,
+      "url": "https://github.com/jimfb"
+    },
+    {
+      "handle": "trueadm",
+      "commits": 436,
+      "url": "https://github.com/trueadm"
+    },
+    {
+      "handle": "gsathya",
+      "commits": 387,
+      "url": "https://github.com/gsathya"
+    },
+    {
+      "handle": "mofeiZ",
+      "commits": 385,
+      "url": "https://github.com/mofeiZ"
     }
   ],
   "autopsy": {
     "causeOfDeath": "alive",
     "epitaph": "react still has a pulse. Long may it commit.",
     "evidenceIds": [],
+    "lastWords": "View Transitions: update error message classification for Chrome 153 (#38034)",
+    "lastWordsUrl": "https://github.com/react/react",
     "generatedBy": "fallback-rules"
   },
   "successors": [
@@ -98,5 +153,5 @@
       "source": "active_fork"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

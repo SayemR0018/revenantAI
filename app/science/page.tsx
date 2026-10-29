@@ -15,12 +15,13 @@ interface EvalResults {
 }
 
 async function loadEval(): Promise<EvalResults | null> {
-  for (const rel of [
-    ['data', 'eval-results.json'],
-    ['data', 'seed', 'eval-results.json'],
-  ]) {
+  const candidates = [
+    path.join(process.cwd(), 'data', 'eval-results.json'),
+    path.join(process.cwd(), 'data', 'seed', 'eval-results.json'),
+  ];
+  for (const file of candidates) {
     try {
-      return JSON.parse(await fs.readFile(path.join(process.cwd(), ...rel), 'utf8'));
+      return JSON.parse(await fs.readFile(file, 'utf8'));
     } catch {
       /* next */
     }

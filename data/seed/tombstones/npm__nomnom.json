@@ -14,14 +14,14 @@
     "deprecationMessage": "Package no longer supported. Contact support@npmjs.com for more info.",
     "lastReleaseAt": "2014-11-07T18:17:52.473Z",
     "daysSinceRelease": 4374,
-    "yearsActive": 15.561508730987148,
+    "yearsActive": 15.561628409860065,
     "dependents": 105854,
     "license": "mit",
     "weeklyDownloads": 470822,
     "downloadsTrend": 0.40405590786778844,
     "repoUrl": "https://github.com/harthur/nomnom",
     "archived": true,
-    "pushedAt": "2021-09-01T13:37:36.000Z",
+    "pushedAt": "2021-09-01T13:37:36Z",
     "openIssues": 51,
     "language": "JavaScript",
     "commitsPerWeek": [
@@ -52,8 +52,9 @@
       0,
       0
     ],
-    "lastCommitAt": "2021-09-01T13:37:36.000Z",
-    "daysSinceCommit": 1884
+    "lastCommitAt": "2015-09-09T05:47:16Z",
+    "_lastCommitSubject": "Add deprecation notice to readme",
+    "daysSinceCommit": 4068
   },
   "score": 100,
   "band": "departed",
@@ -92,8 +93,59 @@
   ],
   "contributors": [
     {
-      "handle": "npm",
-      "url": "https://www.npmjs.com/~npm"
+      "handle": "harthur",
+      "commits": 120,
+      "url": "https://github.com/harthur"
+    },
+    {
+      "handle": "calmh",
+      "commits": 5,
+      "url": "https://github.com/calmh"
+    },
+    {
+      "handle": "sethyuan",
+      "commits": 2,
+      "url": "https://github.com/sethyuan"
+    },
+    {
+      "handle": "bcronin",
+      "commits": 1,
+      "url": "https://github.com/bcronin"
+    },
+    {
+      "handle": "davidaurelio",
+      "commits": 1,
+      "url": "https://github.com/davidaurelio"
+    },
+    {
+      "handle": "zzen",
+      "commits": 1,
+      "url": "https://github.com/zzen"
+    },
+    {
+      "handle": "jsocol",
+      "commits": 1,
+      "url": "https://github.com/jsocol"
+    },
+    {
+      "handle": "krawaller",
+      "commits": 1,
+      "url": "https://github.com/krawaller"
+    },
+    {
+      "handle": "robertrossmann",
+      "commits": 1,
+      "url": "https://github.com/robertrossmann"
+    },
+    {
+      "handle": "saz",
+      "commits": 1,
+      "url": "https://github.com/saz"
+    },
+    {
+      "handle": "soyuka",
+      "commits": 1,
+      "url": "https://github.com/soyuka"
     }
   ],
   "autopsy": {
@@ -102,8 +154,10 @@
     "evidenceIds": [
       "ev1"
     ],
+    "lastWords": "Add deprecation notice to readme",
+    "lastWordsUrl": "https://github.com/harthur/nomnom",
     "generatedBy": "fallback-rules"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

@@ -14,14 +14,14 @@
     "deprecationMessage": "We have news to share - Protractor is deprecated and will reach end-of-life by Summer 2023. To learn more and find out about other options please refer to this post on the Angular blog. Thank you for using and contributing to Protractor. https://goo.gle/state-of-e2e-in-angular",
     "lastReleaseAt": "2020-05-13T20:32:00.170Z",
     "daysSinceRelease": 2359,
-    "yearsActive": 13.680456279818491,
+    "yearsActive": 13.680573196630922,
     "dependents": 615722,
     "license": "MIT",
     "weeklyDownloads": 436642,
     "downloadsTrend": 0.34648922770925084,
     "repoUrl": "https://github.com/angular/protractor",
     "archived": true,
-    "pushedAt": "2023-05-24T20:07:37.000Z",
+    "pushedAt": "2023-05-24T20:07:37Z",
     "openIssues": 684,
     "language": "JavaScript",
     "commitsPerWeek": [
@@ -52,8 +52,9 @@
       0,
       0
     ],
-    "lastCommitAt": "2023-05-24T20:07:37.000Z",
-    "daysSinceCommit": 1253
+    "lastCommitAt": "2020-04-21T21:46:27Z",
+    "_lastCommitSubject": "build: publish using wombat",
+    "daysSinceCommit": 2381
   },
   "score": 100,
   "band": "departed",
@@ -92,12 +93,64 @@
   ],
   "contributors": [
     {
-      "handle": "angular",
-      "url": "https://www.npmjs.com/~angular"
+      "handle": "juliemr",
+      "commits": 717,
+      "url": "https://github.com/juliemr"
     },
     {
-      "handle": "google-wombot",
-      "url": "https://www.npmjs.com/~google-wombot"
+      "handle": "cnishina",
+      "commits": 232,
+      "url": "https://github.com/cnishina"
+    },
+    {
+      "handle": "sjelin",
+      "commits": 150,
+      "url": "https://github.com/sjelin"
+    },
+    {
+      "handle": "hankduan",
+      "commits": 104,
+      "url": "https://github.com/hankduan"
+    },
+    {
+      "handle": "heathkit",
+      "commits": 66,
+      "url": "https://github.com/heathkit"
+    },
+    {
+      "handle": "qiyigg",
+      "commits": 28,
+      "url": "https://github.com/qiyigg"
+    },
+    {
+      "handle": "andresdominguez",
+      "commits": 21,
+      "url": "https://github.com/andresdominguez"
+    },
+    {
+      "handle": "elgalu",
+      "commits": 15,
+      "url": "https://github.com/elgalu"
+    },
+    {
+      "handle": "el-davo",
+      "commits": 15,
+      "url": "https://github.com/el-davo"
+    },
+    {
+      "handle": "NickTomlin",
+      "commits": 13,
+      "url": "https://github.com/NickTomlin"
+    },
+    {
+      "handle": "CrispusDH",
+      "commits": 12,
+      "url": "https://github.com/CrispusDH"
+    },
+    {
+      "handle": "eddiemonge",
+      "commits": 11,
+      "url": "https://github.com/eddiemonge"
     }
   ],
   "autopsy": {
@@ -106,8 +159,10 @@
     "evidenceIds": [
       "ev1"
     ],
+    "lastWords": "build: publish using wombat",
+    "lastWordsUrl": "https://github.com/angular/protractor",
     "generatedBy": "fallback-rules"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

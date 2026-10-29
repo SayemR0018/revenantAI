@@ -14,7 +14,7 @@
     "deprecationMessage": "use String.prototype.padStart()",
     "lastReleaseAt": "2018-04-09T01:10:45.796Z",
     "daysSinceRelease": 3125,
-    "yearsActive": 12.628118622106877,
+    "yearsActive": 12.628258714414278,
     "dependents": 1195353,
     "license": "WTFPL",
     "weeklyDownloads": 2811194,
@@ -151,13 +151,13 @@
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "left-pad stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "A humble utility that served the ecosystem with distinction for many years. Its purpose has been gracefully integrated into the language itself.",
     "evidenceIds": [
       "ev1"
     ],
     "lastWords": "Merge pull request #64 from lexjacobs/master",
     "lastWordsUrl": "https://github.com/stevemao/left-pad",
-    "generatedBy": "fallback-rules"
+    "generatedBy": "gemma-aistudio/gemma-4-26b-a4b-it"
   },
   "successors": [
     {
@@ -189,5 +189,5 @@
       "source": "search"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:28:04.491Z"
 }

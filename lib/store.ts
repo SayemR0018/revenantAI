@@ -1,5 +1,5 @@
-// Report store: MongoDB Atlas when MONGODB_URI is set, otherwise a JSON file
-// store in data/store/ (good enough for demos; honest fallback).
+// Report store: MongoDB Atlas when MONGODB_URI is set, otherwise an atomic JSON
+// file store in data/store/ with in-memory write-through cache.
 import { promises as fs } from 'fs';
 import path from 'path';
 import { Report, CorpusChunk } from './types';
@@ -7,6 +7,8 @@ import { Report, CorpusChunk } from './types';
 const DIR = process.env.REVENANT_DATA_DIR || path.join(process.cwd(), 'data', 'store');
 const REPORTS = path.join(DIR, 'reports');
 const CORPUS = path.join(DIR, 'corpus');
+
+const memReports = new Map<string, Report>();
 
 interface MongoLike {
   db(name: string): { collection(n: string): MongoCollection };
@@ -39,13 +41,20 @@ async function mongo(): Promise<MongoCollection | null> {
 }
 
 export async function saveReport(r: Report): Promise<void> {
+  memReports.set(r.id, JSON.parse(JSON.stringify(r)) as Report);
   const col = await mongo();
   if (col) {
     await col.replaceOne({ _id: r.id }, { ...r, _id: r.id }, { upsert: true });
     return;
   }
   await fs.mkdir(REPORTS, { recursive: true });
-  await fs.writeFile(path.join(REPORTS, `${r.id}.json`), JSON.stringify(r));
+  const target = path.join(REPORTS, `${r.id}.json`);
+  const tmp = `${target}.${process.pid}.${Date.now()}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(r));
+  await fs.rename(tmp, target).catch(async () => {
+    await fs.writeFile(target, JSON.stringify(r));
+    await fs.unlink(tmp).catch(() => {});
+  });
 }
 
 export async function getReport(id: string): Promise<Report | null> {
@@ -59,8 +68,12 @@ export async function getReport(id: string): Promise<Report | null> {
     }
     return null;
   }
+  const hit = memReports.get(id);
+  if (hit) return JSON.parse(JSON.stringify(hit)) as Report;
   try {
-    return JSON.parse(await fs.readFile(path.join(REPORTS, `${id}.json`), 'utf8')) as Report;
+    const parsed = JSON.parse(await fs.readFile(path.join(REPORTS, `${id}.json`), 'utf8')) as Report;
+    memReports.set(id, parsed);
+    return parsed;
   } catch {
     return null;
   }

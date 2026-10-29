@@ -13,7 +13,7 @@
     "deprecated": false,
     "lastReleaseAt": "2026-09-15T01:07:26.131Z",
     "daysSinceRelease": 44,
-    "yearsActive": 15.005692028069308,
+    "yearsActive": 15.005814043875326,
     "dependents": 1006179,
     "license": "MIT",
     "weeklyDownloads": 33787344,
@@ -21,7 +21,7 @@
     "repoUrl": "https://github.com/moment/moment",
     "archived": false,
     "pushedAt": "2026-10-08T16:26:56Z",
-    "openIssues": 68,
+    "openIssues": 70,
     "language": "JavaScript",
     "commitsPerWeek": [
       0,
@@ -167,5 +167,5 @@
       "source": "curated"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

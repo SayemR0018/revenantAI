@@ -13,14 +13,14 @@
     "deprecated": false,
     "lastReleaseAt": "2020-05-22T06:46:09.834Z",
     "daysSinceRelease": 2351,
-    "yearsActive": 11.583415051493143,
+    "yearsActive": 11.583535745779146,
     "dependents": 1665,
     "license": "MIT",
     "weeklyDownloads": 61705,
     "downloadsTrend": 1.1338668406231194,
     "repoUrl": "https://github.com/scravy/uuid-1345",
     "archived": false,
-    "pushedAt": "2024-02-21T00:42:49.000Z",
+    "pushedAt": "2024-02-21T00:42:49Z",
     "openIssues": 1,
     "language": "JavaScript",
     "commitsPerWeek": [
@@ -51,8 +51,9 @@
       0,
       0
     ],
-    "lastCommitAt": "2024-02-21T00:42:49.000Z",
-    "daysSinceCommit": 981
+    "lastCommitAt": "2023-08-06T03:27:01Z",
+    "_lastCommitSubject": "Merge pull request #21 from scravy/dependabot/npm_and_yarn/json-schema-and-jsprim-0.4.0",
+    "daysSinceCommit": 1180
   },
   "score": 65,
   "band": "haunted",
@@ -75,17 +76,23 @@
   "evidence": [
     {
       "kind": "commit",
-      "label": "No commits in 2+ years",
-      "detail": "Last commit 2024-02-21T00:42:49.000Z",
+      "label": "No commits in 3+ years",
+      "detail": "Last commit 2023-08-06T03:27:01Z",
       "url": "https://github.com/scravy/uuid-1345",
-      "at": "2024-02-21T00:42:49.000Z",
+      "at": "2023-08-06T03:27:01Z",
       "id": "ev1"
     }
   ],
   "contributors": [
     {
       "handle": "scravy",
-      "url": "https://www.npmjs.com/~scravy"
+      "commits": 90,
+      "url": "https://github.com/scravy"
+    },
+    {
+      "handle": "XadillaX",
+      "commits": 1,
+      "url": "https://github.com/XadillaX"
     }
   ],
   "autopsy": {
@@ -94,8 +101,10 @@
     "evidenceIds": [
       "ev1"
     ],
+    "lastWords": "Merge pull request #21 from scravy/dependabot/npm_and_yarn/json-schema-and-jsprim-0.4.0",
+    "lastWordsUrl": "https://github.com/scravy/uuid-1345",
     "generatedBy": "fallback-rules"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

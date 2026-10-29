@@ -13,7 +13,7 @@
     "deprecated": false,
     "lastReleaseAt": "2026-04-01T21:01:20.458Z",
     "daysSinceRelease": 210,
-    "yearsActive": 14.516385402438715,
+    "yearsActive": 14.516508110692829,
     "dependents": 1936033,
     "license": "MIT",
     "weeklyDownloads": 141241425,
@@ -149,5 +149,5 @@
       "source": "active_fork"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }

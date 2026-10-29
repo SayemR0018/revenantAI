@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-29T19:45:02.395Z",
+  "generatedAt": "2026-10-29T20:00:04.148Z",
   "baseUrl": "http://localhost:3000",
   "checks": [
     {
       "id": "gemma",
       "partner": "Gemma (Google AI Studio)",
       "category": "Open-Weight AI & Agents",
-      "status": "SKIPPED",
+      "status": "PASS",
       "role": "Primary open-weight model for dependency autopsies, grounded seances, and Arena bouts (rule-based fallback active when unconfigured).",
       "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/llm.ts",
       "enableHint": "Set GOOGLE_API_KEY in .env.local or Render environment.",
-      "notes": "Rule-based fallback epitaphs and corpus seances active until GOOGLE_API_KEY is set."
+      "notes": "Open-weight Gemma via AI Studio OpenAI-compat endpoint for autopsy/seance/arena/judge."
     },
     {
       "id": "tabpfn",

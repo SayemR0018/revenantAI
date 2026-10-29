@@ -14,7 +14,7 @@
     "deprecationMessage": "TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/4534 for more information.",
     "lastReleaseAt": "2020-07-31T17:25:07.479Z",
     "daysSinceRelease": 2281,
-    "yearsActive": 13.255886159245316,
+    "yearsActive": 13.256026635992598,
     "dependents": 634206,
     "license": "Apache-2.0",
     "weeklyDownloads": 1374897,
@@ -155,13 +155,13 @@
   ],
   "autopsy": {
     "causeOfDeath": "deprecated_official",
-    "epitaph": "tslint stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.",
+    "epitaph": "TSLint paved the way for TypeScript linting and helped countless developers write cleaner code. It rests now, having gracefully passed the torch to a unified ecosystem.",
     "evidenceIds": [
       "ev1"
     ],
     "lastWords": "docs(README): point to typescript-eslint roadmap",
     "lastWordsUrl": "https://github.com/palantir/tslint",
-    "generatedBy": "fallback-rules"
+    "generatedBy": "gemma-aistudio/gemma-4-31b-it"
   },
   "successors": [
     {
@@ -172,5 +172,5 @@
       "source": "curated"
     }
   ],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:28:04.491Z"
 }

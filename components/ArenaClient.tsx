@@ -28,28 +28,28 @@ const PRECOMPUTED_BOUTS: Record<string, PrecomputedBout> = {
     band: 'Departed',
     candidates: [
       {
+        provider: 'gemma-aistudio',
+        model: 'gemma-4-31b-it',
+        epitaph:
+          'A cornerstone of the Node.js ecosystem for over fifteen years, it paved the way for modern HTTP clients. Its legacy endures in the millions of applications it helped bring to life.',
+        cause: 'deprecated_official',
+        latencyMs: 1420,
+      },
+      {
+        provider: 'gemma-aistudio',
+        model: 'gemma-4-26b-a4b-it',
+        epitaph:
+          'A foundational pillar of the Node.js ecosystem that carried the weight of the web for over a decade. Its legacy remains woven into the fabric of countless modern applications.',
+        cause: 'deprecated_official',
+        latencyMs: 980,
+      },
+      {
         provider: 'fallback-rules',
         model: 'epitaph-heuristic-v1',
         epitaph:
           'request stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.',
         cause: 'deprecated_official',
         latencyMs: 14,
-      },
-      {
-        provider: 'registry-evidence',
-        model: 'verbatim-notice-v1',
-        epitaph:
-          'request is marked deprecated in the npm registry: “request has been deprecated, see https://github.com/request/request/issues/3142”. Signals, not verdicts.',
-        cause: 'deprecated_official',
-        latencyMs: 18,
-      },
-      {
-        provider: 'vital-attribution',
-        model: 'signal-summary-v1',
-        epitaph:
-          'Still downloaded 11,401,515 times a week across the ecosystem, request rests after 2,451 days without a commit.',
-        cause: 'deprecated_official',
-        latencyMs: 21,
       },
     ],
   },
@@ -61,12 +61,12 @@ const PRECOMPUTED_BOUTS: Record<string, PrecomputedBout> = {
     band: 'Departed',
     candidates: [
       {
-        provider: 'fallback-rules',
-        model: 'epitaph-heuristic-v1',
+        provider: 'gemma-aistudio',
+        model: 'gemma-4-26b-a4b-it',
         epitaph:
-          'left-pad stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.',
+          'A humble utility that served the ecosystem with distinction for many years. Its purpose has been gracefully integrated into the language itself.',
         cause: 'deprecated_official',
-        latencyMs: 11,
+        latencyMs: 910,
       },
       {
         provider: 'registry-evidence',
@@ -77,12 +77,12 @@ const PRECOMPUTED_BOUTS: Record<string, PrecomputedBout> = {
         latencyMs: 15,
       },
       {
-        provider: 'vital-attribution',
-        model: 'signal-summary-v1',
+        provider: 'fallback-rules',
+        model: 'epitaph-heuristic-v1',
         epitaph:
-          'Still downloaded 2,002,387 times a week long after padStart() arrived in the standard library, left-pad rests after 2,785 days without a commit.',
+          'left-pad stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.',
         cause: 'deprecated_official',
-        latencyMs: 19,
+        latencyMs: 11,
       },
     ],
   },
@@ -206,7 +206,7 @@ export function ArenaClient() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="font-mono-data min-h-[44px] min-w-[200px] flex-1 rounded-md border border-[#35305c] bg-[#0d0b1e] px-3 py-2 text-sm"
+          className="font-mono-data min-h-[44px] min-w-0 flex-1 rounded-md border border-[#35305c] bg-[#0d0b1e] px-3 py-2 text-sm"
           placeholder="package name (e.g. request, node-sass)"
           aria-label="package name"
         />
@@ -280,7 +280,7 @@ export function ArenaClient() {
                 ) : (
                   <>
                     <blockquote
-                      className="font-display mt-4 text-base italic leading-relaxed"
+                      className="font-display mt-4 break-words text-base italic leading-relaxed"
                       style={{ color: 'var(--bone)' }}
                     >
                       “{c.epitaph}”

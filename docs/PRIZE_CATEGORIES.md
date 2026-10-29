@@ -3,13 +3,14 @@
 > Regenerate with `npx tsx scripts/receipts.ts` — only PASS integrations belong here.
 > Current state below reflects what is genuinely working as of the last check.
 
-## Integrated and working (no keys required)
+## Integrated and working (PASS in receipts.json)
+- **Gemma (`gemma-4-31b-it` & `gemma-4-26b-a4b-it` via Google AI Studio)** — open-weight model writing dignified autopsies, grounded seance responses, and Arena bouts.
 - **ecosyste.ms** — open-data backbone resolving packages → repos and activity signals.
 - **GitHub Copilot / GitHub Actions** — `revenant-action` composite action warns on PRs adding haunted deps; CI + nightly index workflows ship in-repo.
 - **Mastra** — autopsy/seance agents + resurrection workflow + `predictGhostScore` tool (`mastra/`).
+- **Entire** — `.entire/settings.json` provenance configuration tracked in-repo.
 
 ## Integrated, key-gated (code is real; flip status to PASS once env is set)
-- **Gemma** — OpenAI-compat provider for autopsy, seance, arena, judge (`GOOGLE_API_KEY`).
 - **TabPFN** — ghost-risk predictor served by `ml/` FastAPI (`ML_SERVICE_URL` + `PRIORLABS_API_KEY`).
 - **Tinker** — LoRA epitaph writer; dataset/train/eval scripts in `ml/tinker/` (`TINKER_API_KEY`).
 - **Temporal** — `ExhumeWorkflow` with queryable progress (`TEMPORAL_*`).

@@ -13,21 +13,21 @@
     "deprecated": false,
     "lastReleaseAt": "2020-12-08T13:54:35.223Z",
     "daysSinceRelease": 2151,
-    "yearsActive": 14.855534160392425,
+    "yearsActive": 14.855654769976171,
     "dependents": 2318159,
     "license": "MIT",
     "weeklyDownloads": 488210519,
     "downloadsTrend": 0.8536809912677289,
     "repoUrl": "https://github.com/vercel/ms",
     "archived": false,
-    "pushedAt": "2026-05-20T22:24:50.000Z",
+    "pushedAt": "2026-05-20T22:24:50Z",
     "openIssues": 41,
     "language": "TypeScript",
     "commitsPerWeek": [
-      2,
-      3,
-      4,
-      2,
+      0,
+      0,
+      1,
+      0,
       0,
       0,
       0,
@@ -51,7 +51,8 @@
       0,
       0
     ],
-    "lastCommitAt": "2026-05-20T22:24:50.000Z",
+    "lastCommitAt": "2026-05-20T22:20:35Z",
+    "_lastCommitSubject": "chore: minimumReleaseAge: 2880 (#289)",
     "daysSinceCommit": 161
   },
   "score": 33,
@@ -75,36 +76,74 @@
   "evidence": [],
   "contributors": [
     {
+      "handle": "leo",
+      "commits": 48,
+      "url": "https://github.com/leo"
+    },
+    {
       "handle": "rauchg",
-      "url": "https://www.npmjs.com/~rauchg"
+      "commits": 36,
+      "url": "https://github.com/rauchg"
     },
     {
-      "handle": "vercel-release-bot",
-      "url": "https://www.npmjs.com/~vercel-release-bot"
+      "handle": "dimitropoulos",
+      "commits": 22,
+      "url": "https://github.com/dimitropoulos"
     },
     {
-      "handle": "nick.tracey",
-      "url": "https://www.npmjs.com/~nick.tracey"
+      "handle": "tj",
+      "commits": 18,
+      "url": "https://github.com/tj"
     },
     {
-      "handle": "matt.straka",
-      "url": "https://www.npmjs.com/~matt.straka"
+      "handle": "styfle",
+      "commits": 10,
+      "url": "https://github.com/styfle"
     },
     {
-      "handle": "zeit-bot",
-      "url": "https://www.npmjs.com/~zeit-bot"
+      "handle": "Swatinem",
+      "commits": 4,
+      "url": "https://github.com/Swatinem"
     },
     {
-      "handle": "matheuss",
-      "url": "https://www.npmjs.com/~matheuss"
+      "handle": "mrmckeb",
+      "commits": 3,
+      "url": "https://github.com/mrmckeb"
+    },
+    {
+      "handle": "leerob",
+      "commits": 3,
+      "url": "https://github.com/leerob"
+    },
+    {
+      "handle": "greenkeeperio-bot",
+      "commits": 2,
+      "url": "https://github.com/greenkeeperio-bot"
+    },
+    {
+      "handle": "yuler",
+      "commits": 2,
+      "url": "https://github.com/yuler"
+    },
+    {
+      "handle": "gobwas",
+      "commits": 2,
+      "url": "https://github.com/gobwas"
+    },
+    {
+      "handle": "ArtskydJ",
+      "commits": 2,
+      "url": "https://github.com/ArtskydJ"
     }
   ],
   "autopsy": {
     "causeOfDeath": "alive",
     "epitaph": "ms still has a pulse. Long may it commit.",
     "evidenceIds": [],
+    "lastWords": "chore: minimumReleaseAge: 2880 (#289)",
+    "lastWordsUrl": "https://github.com/vercel/ms",
     "generatedBy": "fallback-rules"
   },
   "successors": [],
-  "snapshotAt": "2026-10-29T19:14:36.786Z"
+  "snapshotAt": "2026-10-29T20:11:53.539Z"
 }
