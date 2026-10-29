@@ -41,14 +41,22 @@ export function ReportView({ initial }: { initial: Report }) {
         <div>
           <h1 className="font-display text-4xl">Haunting Report</h1>
           <p className="font-mono-data mt-1 text-sm" style={{ color: 'var(--violet-mute)' }}>
-            {report.sourceLabel} · {new Date(report.createdAt).toLocaleString()}
+            {report.sourceLabel} ·{' '}
+            <time dateTime={report.createdAt}>
+              {new Date(report.createdAt).toLocaleString('en-US', {
+                dateStyle: 'medium',
+                timeStyle: 'short',
+                timeZone: 'UTC',
+              })}{' '}
+              UTC
+            </time>
           </p>
         </div>
         <ShareBlock id={report.id} />
       </div>
 
       {report.status !== 'done' && report.status !== 'error' && (
-        <div className="card mt-6 p-4">
+        <div className="card mt-6 p-4" role="status" aria-live="polite">
           <div className="flex items-center gap-3">
             <span className="ghost-float inline-block" aria-hidden>👻</span>
             <div className="flex-1">

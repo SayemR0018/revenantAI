@@ -47,7 +47,7 @@ export function SeanceChat({ eco, name }: { eco: string; name: string }) {
       <p className="mt-1 text-xs" style={{ color: 'var(--violet-mute)' }}>
         The spirit of {name} answers only from its own records — README, releases, issues. It is not a person.
       </p>
-      <div className="mt-4 max-h-80 space-y-3 overflow-y-auto">
+      <div className="mt-4 max-h-80 space-y-3 overflow-y-auto" role="log" aria-live="polite" aria-relevant="additions">
         {!msgs.length && (
           <p className="text-sm italic" style={{ color: 'var(--violet-mute)' }}>
             The candles are lit. Ask what it does, how to use it, or how it ended.

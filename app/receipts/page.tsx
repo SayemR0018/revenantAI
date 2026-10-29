@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: 'Receipts — live integration status
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-const COLOR = { PASS: 'var(--alive)', DEGRADED: '#e8b33c', SKIPPED: '#6f6599', FAIL: 'var(--departed)' } as const;
+const COLOR = { PASS: 'var(--alive)', DEGRADED: '#f2bd49', SKIPPED: 'var(--violet-mute)', FAIL: 'var(--departed)' } as const;
 
 export default async function ReceiptsPage() {
   const checks = await runReceiptChecks({ quick: true });
