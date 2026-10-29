@@ -5,7 +5,7 @@ import {
 } from './types';
 import { getPackage, getRepo, getRepoIssuesStats, getRepoContributors, githubRefFromUrl } from './ecosystems';
 import {
-  npmMeta, pypiMeta, npmDownloadsTrend, registryRepoUrl, registryDeprecation, lastReleaseInfo, firstReleaseAt,
+  npmMeta, pypiMeta, NpmMeta, PypiMeta, npmDownloadsTrend, registryRepoUrl, registryDeprecation, lastReleaseInfo, firstReleaseAt,
 } from './registries';
 import { ghRepo, ghLastCommit, ghCommitActivity, ghContributors } from './github';
 import { ghostScore } from './score';
@@ -27,7 +27,7 @@ export async function resolveRepo(dep: DepRef): Promise<ScoredDep['repo'] | unde
   return url ? githubRefFromUrl(url) ?? undefined : undefined;
 }
 
-export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; repo?: ScoredDep['repo']; contributors: Contributor[] }> {
+export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; repo?: ScoredDep['repo']; contributors: Contributor[]; exists: boolean }> {
   const v: VitalSigns = {};
   const now = Date.now();
   const repo = await resolveRepo(dep);
@@ -36,6 +36,16 @@ export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; r
     getPackage(dep.ecosystem, dep.name).catch(() => null),
     dep.ecosystem === 'npm' ? npmMeta(dep.name).catch(() => null) : pypiMeta(dep.name).catch(() => null),
   ]);
+
+  const hasReg =
+    dep.ecosystem === 'npm'
+      ? Boolean((reg as NpmMeta | null)?.name)
+      : Boolean((reg as PypiMeta | null)?.info?.name);
+  const hasEco = Boolean(eco?.name);
+  const exists = hasReg || hasEco || Boolean(repo);
+  if (!exists) {
+    return { vitals: v, repo: undefined, contributors: [], exists: false };
+  }
 
   const dep_ = registryDeprecation(dep.ecosystem, reg);
   v.deprecated = dep_.deprecated || eco?.status === 'deprecated';
@@ -113,7 +123,7 @@ export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; r
     v.daysSinceCommit = v.lastCommitAt ? Math.floor((now - new Date(v.lastCommitAt).getTime()) / DAY) : v.pushedAt ? Math.floor((now - new Date(v.pushedAt).getTime()) / DAY) : undefined;
   }
 
-  return { vitals: v, repo, contributors: contribs };
+  return { vitals: v, repo, contributors: contribs, exists: true };
 }
 
 export async function autopsy(dep: DepRef, vitals: VitalSigns): Promise<Autopsy> {
@@ -159,11 +169,44 @@ export async function autopsy(dep: DepRef, vitals: VitalSigns): Promise<Autopsy>
 
 export async function scoreOne(dep: DepRef, opts: { withAutopsy?: boolean } = {}): Promise<ScoredDep> {
   try {
-    const { vitals, repo, contributors } = await fetchSignals(dep);
+    const { vitals, repo, contributors, exists } = await fetchSignals(dep);
+    if (!exists) {
+      return {
+        dep,
+        vitals: {},
+        score: 0,
+        band: 'alive',
+        confidence: 'low',
+        evidence: [],
+        error: "We couldn't find enough public signals",
+        notFound: true,
+      };
+    }
+    const hasAnySignal =
+      vitals.daysSinceCommit !== undefined ||
+      vitals.daysSinceRelease !== undefined ||
+      Boolean(vitals.archived) ||
+      Boolean(vitals.deprecated) ||
+      vitals.weeklyDownloads != null;
+    if (!hasAnySignal) {
+      return {
+        dep,
+        repo,
+        vitals,
+        score: 0,
+        band: 'alive',
+        confidence: 'low',
+        evidence: [],
+        contributors,
+        error: "We couldn't find enough public signals",
+      };
+    }
     const s = await ghostScore(vitals);
     const out: ScoredDep = {
       dep, repo, vitals,
       score: s.score, band: s.band, confidence: s.confidence,
+      contributions: s.contributions,
+      model: s.model,
       evidence: classifyCause(vitals).evidence,
       contributors,
     };
@@ -176,7 +219,7 @@ export async function scoreOne(dep: DepRef, opts: { withAutopsy?: boolean } = {}
   } catch (e) {
     return {
       dep, vitals: {}, score: 0, band: 'alive', confidence: 'low',
-      evidence: [], error: e instanceof Error ? e.message : String(e),
+      evidence: [], error: e instanceof Error ? e.message : "We couldn't find enough public signals",
     };
   }
 }

@@ -1,9 +1,10 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import { Report, ScoredDep, BAND_LABEL } from '@/lib/types';
+import Link from 'next/link';
+import { Report, ScoredDep, BAND_LABEL, visualBandFor } from '@/lib/types';
 import { PulseSparkline } from './PulseSparkline';
 
-const ORDER = { departed: 0, haunted: 1, fading: 2, alive: 3 };
+const ORDER: Record<string, number> = { departed: 0, haunted: 1, fading: 2, alive: 3, unknown: 4 };
 
 export function ReportView({ initial }: { initial: Report }) {
   const [report, setReport] = useState(initial);
@@ -25,7 +26,10 @@ export function ReportView({ initial }: { initial: Report }) {
   }, [initial.id, initial.status]);
 
   const sorted = useMemo(
-    () => [...report.results].sort((a, b) => ORDER[a.band] - ORDER[b.band] || b.score - a.score),
+    () =>
+      [...report.results].sort(
+        (a, b) => ORDER[visualBandFor(a)] - ORDER[visualBandFor(b)] || b.score - a.score,
+      ),
     [report.results],
   );
   const s = report.summary;
@@ -91,25 +95,34 @@ export function ReportView({ initial }: { initial: Report }) {
 }
 
 function DepRow({ d }: { d: ScoredDep }) {
+  const vb = visualBandFor(d);
   return (
     <li className="card flex items-center gap-4 p-4">
-      <div className="w-14 text-center">
-        <div className={`font-display text-2xl band-${d.band}`}>{d.error ? '?' : d.score}</div>
-        <div className={`text-[10px] uppercase tracking-wider band-${d.band}`}>{BAND_LABEL[d.band]}</div>
+      <div className="w-16 text-center">
+        <div className={`font-display text-2xl band-${vb}`}>{d.error ? '?' : d.score}</div>
+        <div className={`text-[10px] font-semibold uppercase tracking-wider band-${vb}`}>
+          {BAND_LABEL[vb]}
+        </div>
       </div>
       <div className="min-w-0 flex-1">
-        <a
-          href={`/grave/${d.dep.ecosystem}/${encodeURIComponent(d.dep.name)}`}
-          className="font-mono-data truncate text-lg hover:text-[var(--marigold)]"
-        >
-          {d.dep.name}
-        </a>
+        {d.notFound ? (
+          <span className="font-mono-data truncate text-lg" style={{ color: 'var(--bone)' }}>
+            {d.dep.name}
+          </span>
+        ) : (
+          <Link
+            href={`/grave/${d.dep.ecosystem}/${encodeURIComponent(d.dep.name)}`}
+            className="font-mono-data truncate text-lg hover:text-[var(--marigold)]"
+          >
+            {d.dep.name}
+          </Link>
+        )}
         <div className="mt-1 text-xs" style={{ color: 'var(--violet-mute)' }}>
           {d.dep.ecosystem}
-          {d.vitals.daysSinceCommit !== undefined && ` · last commit ${d.vitals.daysSinceCommit}d ago`}
-          {d.vitals.archived && ' · archived'}
-          {d.vitals.deprecated && ' · deprecated'}
-          {d.error && ` · ${d.error}`}
+          {!d.error && d.vitals.daysSinceCommit !== undefined && ` · last commit ${d.vitals.daysSinceCommit}d ago`}
+          {!d.error && d.vitals.archived && ' · archived'}
+          {!d.error && d.vitals.deprecated && ' · deprecated'}
+          {d.error && ` · ${d.error || "We couldn't find enough public signals"}`}
         </div>
       </div>
       <PulseSparkline data={d.vitals.commitsPerWeek} />

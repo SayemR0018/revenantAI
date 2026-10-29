@@ -94,6 +94,8 @@ export interface Autopsy {
   generatedBy: string; // provider id or 'fallback-rules'
 }
 
+export type VisualBand = Band | 'unknown';
+
 export interface ScoredDep {
   dep: DepRef;
   repo?: RepoRef;
@@ -101,11 +103,15 @@ export interface ScoredDep {
   score: number; // 0..100
   band: Band;
   confidence: 'high' | 'medium' | 'low';
+  contributions?: { feature: string; points: number }[];
+  model?: string;
   evidence: EvidenceItem[];
   autopsy?: Autopsy;
   successors?: Successor[];
   contributors?: Contributor[];
   error?: string;
+  notFound?: boolean;
+  snapshotAt?: string;
 }
 
 export interface ScanSummary {
@@ -127,6 +133,7 @@ export interface Report {
   results: ScoredDep[];
   summary: ScanSummary;
   isPublic: boolean;
+  manifestSpecs?: Record<string, string>;
   error?: string;
 }
 
@@ -207,9 +214,14 @@ export function bandFor(score: number, archived = false, deprecated = false): Ba
   return 'alive';
 }
 
-export const BAND_LABEL: Record<Band, string> = {
+export const BAND_LABEL: Record<Band | 'unknown', string> = {
   alive: 'Alive',
   fading: 'Fading',
   haunted: 'Haunted',
   departed: 'Departed',
+  unknown: 'Unknown',
 };
+
+export function visualBandFor(d: Pick<ScoredDep, 'band' | 'error'>): VisualBand {
+  return d.error ? 'unknown' : d.band;
+}

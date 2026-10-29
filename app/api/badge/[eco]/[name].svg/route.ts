@@ -15,11 +15,12 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ eco
   const { eco, name } = await params;
   if (eco !== 'npm' && eco !== 'pypi') return new NextResponse('bad ecosystem', { status: 400 });
   const t = await getTombstone(eco as Ecosystem, decodeURIComponent(name));
+  const isUnknown = !t || Boolean(t.error);
   const score = t?.score ?? 0;
   const band = t?.band ?? 'alive';
   const label = 'ghost risk';
-  const value = t?.error ? 'unknown' : `${score}%`;
-  const color = t?.error ? '#555' : COLORS[band];
+  const value = isUnknown ? 'unknown' : `${score}%`;
+  const color = isUnknown ? '#5c567a' : COLORS[band];
   const lw = 6 * label.length + 12;
   const vw = 6.4 * value.length + 12;
   const w = lw + vw;

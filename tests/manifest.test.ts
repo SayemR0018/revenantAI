@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { parsePackageJson, parseRequirementsTxt, parsePyprojectToml, parseManifest, dedupeDeps } from '@/lib/manifest';
-import { bandFor } from '@/lib/types';
+import { bandFor, visualBandFor } from '@/lib/types';
 import { heuristicScore } from '@/lib/score';
+import { classifyCause } from '@/lib/epitaph';
 
 describe('manifest parsing', () => {
   it('parses package.json deps + devDeps', () => {
@@ -64,5 +65,12 @@ describe('score banding', () => {
   it('heuristic: two years silent is haunted+', () => {
     const s = heuristicScore({ daysSinceCommit: 800, daysSinceRelease: 900 });
     expect(s.score).toBeGreaterThanOrEqual(50);
+  });
+
+  it('empty vitals classify as unknown without Infinity years', () => {
+    const c = classifyCause({});
+    expect(c.cause).toBe('unknown');
+    expect(JSON.stringify(c.evidence)).not.toContain('Infinity');
+    expect(visualBandFor({ band: 'alive', error: "We couldn't find enough public signals" })).toBe('unknown');
   });
 });

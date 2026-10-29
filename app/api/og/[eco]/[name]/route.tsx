@@ -6,20 +6,25 @@ import { Ecosystem, BAND_LABEL } from '@/lib/types';
 export const runtime = 'nodejs';
 
 const BAND_COLOR: Record<string, string> = {
-  alive: '#3fae5a',
-  fading: '#e8b33c',
-  haunted: '#e8890c',
-  departed: '#b06cf0',
+  alive: '#4cc366',
+  fading: '#f2bd49',
+  haunted: '#ff8c42',
+  departed: '#b87cff',
+  unknown: '#9e96bf',
 };
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ eco: string; name: string }> }) {
   const { eco, name } = await params;
   if (eco !== 'npm' && eco !== 'pypi') return new Response('bad ecosystem', { status: 400 });
-  const t = await getTombstone(eco as Ecosystem, decodeURIComponent(name)).catch(() => null);
-  const score = t?.score ?? 0;
-  const band = t?.band ?? 'alive';
-  const color = BAND_COLOR[band];
-  const epitaph = t?.autopsy?.epitaph ?? '';
+  const decoded = decodeURIComponent(name);
+  const t = await getTombstone(eco as Ecosystem, decoded).catch(() => null);
+  const isUnknown = !t || Boolean(t.error);
+  const scoreText = isUnknown ? '?' : String(t.score);
+  const band = isUnknown ? 'unknown' : t.band;
+  const color = BAND_COLOR[band] ?? '#9e96bf';
+  const epitaph = isUnknown
+    ? "We couldn't find enough public signals"
+    : (t?.autopsy?.epitaph ?? '');
   const epit = epitaph.length > 150 ? epitaph.slice(0, 147) + '…' : epitaph;
 
   return new ImageResponse(
@@ -47,12 +52,12 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ eco
               borderRadius: '150px 150px 12px 12px', marginRight: 64,
             }}
           >
-            <div style={{ display: 'flex', fontSize: 110, fontWeight: 700, color }}>{String(score)}</div>
+            <div style={{ display: 'flex', fontSize: 110, fontWeight: 700, color }}>{scoreText}</div>
             <div style={{ display: 'flex', fontSize: 24, color: '#9a90c4', letterSpacing: 4 }}>{'GHOST SCORE'}</div>
-            <div style={{ display: 'flex', fontSize: 30, color, marginTop: 12 }}>{BAND_LABEL[band]}</div>
+            <div style={{ display: 'flex', fontSize: 30, color, marginTop: 12 }}>{BAND_LABEL[band].toUpperCase()}</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-            <div style={{ display: 'flex', fontSize: 64, fontWeight: 700, lineHeight: 1.1 }}>{name}</div>
+            <div style={{ display: 'flex', fontSize: 64, fontWeight: 700, lineHeight: 1.1 }}>{decoded}</div>
             <div style={{ display: 'flex', fontSize: 24, color: '#9a90c4', marginTop: 8 }}>{`${eco} package`}</div>
             {epit ? <div style={{ display: 'flex', fontSize: 26, color: '#d8cfe8', marginTop: 28, fontStyle: 'italic', lineHeight: 1.4 }}>{`“${epit}”`}</div> : null}
           </div>

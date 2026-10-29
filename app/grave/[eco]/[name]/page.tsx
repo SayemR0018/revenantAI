@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTombstone } from '@/lib/tombstones';
-import { Ecosystem, BAND_LABEL, ScoredDep } from '@/lib/types';
+import { Ecosystem, BAND_LABEL, ScoredDep, visualBandFor } from '@/lib/types';
 import { PulseSparkline } from '@/components/PulseSparkline';
 import { Ofrenda } from '@/components/Ofrenda';
 import { SeanceChat } from '@/components/SeanceChat';
@@ -34,14 +34,21 @@ export default async function GravePage({ params }: Props) {
 
 function Tombstone({ t }: { t: ScoredDep }) {
   const v = t.vitals;
+  const vb = visualBandFor(t);
   const years = v.yearsActive ? Math.max(1, Math.round(v.yearsActive)) : null;
+  const noData = <span className="text-sm font-normal" style={{ color: 'var(--violet-mute)' }}>not enough data</span>;
   return (
     <article>
       <div className="grid gap-8 md:grid-cols-[300px_1fr]">
         <div className="tombstone mx-auto flex h-[340px] w-[280px] flex-col items-center justify-center p-6 text-center">
-          <div className={`font-display text-7xl band-${t.band}`}>{t.error ? '?' : t.score}</div>
+          <div className={`font-display text-7xl band-${vb}`}>{t.error ? '?' : t.score}</div>
           <div className="mt-1 text-xs uppercase tracking-[0.3em]" style={{ color: 'var(--violet-mute)' }}>ghost score</div>
-          <div className={`mt-3 text-xl band-${t.band}`}>{BAND_LABEL[t.band]}</div>
+          <div className={`mt-3 text-xl uppercase tracking-wider band-${vb}`}>{BAND_LABEL[vb]}</div>
+          {t.error && (
+            <div className="mt-2 px-2 text-xs" style={{ color: 'var(--bone-dim)' }}>
+              We couldn&apos;t find enough public signals
+            </div>
+          )}
           {v.archived && <div className="font-mono-data mt-3 text-xs" style={{ color: 'var(--violet-mute)' }}>✝ archived</div>}
           {v.deprecated && <div className="font-mono-data mt-1 text-xs" style={{ color: 'var(--violet-mute)' }}>⚠ deprecated</div>}
         </div>
@@ -69,13 +76,13 @@ function Tombstone({ t }: { t: ScoredDep }) {
         <h2 id="vitals" className="font-display text-2xl">Vital signs</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Vital label="commit pulse (26 wks)"><PulseSparkline data={v.commitsPerWeek} width={150} height={30} /></Vital>
-          <Vital label="last commit">{v.daysSinceCommit !== undefined ? `${v.daysSinceCommit} days ago` : 'unknown'}</Vital>
-          <Vital label="release gap">{v.daysSinceRelease !== undefined ? `${v.daysSinceRelease} days` : 'unknown'}</Vital>
-          <Vital label="bus factor">{v.busFactor !== undefined ? `${Math.round(v.busFactor * 100)}% top author` : 'unknown'}</Vital>
-          <Vital label="issue close rate">{v.issueCloseRate180 != null ? `${Math.round(v.issueCloseRate180 * 100)}%` : 'unknown'}</Vital>
-          <Vital label="weekly downloads">{v.weeklyDownloads != null ? v.weeklyDownloads.toLocaleString() : 'unknown'}</Vital>
-          <Vital label="dependents">{v.dependents != null ? v.dependents.toLocaleString() : 'unknown'}</Vital>
-          <Vital label="years active">{years ?? 'unknown'}</Vital>
+          <Vital label="last commit">{v.daysSinceCommit !== undefined ? `${v.daysSinceCommit} days ago` : noData}</Vital>
+          <Vital label="release gap">{v.daysSinceRelease !== undefined ? `${v.daysSinceRelease} days` : noData}</Vital>
+          <Vital label="bus factor">{v.busFactor !== undefined ? `${Math.round(v.busFactor * 100)}% top author` : noData}</Vital>
+          <Vital label="issue close rate">{v.issueCloseRate180 != null ? `${Math.round(v.issueCloseRate180 * 100)}%` : noData}</Vital>
+          <Vital label="weekly downloads">{v.weeklyDownloads != null ? v.weeklyDownloads.toLocaleString() : noData}</Vital>
+          <Vital label="dependents">{v.dependents != null ? v.dependents.toLocaleString() : noData}</Vital>
+          <Vital label="years active">{years ?? noData}</Vital>
         </div>
       </section>
 

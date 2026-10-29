@@ -12,6 +12,7 @@ interface Row {
   band: string;
   vitals: { daysSinceCommit?: number; weeklyDownloads?: number | null; archived?: boolean; deprecated?: boolean };
   epitaph?: string;
+  error?: string;
 }
 
 async function loadIndex(): Promise<{ generatedAt: string; rows: Row[] }> {
@@ -90,8 +91,8 @@ export default async function Cementerio({ searchParams }: { searchParams: Promi
                   </Link>
                 </td>
                 <td className="py-2 pr-3" style={{ color: 'var(--violet-mute)' }}>{r.dep.ecosystem}</td>
-                <td className={`font-mono-data py-2 pr-3 band-${r.band}`}>{r.score}</td>
-                <td className={`py-2 pr-3 capitalize band-${r.band}`}>{BAND_LABEL[r.band as ScoredDep['band']]}</td>
+                <td className={`font-mono-data py-2 pr-3 band-${r.error ? 'unknown' : r.band}`}>{r.error ? '?' : r.score}</td>
+                <td className={`py-2 pr-3 capitalize band-${r.error ? 'unknown' : r.band}`}>{BAND_LABEL[(r.error ? 'unknown' : r.band) as ScoredDep['band']]}</td>
                 <td className="font-mono-data py-2 pr-3" style={{ color: 'var(--bone-dim)' }}>
                   {r.vitals.daysSinceCommit !== undefined ? `${r.vitals.daysSinceCommit}d` : '—'}
                   {r.vitals.archived ? ' ✝' : ''}{r.vitals.deprecated ? ' ⚠' : ''}
