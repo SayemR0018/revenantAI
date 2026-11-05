@@ -1,9 +1,9 @@
-// LLM gateway. Open-weight models only on the product path.
-// Ultramarine exists strictly as a labelled closed baseline for comparisons.
+// LLM gateway. Open-weight by default; optional closed-weight providers
+// (OpenAI, Ultramarine) are opt-in and visibly labelled everywhere.
 // Every provider is OpenAI-compatible HTTP or a local client; chosen per task by env.
 import { z } from 'zod';
 
-export type Task = 'autopsy' | 'epitaph' | 'seance' | 'arena' | 'judge';
+export type Task = 'autopsy' | 'epitaph' | 'seance' | 'arena' | 'judge' | 'lifecycle';
 
 export interface ChatMsg {
   role: 'system' | 'user' | 'assistant';
@@ -15,16 +15,20 @@ export interface LlmResult {
   provider: string;
   model: string;
   latencyMs: number;
+  closed?: boolean;
   usage?: { prompt?: number; completion?: number };
 }
 
-interface ProviderDef {
+export interface ProviderDef {
   id: string;
+  spec?: string;
   baseUrl: () => string | undefined;
   apiKey: () => string | undefined;
   model: () => string;
   closed?: boolean;
 }
+
+export const DEFAULT_OPENAI_MODEL = 'gpt-5.4-mini';
 
 const PROVIDERS: Record<string, ProviderDef> = {
   'gemma-aistudio': {
@@ -61,6 +65,13 @@ const PROVIDERS: Record<string, ProviderDef> = {
     apiKey: () => 'ollama',
     model: () => process.env.OLLAMA_MODEL || 'gemma3:4b',
   },
+  openai: {
+    id: 'openai',
+    baseUrl: () => process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1',
+    apiKey: () => process.env.OPENAI_API_KEY,
+    model: () => process.env.OPENAI_MODEL || DEFAULT_OPENAI_MODEL,
+    closed: true,
+  },
   ultramarine: {
     id: 'ultramarine',
     baseUrl: () => process.env.ULTRAMARINE_BASE_URL,
@@ -71,25 +82,58 @@ const PROVIDERS: Record<string, ProviderDef> = {
 };
 
 export function resolveProvider(spec: string): ProviderDef {
-  const base = spec.split(':')[0];
+  const trimmed = spec.trim();
+  const base = trimmed.split(':')[0];
   const p = PROVIDERS[base];
-  if (!p) throw new Error(`unknown LLM provider: ${spec}`);
-  if (spec.includes(':')) {
-    const model = spec.split(':').slice(1).join(':');
-    return { ...p, model: () => model };
+  if (!p) throw new Error(`unknown LLM provider: ${trimmed}`);
+  if (trimmed.includes(':')) {
+    const model = trimmed.split(':').slice(1).join(':');
+    return { ...p, spec: trimmed, model: () => model };
   }
-  return p;
+  return { ...p, spec: trimmed };
+}
+
+export function isClosedProvider(specOrId: string): boolean {
+  try {
+    return Boolean(resolveProvider(specOrId).closed);
+  } catch {
+    return specOrId.startsWith('openai') || specOrId.startsWith('ultramarine');
+  }
+}
+
+/**
+ * Resolve all configured providers for a task in priority order.
+ * Accepts a comma-separated fallback chain in `LLM_<TASK>_PROVIDER`
+ * (e.g. `LLM_AUTOPSY_PROVIDER=gemma-aistudio,openai`).
+ * Closed-weight providers are NEVER included unless explicitly named in env.
+ */
+export function providersFor(task: Task): ProviderDef[] {
+  const envKey = `LLM_${task.toUpperCase()}_PROVIDER`;
+  const raw = process.env[envKey]?.trim();
+  const explicitSpecs = raw
+    ? raw
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : null;
+  const candidates = explicitSpecs ?? ['gemma-aistudio', 'ollama'];
+  const out: ProviderDef[] = [];
+  for (const c of candidates) {
+    try {
+      const p = resolveProvider(c);
+      if (!explicitSpecs && p.closed) continue;
+      if (p.baseUrl() && p.apiKey()) {
+        out.push(p);
+      }
+    } catch {
+      /* skip unknown/unconfigured provider silently */
+    }
+  }
+  return out;
 }
 
 export function providerFor(task: Task): ProviderDef | null {
-  const envKey = `LLM_${task.toUpperCase()}_PROVIDER`;
-  const spec = process.env[envKey];
-  const candidates = spec ? [spec] : ['gemma-aistudio', 'ollama'];
-  for (const c of candidates) {
-    const p = resolveProvider(c);
-    if (p.baseUrl() && p.apiKey()) return p;
-  }
-  return null;
+  return providersFor(task)[0] ?? null;
 }
 
 function normalizeMessagesForGemma(messages: ChatMsg[]): ChatMsg[] {
@@ -103,28 +147,84 @@ function normalizeMessagesForGemma(messages: ChatMsg[]): ChatMsg[] {
   return out;
 }
 
-export async function chat(spec: string, messages: ChatMsg[], opts: { temperature?: number; maxTokens?: number; json?: boolean; modelOverride?: string } = {}): Promise<LlmResult> {
+function parseRetryAfterMs(headerVal: string | null): number {
+  if (!headerVal) return 1000;
+  const secs = Number(headerVal);
+  if (Number.isFinite(secs) && secs >= 0) {
+    return Math.min(10_000, Math.max(50, Math.round(secs * 1000)));
+  }
+  const dateMs = Date.parse(headerVal);
+  if (!Number.isNaN(dateMs)) {
+    return Math.min(10_000, Math.max(50, dateMs - Date.now()));
+  }
+  return 1000;
+}
+
+export async function chat(
+  spec: string,
+  messages: ChatMsg[],
+  opts: { temperature?: number; maxTokens?: number; json?: boolean; modelOverride?: string } = {},
+): Promise<LlmResult> {
   const p = resolveProvider(spec);
   const base = p.baseUrl();
   const key = p.apiKey();
-  if (!base || !key) throw new Error(`provider ${spec} not configured`);
+  if (!base || !key) throw new Error(`provider ${p.id} not configured`);
+
   const t0 = Date.now();
   const modelName = opts.modelOverride || p.model();
   const isGemma = modelName.toLowerCase().includes('gemma');
-  const res = await fetch(`${base.replace(/\/$/, '')}/chat/completions`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', authorization: `Bearer ${key}` },
-    body: JSON.stringify({
-      model: modelName,
-      messages: isGemma ? normalizeMessagesForGemma(messages) : messages,
-      temperature: opts.temperature ?? 0.4,
-      max_tokens: opts.maxTokens ?? 2048,
-      ...(opts.json && !isGemma ? { response_format: { type: 'json_object' } } : {}),
-    }),
-    signal: AbortSignal.timeout(60_000),
-  });
-  if (!res.ok) throw new Error(`${spec} HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  const j = (await res.json()) as { choices?: { message?: { content?: string } }[]; usage?: { prompt_tokens?: number; completion_tokens?: number } };
+  const isOpenAI = p.id === 'openai';
+  const isReasoningModel = /^(o\d|gpt-5)/i.test(modelName);
+
+  const normalizedMessages = isGemma ? normalizeMessagesForGemma(messages) : messages;
+  const maxTokens = opts.maxTokens ?? 2048;
+
+  const payload: Record<string, unknown> = {
+    model: modelName,
+    messages: normalizedMessages,
+  };
+
+  if (isOpenAI) {
+    payload.max_completion_tokens = maxTokens;
+    if (!isReasoningModel) {
+      payload.temperature = opts.temperature ?? 0.4;
+    }
+  } else {
+    payload.max_tokens = maxTokens;
+    payload.temperature = opts.temperature ?? 0.4;
+  }
+
+  if (opts.json && !isGemma) {
+    payload.response_format = { type: 'json_object' };
+  }
+
+  const endpoint = `${base.replace(/\/$/, '')}/chat/completions`;
+  const doRequest = () =>
+    fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `Bearer ${key}`,
+      },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(60_000),
+    });
+
+  let res = await doRequest();
+  if (res.status === 429) {
+    const delayMs = parseRetryAfterMs(res.headers?.get?.('retry-after') ?? null);
+    await new Promise((r) => setTimeout(r, delayMs));
+    res = await doRequest();
+  }
+
+  if (!res.ok) {
+    throw new Error(`${p.id} HTTP ${res.status}`);
+  }
+
+  const j = (await res.json()) as {
+    choices?: { message?: { content?: string } }[];
+    usage?: { prompt_tokens?: number; completion_tokens?: number };
+  };
   const rawContent = j.choices?.[0]?.message?.content ?? '';
   const cleaned = rawContent.replace(/<thought>[\s\S]*?<\/thought>/gi, '').trim();
   return {
@@ -132,31 +232,53 @@ export async function chat(spec: string, messages: ChatMsg[], opts: { temperatur
     provider: p.id,
     model: modelName,
     latencyMs: Date.now() - t0,
+    closed: Boolean(p.closed),
     usage: { prompt: j.usage?.prompt_tokens, completion: j.usage?.completion_tokens },
   };
 }
 
 /** Structured call: validate with zod, retry once on bad JSON or transient 5xx, then return null. */
-export async function chatJson<T>(spec: string, messages: ChatMsg[], schema: z.ZodType<T>): Promise<{ data: T | null; result?: LlmResult }> {
-  for (let attempt = 0; attempt < 2; attempt++) {
+export async function chatJson<T>(
+  spec: string,
+  messages: ChatMsg[],
+  schema: z.ZodType<T>,
+): Promise<{ data: T | null; result?: LlmResult }> {
+  const specs = spec.includes(',')
+    ? spec
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : [spec];
+
+  for (const candidateSpec of specs) {
+    let resolved: ProviderDef;
     try {
-      const modelOverride =
-        attempt === 1 && spec === 'gemma-aistudio' ? 'gemma-4-26b-a4b-it' : undefined;
-      const r = await chat(spec, messages, {
-        json: true,
-        temperature: attempt ? 0.1 : 0.4,
-        modelOverride,
-      });
-      let text = r.text.replace(/^```(?:json)?\s*|\s*```$/g, '').trim();
-      const firstBrace = text.indexOf('{');
-      const lastBrace = text.lastIndexOf('}');
-      if (firstBrace >= 0 && lastBrace > firstBrace) {
-        text = text.slice(firstBrace, lastBrace + 1);
-      }
-      const parsed = schema.safeParse(JSON.parse(text));
-      if (parsed.success) return { data: parsed.data, result: r };
+      resolved = resolveProvider(candidateSpec);
+      if (!resolved.baseUrl() || !resolved.apiKey()) continue;
     } catch {
-      /* retry */
+      continue;
+    }
+
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const modelOverride =
+          attempt === 1 && resolved.id === 'gemma-aistudio' ? 'gemma-4-26b-a4b-it' : undefined;
+        const r = await chat(candidateSpec, messages, {
+          json: true,
+          temperature: attempt ? 0.1 : 0.4,
+          modelOverride,
+        });
+        let text = r.text.replace(/^```(?:json)?\s*|\s*```$/g, '').trim();
+        const firstBrace = text.indexOf('{');
+        const lastBrace = text.lastIndexOf('}');
+        if (firstBrace >= 0 && lastBrace > firstBrace) {
+          text = text.slice(firstBrace, lastBrace + 1);
+        }
+        const parsed = schema.safeParse(JSON.parse(text));
+        if (parsed.success) return { data: parsed.data, result: r };
+      } catch {
+        /* retry or advance to next provider in chain */
+      }
     }
   }
   return { data: null };
@@ -170,6 +292,7 @@ export const AutopsySchema = z.object({
     'ecosystem_shift',
     'company_pulled',
     'deprecated_official',
+    'maintenance_mode',
     'slow_decay',
     'alive',
     'unknown',
@@ -180,10 +303,26 @@ export const AutopsySchema = z.object({
 
 export type AutopsyOutput = z.infer<typeof AutopsySchema>;
 
+export const LifecycleLlmSchema = z.object({
+  status: z.enum([
+    'maintenance',
+    'legacy',
+    'unmaintained',
+    'seeking_maintainers',
+    'sunset',
+    'none',
+  ]),
+  confidence: z.number().min(0).max(1),
+  quote: z.string(),
+});
+
+export type LifecycleLlmOutput = z.infer<typeof LifecycleLlmSchema>;
+
 export function listArenaProviders(): string[] {
   const spec = process.env.LLM_ARENA_PROVIDERS;
   if (spec) return spec.split(',').map((s) => s.trim()).filter(Boolean);
-  // default trio: AI Studio Gemma + two Backboard open-weights when keys exist
+  // Default trio: open-weight only (AI Studio Gemma + two Backboard open-weights + Ollama when configured).
+  // Closed-weight providers (openai, ultramarine) are never included unless explicitly listed in LLM_ARENA_PROVIDERS.
   const out: string[] = [];
   if (process.env.GOOGLE_API_KEY || process.env.GEMMA_API_KEY) out.push('gemma-aistudio');
   if (process.env.BACKBOARD_API_KEY) out.push('backboard:qwen3-8b', 'backboard:llama-3.3-70b');

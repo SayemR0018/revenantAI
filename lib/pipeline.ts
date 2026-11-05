@@ -14,7 +14,8 @@ import { findSuccessors } from './successors';
 import { mapLimit } from './fetch';
 import { getReport, saveReport } from './store';
 import { buildCorpus } from './corpus';
-import { chatJson, providerFor, AutopsySchema } from './llm';
+import { chatJson, providersFor, AutopsySchema } from './llm';
+import { detectLifecycle, createLifecycleBudget, LifecycleScanBudget } from './lifecycle';
 
 const DAY = 86400_000;
 
@@ -28,7 +29,10 @@ export async function resolveRepo(dep: DepRef): Promise<ScoredDep['repo'] | unde
   return fromEco ?? undefined;
 }
 
-export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; repo?: ScoredDep['repo']; contributors: Contributor[]; exists: boolean }> {
+export async function fetchSignals(
+  dep: DepRef,
+  opts: { lifecycleBudget?: LifecycleScanBudget } = {},
+): Promise<{ vitals: VitalSigns; repo?: ScoredDep['repo']; contributors: Contributor[]; exists: boolean }> {
   const v: VitalSigns = {};
   const now = Date.now();
   const repo = await resolveRepo(dep);
@@ -108,6 +112,9 @@ export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; r
       for (const c of ghC.slice(0, 12)) {
         if (c.login) contribs.push({ handle: c.login, commits: c.contributions, url: c.html_url });
       }
+      if (ghC.length && v.authorsLast365 === undefined) {
+        v.authorsLast365 = ghC.filter((c) => (c.contributions ?? 0) > 0).length;
+      }
     }
 
     // pulse + precise last commit (GitHub; falls back to ecosyste.ms weekly commits when rate-limited)
@@ -134,6 +141,18 @@ export async function fetchSignals(dep: DepRef): Promise<{ vitals: VitalSigns; r
       (v as VitalSigns & { _lastCommitSubject?: string })._lastCommitSubject = last.commit.message.split('\n')[0];
     }
     v.daysSinceCommit = v.lastCommitAt ? Math.floor((now - new Date(v.lastCommitAt).getTime()) / DAY) : v.pushedAt ? Math.floor((now - new Date(v.pushedAt).getTime()) / DAY) : undefined;
+
+    if (!v.deprecated && !v.archived) {
+      const lc = await detectLifecycle(dep, {
+        repo,
+        repoDescription: gh?.description ?? ecoRepo?.description,
+        budget: opts.lifecycleBudget,
+      }).catch(() => null);
+      if (lc) v.lifecycle = lc;
+    }
+  } else if (!v.deprecated && !v.archived) {
+    const lc = await detectLifecycle(dep, { budget: opts.lifecycleBudget }).catch(() => null);
+    if (lc) v.lifecycle = lc;
   }
 
   if (!contribs.length) {
@@ -158,11 +177,12 @@ export async function autopsy(dep: DepRef, vitals: VitalSigns): Promise<Autopsy>
   const { cause, evidence } = classifyCause(vitals);
   const last = lastWords(vitals, (vitals as VitalSigns & { _lastCommitSubject?: string })._lastCommitSubject);
 
-  const provider = providerFor('autopsy');
-  if (provider) {
+  const providers = providersFor('autopsy');
+  if (providers.length) {
+    const chainSpec = providers.map((p) => p.spec || p.id).join(',');
     const evText = evidence.map((e) => `${e.id}: ${e.label} — ${e.detail}`).join('\n');
     const { data, result } = await chatJson(
-      provider.id,
+      chainSpec,
       [
         { role: 'system', content: 'You write dignified autopsies for open-source projects. Return strict JSON: causeOfDeath (enum), evidenceIds (only ids given), epitaph (max 2 sentences, warm, never blaming maintainers, no jokes at their expense). Signals, not verdicts.' },
         {
@@ -195,9 +215,14 @@ export async function autopsy(dep: DepRef, vitals: VitalSigns): Promise<Autopsy>
   };
 }
 
-export async function scoreOne(dep: DepRef, opts: { withAutopsy?: boolean } = {}): Promise<ScoredDep> {
+export async function scoreOne(
+  dep: DepRef,
+  opts: { withAutopsy?: boolean; lifecycleBudget?: LifecycleScanBudget } = {},
+): Promise<ScoredDep> {
   try {
-    const { vitals, repo, contributors, exists } = await fetchSignals(dep);
+    const { vitals, repo, contributors, exists } = await fetchSignals(dep, {
+      lifecycleBudget: opts.lifecycleBudget,
+    });
     if (!exists) {
       return {
         dep,
@@ -215,6 +240,7 @@ export async function scoreOne(dep: DepRef, opts: { withAutopsy?: boolean } = {}
       vitals.daysSinceRelease !== undefined ||
       Boolean(vitals.archived) ||
       Boolean(vitals.deprecated) ||
+      Boolean(vitals.lifecycle) ||
       vitals.weeklyDownloads != null;
     if (!hasAnySignal) {
       return {
@@ -238,7 +264,12 @@ export async function scoreOne(dep: DepRef, opts: { withAutopsy?: boolean } = {}
       evidence: classifyCause(vitals).evidence,
       contributors,
     };
-    if (opts.withAutopsy || s.band === 'haunted' || s.band === 'departed') {
+    if (
+      opts.withAutopsy ||
+      s.band === 'haunted' ||
+      s.band === 'departed' ||
+      (s.band === 'fading' && Boolean(vitals.lifecycle))
+    ) {
       out.autopsy = await autopsy(dep, vitals);
       out.successors = await findSuccessors(dep, vitals).catch(() => []);
       if (repo) await buildCorpus(dep, repo).catch(() => {});
@@ -262,8 +293,9 @@ export async function runScan(reportId: string, onProgress?: (r: Report) => Prom
 
   const deps: DepRef[] = (report as unknown as { _deps: DepRef[] })._deps ?? [];
   const results: ScoredDep[] = new Array(deps.length);
+  const lifecycleBudget = createLifecycleBudget(20);
   await mapLimit(deps, 8, async (dep, i) => {
-    results[i] = await scoreOne(dep);
+    results[i] = await scoreOne(dep, { lifecycleBudget });
     report.progress = { done: i + 1, total: deps.length, phase: `examining ${dep.name}` };
     await saveReport(report);
     await onProgress?.(report);

@@ -8,7 +8,7 @@ const CACHE_DIR = process.env.REVENANT_CACHE_DIR || path.join(process.cwd(), 'da
 
 export async function cachedFetch<T>(
   url: string,
-  opts: { ttlMs?: number; init?: RequestInit; key?: string } = {},
+  opts: { ttlMs?: number; init?: RequestInit; key?: string; timeoutMs?: number; text?: boolean } = {},
 ): Promise<T | null> {
   const ttl = opts.ttlMs ?? 6 * 3600_000;
   const key = opts.key ?? createHash('sha1').update(url).digest('hex');
@@ -27,7 +27,9 @@ export async function cachedFetch<T>(
     /* no cache file */
   }
 
-  const data = await fetchJson<T>(url, opts.init);
+  const data = opts.text
+    ? ((await fetchText(url, opts.init, opts.timeoutMs ?? 4000)) as unknown as T | null)
+    : await fetchJson<T>(url, opts.init, opts.timeoutMs ?? 12000);
   if (data !== null) {
     memCache.set(key, { at: Date.now(), ttl, data });
     fs.mkdir(CACHE_DIR, { recursive: true })
@@ -35,6 +37,28 @@ export async function cachedFetch<T>(
       .catch(() => {});
   }
   return data;
+}
+
+export async function fetchText(url: string, init: RequestInit = {}, timeoutMs = 4000): Promise<string | null> {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, {
+      ...init,
+      signal: ctrl.signal,
+      headers: {
+        'User-Agent': 'revenant/0.1 (ghost-in-the-machine; +https://github.com/SayemR0018/revenantAI)',
+        Accept: 'text/plain, text/markdown, */*',
+        ...(init.headers || {}),
+      },
+    });
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(t);
+  }
 }
 
 export async function fetchJson<T>(url: string, init: RequestInit = {}, timeoutMs = 12000): Promise<T | null> {

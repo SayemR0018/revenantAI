@@ -26,7 +26,7 @@ const EXAMPLE_CHIPS = [
   { eco: 'npm', name: 'request', band: 'departed' },
   { eco: 'npm', name: 'left-pad', band: 'departed' },
   { eco: 'npm', name: 'node-sass', band: 'departed' },
-  { eco: 'npm', name: 'moment', band: 'alive' },
+  { eco: 'npm', name: 'moment', band: 'fading' },
   { eco: 'npm', name: 'react', band: 'alive' },
 ] as const;
 

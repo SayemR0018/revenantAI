@@ -5,6 +5,7 @@ import { getTombstone } from '@/lib/tombstones';
 import {
   Ecosystem,
   BAND_LABEL,
+  LIFECYCLE_CHIP_LABEL,
   ScoredDep,
   CauseOfDeath,
   EvidenceItem,
@@ -58,6 +59,11 @@ const CAUSE_META: Record<CauseOfDeath, { title: string; summary: string }> = {
     summary:
       'The surrounding runtime or toolchain evolved past the problem this package originally solved.',
   },
+  maintenance_mode: {
+    title: 'Maintenance mode',
+    summary:
+      'The maintainers explicitly declared this project in maintenance or legacy mode — still receiving essential fixes, but no longer evolving with new features.',
+  },
   slow_decay: {
     title: 'Gradual Dormancy',
     summary:
@@ -90,6 +96,7 @@ const KIND_LABEL: Record<EvidenceItem['kind'], string> = {
 const FEATURE_LABEL: Record<string, string> = {
   archived: 'Repository archived (read-only)',
   deprecated: 'Registry deprecation flag',
+  lifecycle: 'Declared lifecycle status',
   daysSinceCommit: 'Time since last commit',
   daysSinceRelease: 'Time since last release',
   busFactor: 'High single-author concentration',
@@ -153,7 +160,9 @@ function Tombstone({ t }: { t: ScoredDep }) {
     </span>
   );
 
-  const causeKey: CauseOfDeath = t.autopsy?.causeOfDeath ?? (vb === 'alive' ? 'alive' : 'unknown');
+  const causeKey: CauseOfDeath =
+    t.autopsy?.causeOfDeath ??
+    (v.lifecycle ? 'maintenance_mode' : vb === 'alive' ? 'alive' : 'unknown');
   const causeInfo = CAUSE_META[causeKey] ?? CAUSE_META.unknown;
 
   const fallbackHeuristic = heuristicScore(v);
@@ -196,6 +205,14 @@ function Tombstone({ t }: { t: ScoredDep }) {
             {v.deprecated && (
               <span className="font-mono-data rounded border border-[#35305c] bg-[#0d0b1e] px-2 py-0.5 text-[11px]" style={{ color: 'var(--haunted)' }}>
                 ⚠ deprecated
+              </span>
+            )}
+            {v.lifecycle && (
+              <span
+                className="font-mono-data rounded border border-[#5c4820] bg-[#0d0b1e] px-2 py-0.5 text-[11px] font-semibold"
+                style={{ color: '#f2bd49' }}
+              >
+                ⚑ {LIFECYCLE_CHIP_LABEL[v.lifecycle.status]}
               </span>
             )}
           </div>
@@ -256,7 +273,10 @@ function Tombstone({ t }: { t: ScoredDep }) {
             </p>
           )}
 
-          {(vb === 'departed' || vb === 'haunted' || (t.successors && t.successors.length > 0)) && (
+          {(vb === 'departed' ||
+            vb === 'haunted' ||
+            (vb === 'fading' && Boolean(v.lifecycle)) ||
+            (t.successors && t.successors.length > 0)) && (
             <div className="mt-5">
               <TombstoneResurrectTrigger dep={t} />
             </div>
@@ -399,6 +419,30 @@ function Tombstone({ t }: { t: ScoredDep }) {
           <p className="mt-1 text-xs" style={{ color: 'var(--bone-dim)' }}>
             {causeInfo.summary}
           </p>
+
+          {v.lifecycle && (
+            <div className="mt-3 rounded-lg border border-[#5c4820] bg-[#14112b] p-3 text-xs">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="font-mono-data font-semibold uppercase" style={{ color: '#f2bd49' }}>
+                  ⚑ {LIFECYCLE_CHIP_LABEL[v.lifecycle.status]} ({v.lifecycle.source})
+                </span>
+                {v.lifecycle.url && (
+                  <a
+                    href={v.lifecycle.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-mono-data underline hover:text-[var(--marigold)]"
+                    style={{ color: 'var(--marigold)' }}
+                  >
+                    Official status source →
+                  </a>
+                )}
+              </div>
+              <blockquote className="mt-1.5 italic" style={{ color: 'var(--bone)' }}>
+                “{v.lifecycle.quote}”
+              </blockquote>
+            </div>
+          )}
 
           <ol className="mt-4 space-y-2.5 text-sm" style={{ color: 'var(--bone-dim)' }}>
             {t.evidence.map((e, idx) => (

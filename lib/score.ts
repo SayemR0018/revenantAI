@@ -1,6 +1,13 @@
 // Ghost score: heuristic model + optional remote TabPFN scoring via ml/ service.
 // The heuristic is deliberately transparent — every point is attributable to a signal.
-import { FeatureVector, VitalSigns, Band, bandFor, FEATURE_KEYS } from './types';
+import {
+  FeatureVector,
+  VitalSigns,
+  Band,
+  LifecycleStatus,
+  bandFor,
+  FEATURE_KEYS,
+} from './types';
 
 export interface ScoreResult {
   score: number;
@@ -9,6 +16,22 @@ export interface ScoreResult {
   contributions: { feature: string; points: number }[];
   model: 'heuristic-v1' | 'tabpfn';
 }
+
+export const LIFECYCLE_POINTS: Record<LifecycleStatus, number> = {
+  maintenance: 35,
+  legacy: 35,
+  sunset: 40,
+  unmaintained: 50,
+  seeking_maintainers: 40,
+};
+
+export const LIFECYCLE_TABPFN_FLOOR: Record<LifecycleStatus, number> = {
+  maintenance: 30,
+  legacy: 30,
+  sunset: 40,
+  unmaintained: 55,
+  seeking_maintainers: 45,
+};
 
 /** Build the ML feature vector from vitals (mirrors ml/features.py). */
 export function featureVector(v: VitalSigns): FeatureVector {
@@ -60,6 +83,9 @@ export function heuristicScore(v: VitalSigns): ScoreResult {
 
   if (v.archived) add('archived', 70);
   if (v.deprecated) add('deprecated', 65);
+  if (v.lifecycle) {
+    add('lifecycle', LIFECYCLE_POINTS[v.lifecycle.status]);
+  }
 
   const dc = v.daysSinceCommit;
   if (dc !== undefined) {
@@ -78,7 +104,10 @@ export function heuristicScore(v: VitalSigns): ScoreResult {
 
   if (v.busFactor !== undefined && v.busFactor >= 0.8 && (v.authorsLast365 ?? 1) <= 2)
     add('busFactor', 8);
-  if ((v.authorsLast365 ?? 0) === 0 && !v.archived) add('authors365', 10);
+
+  const zeroAuthorsLastYear =
+    v.authorsLast365 !== undefined ? v.authorsLast365 === 0 : dc === undefined || dc > 365;
+  if (zeroAuthorsLastYear && !v.archived) add('authors365', 10);
 
   if (v.issueCloseRate180 !== undefined && v.issueCloseRate180 !== null) {
     if (v.issueCloseRate180 < 0.1 && (v.openIssues ?? 0) > 50) add('issueCloseRate', 8);
@@ -89,19 +118,46 @@ export function heuristicScore(v: VitalSigns): ScoreResult {
   if (v.downloadsTrend !== null && v.downloadsTrend !== undefined && v.downloadsTrend < 0.5)
     add('downloadsTrend', 4); // usage collapsing matters less than dev activity
 
-  // mitigations — real signs of life pull the score down
-  if (dc !== undefined && dc < 30) add('recentActivity', -10);
-  if (dr !== undefined && dr < 90) add('recentRelease', -6);
+  // mitigations — real signs of life pull the score down, unless the project is in a declared lifecycle state
+  if (!v.lifecycle) {
+    if (dc !== undefined && dc < 30) add('recentActivity', -10);
+    if (dr !== undefined && dr < 90) add('recentRelease', -6);
+  }
 
   const raw = c.reduce((a, x) => a + x.points, 0);
-  const score = Math.max(0, Math.min(100, Math.round(raw)));
+  let score = Math.max(0, Math.min(100, Math.round(raw)));
+
+  if (v.lifecycle) {
+    // Guarantee: a declared lifecycle status can never produce a band better than Fading (score >= 25),
+    // and maintenance/legacy with no other risk signals must not exceed 49.
+    score = Math.max(25, score);
+    const otherRiskPoints = c
+      .filter((item) => item.feature !== 'lifecycle' && item.points > 0)
+      .reduce((acc, item) => acc + item.points, 0);
+    if (
+      (v.lifecycle.status === 'maintenance' || v.lifecycle.status === 'legacy') &&
+      otherRiskPoints === 0
+    ) {
+      score = Math.min(49, score);
+    }
+  }
+
   const confidence =
-    v.daysSinceCommit !== undefined && (v.commitsPerWeek?.length ?? 0) > 0
+    v.lifecycle?.source === 'curated' ||
+    v.lifecycle?.source === 'readme' ||
+    (v.daysSinceCommit !== undefined && (v.commitsPerWeek?.length ?? 0) > 0)
       ? 'high'
-      : v.daysSinceCommit !== undefined
+      : v.daysSinceCommit !== undefined || Boolean(v.lifecycle)
         ? 'medium'
         : 'low';
-  return { score, band: bandFor(score, !!v.archived, !!v.deprecated), confidence, contributions: c, model: 'heuristic-v1' };
+
+  return {
+    score,
+    band: bandFor(score, !!v.archived, !!v.deprecated),
+    confidence,
+    contributions: c,
+    model: 'heuristic-v1',
+  };
 }
 
 /** Try the ML service (TabPFN); fall back to the heuristic on any failure. */
@@ -119,12 +175,25 @@ export async function ghostScore(v: VitalSigns): Promise<ScoreResult> {
       if (res.ok) {
         const j = (await res.json()) as { p_abandoned?: number };
         if (typeof j.p_abandoned === 'number') {
-          const score = Math.round(j.p_abandoned * 100);
+          const modelScore = Math.round(j.p_abandoned * 100);
+          const contributions: { feature: string; points: number }[] = [
+            { feature: 'tabpfn', points: modelScore },
+          ];
+          let score = modelScore;
+          if (v.lifecycle) {
+            const floor = LIFECYCLE_TABPFN_FLOOR[v.lifecycle.status];
+            score = Math.max(modelScore, floor);
+            const delta = Math.max(0, score - modelScore);
+            contributions.push({
+              feature: 'lifecycle',
+              points: delta > 0 ? delta : LIFECYCLE_POINTS[v.lifecycle.status],
+            });
+          }
           return {
             score,
             band: bandFor(score, !!v.archived, !!v.deprecated),
             confidence: 'high',
-            contributions: [{ feature: 'tabpfn', points: score }],
+            contributions,
             model: 'tabpfn',
           };
         }

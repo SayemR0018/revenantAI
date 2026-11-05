@@ -53,12 +53,22 @@
     ],
     "lastCommitAt": "2024-10-13T10:45:04Z",
     "_lastCommitSubject": "CI: add Node.js 18, 20 & 22 (#2630)",
-    "daysSinceCommit": 746
+    "daysSinceCommit": 746,
+    "lifecycle": {
+      "status": "legacy",
+      "source": "curated",
+      "quote": "..psst! While Bower is maintained, we recommend yarn and webpack or parcel for new front-end projects!",
+      "url": "https://github.com/bower/bower#readme"
+    }
   },
-  "score": 65,
-  "band": "haunted",
+  "score": 100,
+  "band": "departed",
   "confidence": "high",
   "contributions": [
+    {
+      "feature": "lifecycle",
+      "points": 35
+    },
     {
       "feature": "daysSinceCommit",
       "points": 40
@@ -75,12 +85,19 @@
   "model": "heuristic-v1",
   "evidence": [
     {
+      "kind": "readme",
+      "label": "Declared in maintenance mode",
+      "detail": "..psst! While Bower is maintained, we recommend yarn and webpack or parcel for new front-end projects!",
+      "url": "https://github.com/bower/bower#readme",
+      "id": "ev1"
+    },
+    {
       "kind": "commit",
       "label": "No commits in 2+ years",
       "detail": "Last commit 2024-10-13T10:45:04Z",
       "url": "https://github.com/bower/bower",
       "at": "2024-10-13T10:45:04Z",
-      "id": "ev1"
+      "id": "ev2"
     }
   ],
   "contributors": [
@@ -146,14 +163,15 @@
     }
   ],
   "autopsy": {
-    "causeOfDeath": "slow_decay",
-    "epitaph": "A venerable guide through the early days of frontend package management. Its contributions helped build the foundation upon which the modern web stands.",
+    "causeOfDeath": "maintenance_mode",
+    "epitaph": "bower is in maintenance mode: still patched, no longer evolving. Plan your exit while it is calm.",
     "evidenceIds": [
-      "ev1"
+      "ev1",
+      "ev2"
     ],
     "lastWords": "CI: add Node.js 18, 20 & 22 (#2630)",
     "lastWordsUrl": "https://github.com/bower/bower",
-    "generatedBy": "gemma-aistudio/gemma-4-26b-a4b-it"
+    "generatedBy": "fallback-rules"
   },
   "successors": [],
   "snapshotAt": "2026-10-29T20:28:04.491Z"

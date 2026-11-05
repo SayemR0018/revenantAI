@@ -1,7 +1,7 @@
 // The seance: a grounded persona that speaks only from the project's own
 // corpus (README, releases, issues). Never impersonates a person, never
 // fabricates quotes, says "I don't remember that" when evidence is missing.
-import { chat, providerFor } from './llm';
+import { chat, providersFor } from './llm';
 import { buildCorpus, retrieve } from './corpus';
 import { DepRef, RepoRef, SeanceMessage, VitalSigns } from './types';
 import { getCorpus } from './store';
@@ -38,21 +38,23 @@ export async function seance(
     ? found.map((c, i) => `[e${i + 1}] (${c.source}) ${c.text.slice(0, 500)}`).join('\n\n')
     : '';
 
-  const provider = providerFor('seance');
-  if (provider) {
+  const providers = providersFor('seance');
+  if (providers.length) {
     const msgs = [
       { role: 'system' as const, content: `${SPIRIT_RULES}\n\nProject: ${dep.name} (${dep.ecosystem}). ${vitalLine}` },
       ...history.slice(-8).map((m) => ({ role: (m.role === 'spirit' ? 'assistant' : 'user') as 'assistant' | 'user', content: m.text })),
       { role: 'user' as const, content: `Evidence:\n${evidenceText || '(no matching evidence found)'}\n\nQuestion: ${userText}` },
     ];
-    try {
-      const r = await chat(provider.id.includes('backboard') ? `${provider.id}:${provider.model()}` : provider.id, msgs, { maxTokens: 400 });
-      const text = r.text.trim();
-      if (text) {
-        return { text, evidenceIds: found.map((_, i) => `e${i + 1}`), provider: r.provider, grounded: found.length > 0 };
+    for (const provider of providers) {
+      try {
+        const r = await chat(provider.spec || provider.id, msgs, { maxTokens: 400 });
+        const text = r.text.trim();
+        if (text) {
+          return { text, evidenceIds: found.map((_, i) => `e${i + 1}`), provider: r.provider, grounded: found.length > 0 };
+        }
+      } catch {
+        /* try next provider in chain, then fall through to template */
       }
-    } catch {
-      /* fall through to template */
     }
   }
 

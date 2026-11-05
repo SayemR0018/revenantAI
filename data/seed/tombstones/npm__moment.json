@@ -53,27 +53,33 @@
     ],
     "lastCommitAt": "2026-10-08T16:26:53Z",
     "_lastCommitSubject": "[bugfix] Bound chooseLocale prefix walk for long locale names (#6458)",
-    "daysSinceCommit": 21
+    "daysSinceCommit": 21,
+    "lifecycle": {
+      "status": "maintenance",
+      "source": "curated",
+      "quote": "Moment.js is a legacy project, now in maintenance mode. New features are not being accepted.",
+      "url": "https://momentjs.com/docs/#/-project-status/"
+    }
   },
-  "score": 0,
-  "band": "alive",
+  "score": 35,
+  "band": "fading",
   "confidence": "high",
   "contributions": [
     {
-      "feature": "authors365",
-      "points": 10
-    },
-    {
-      "feature": "recentActivity",
-      "points": -10
-    },
-    {
-      "feature": "recentRelease",
-      "points": -6
+      "feature": "lifecycle",
+      "points": 35
     }
   ],
   "model": "heuristic-v1",
-  "evidence": [],
+  "evidence": [
+    {
+      "kind": "readme",
+      "label": "Declared in maintenance mode",
+      "detail": "Moment.js is a legacy project, now in maintenance mode. New features are not being accepted.",
+      "url": "https://momentjs.com/docs/#/-project-status/",
+      "id": "ev1"
+    }
+  ],
   "contributors": [
     {
       "handle": "ichernev",
@@ -137,9 +143,11 @@
     }
   ],
   "autopsy": {
-    "causeOfDeath": "alive",
-    "epitaph": "moment still has a pulse. Long may it commit.",
-    "evidenceIds": [],
+    "causeOfDeath": "maintenance_mode",
+    "epitaph": "moment is in maintenance mode: still patched, no longer evolving. Plan your exit while it is calm.",
+    "evidenceIds": [
+      "ev1"
+    ],
     "lastWords": "[bugfix] Bound chooseLocale prefix walk for long locale names (#6458)",
     "lastWordsUrl": "https://github.com/moment/moment",
     "generatedBy": "fallback-rules"

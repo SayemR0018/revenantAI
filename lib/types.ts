@@ -15,6 +15,30 @@ export interface RepoRef {
   url: string;
 }
 
+export type LifecycleStatus =
+  | 'maintenance'
+  | 'legacy'
+  | 'unmaintained'
+  | 'seeking_maintainers'
+  | 'sunset';
+
+export type LifecycleSource = 'curated' | 'readme' | 'repo_description' | 'llm';
+
+export interface LifecycleSignal {
+  status: LifecycleStatus;
+  source: LifecycleSource;
+  quote: string; // verbatim text that proves it
+  url?: string; // where the quote lives
+}
+
+export const LIFECYCLE_CHIP_LABEL: Record<LifecycleStatus, string> = {
+  maintenance: 'MAINTENANCE MODE',
+  legacy: 'LEGACY PROJECT',
+  unmaintained: 'UNMAINTAINED',
+  seeking_maintainers: 'SEEKING MAINTAINERS',
+  sunset: 'SUNSET',
+};
+
 export interface VitalSigns {
   repoUrl?: string;
   pushedAt?: string; // last push to any branch (ISO)
@@ -29,6 +53,7 @@ export interface VitalSigns {
   archived?: boolean;
   deprecated?: boolean;
   deprecationMessage?: string;
+  lifecycle?: LifecycleSignal;
   openIssues?: number;
   issueCloseRate180?: number | null;
   medianIssueFirstResponseHrs?: number | null;
@@ -48,6 +73,7 @@ export type CauseOfDeath =
   | 'ecosystem_shift'
   | 'company_pulled'
   | 'deprecated_official'
+  | 'maintenance_mode'
   | 'slow_decay'
   | 'alive'
   | 'unknown';

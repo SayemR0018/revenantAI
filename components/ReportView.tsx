@@ -1,7 +1,14 @@
 'use client';
 import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
-import { Report, ScoredDep, BAND_LABEL, VisualBand, visualBandFor } from '@/lib/types';
+import {
+  Report,
+  ScoredDep,
+  BAND_LABEL,
+  LIFECYCLE_CHIP_LABEL,
+  VisualBand,
+  visualBandFor,
+} from '@/lib/types';
 import { humanizeDays, numberWord } from '@/lib/format';
 import { PulseSparkline } from './PulseSparkline';
 import { ResurrectDrawer } from './ResurrectDrawer';
@@ -367,7 +374,9 @@ function DepRow({
   onResurrect: (dep: ScoredDep) => void;
 }) {
   const vb = visualBandFor(d);
-  const needsResurrection = vb === 'departed' || vb === 'haunted';
+  const lc = d.vitals.lifecycle;
+  const needsResurrection =
+    vb === 'departed' || vb === 'haunted' || (vb === 'fading' && Boolean(lc));
 
   return (
     <li className="card group relative flex flex-wrap items-center justify-between gap-4 p-4 transition-colors hover:border-[var(--marigold)]">
@@ -379,18 +388,28 @@ function DepRow({
           </div>
         </div>
         <div className="min-w-0 flex-1">
-          {d.notFound ? (
-            <span className="font-mono-data block truncate text-lg" style={{ color: 'var(--bone)' }}>
-              {d.dep.name}
-            </span>
-          ) : (
-            <Link
-              href={`/grave/${d.dep.ecosystem}/${encodeURIComponent(d.dep.name)}`}
-              className="font-mono-data block truncate text-lg after:absolute after:inset-0 group-hover:text-[var(--marigold)]"
-            >
-              {d.dep.name}
-            </Link>
-          )}
+          <div className="flex flex-wrap items-center gap-2">
+            {d.notFound ? (
+              <span className="font-mono-data block truncate text-lg" style={{ color: 'var(--bone)' }}>
+                {d.dep.name}
+              </span>
+            ) : (
+              <Link
+                href={`/grave/${d.dep.ecosystem}/${encodeURIComponent(d.dep.name)}`}
+                className="font-mono-data block truncate text-lg after:absolute after:inset-0 group-hover:text-[var(--marigold)]"
+              >
+                {d.dep.name}
+              </Link>
+            )}
+            {!d.error && lc && (
+              <span
+                className="font-mono-data rounded border border-[#5c4820] bg-[#1d1936] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+                style={{ color: '#f2bd49' }}
+              >
+                ⚑ {LIFECYCLE_CHIP_LABEL[lc.status]}
+              </span>
+            )}
+          </div>
           <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs" style={{ color: 'var(--violet-mute)' }}>
             <span>{d.dep.ecosystem}</span>
             {!d.error && d.vitals.daysSinceCommit !== undefined && (
@@ -403,6 +422,22 @@ function DepRow({
             {!d.error && d.vitals.deprecated && <span>· ⚠ deprecated</span>}
             {d.error && <span>· {d.error || "We couldn't find enough public signals"}</span>}
           </div>
+          {!d.error && lc?.quote && (
+            <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs" style={{ color: 'var(--bone-dim)' }}>
+              <span className="italic">“{lc.quote}”</span>
+              {lc.url && (
+                <a
+                  href={lc.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono-data relative z-10 underline hover:text-[var(--marigold)]"
+                  style={{ color: 'var(--marigold)' }}
+                >
+                  source ({lc.source}) →
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

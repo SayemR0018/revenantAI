@@ -185,6 +185,29 @@
     {
       "dep": {
         "ecosystem": "npm",
+        "name": "bower"
+      },
+      "score": 100,
+      "band": "departed",
+      "vitals": {
+        "daysSinceCommit": 746,
+        "daysSinceRelease": 1690,
+        "weeklyDownloads": 309389,
+        "archived": false,
+        "deprecated": false,
+        "repoUrl": "https://github.com/bower/bower",
+        "lifecycle": {
+          "status": "legacy",
+          "source": "curated",
+          "quote": "..psst! While Bower is maintained, we recommend yarn and webpack or parcel for new front-end projects!",
+          "url": "https://github.com/bower/bower#readme"
+        }
+      },
+      "epitaph": "bower is in maintenance mode: still patched, no longer evolving. Plan your exit while it is calm."
+    },
+    {
+      "dep": {
+        "ecosystem": "npm",
         "name": "coffee-script"
       },
       "score": 84,
@@ -355,23 +378,6 @@
         "daysSinceCommit": 1666
       },
       "epitaph": "estraverse did not die — it faded, release by release, until the pulse went flat."
-    },
-    {
-      "dep": {
-        "ecosystem": "npm",
-        "name": "bower"
-      },
-      "score": 65,
-      "band": "haunted",
-      "vitals": {
-        "daysSinceCommit": 746,
-        "daysSinceRelease": 1690,
-        "weeklyDownloads": 309389,
-        "archived": false,
-        "deprecated": false,
-        "repoUrl": "https://github.com/bower/bower"
-      },
-      "epitaph": "A venerable guide through the early days of frontend package management. Its contributions helped build the foundation upon which the modern web stands."
     },
     {
       "dep": {
@@ -695,6 +701,29 @@
         "deprecated": false
       },
       "epitaph": "pycrypto did not die — it faded, release by release, until the pulse went flat."
+    },
+    {
+      "dep": {
+        "ecosystem": "npm",
+        "name": "moment"
+      },
+      "score": 35,
+      "band": "fading",
+      "vitals": {
+        "daysSinceCommit": 21,
+        "daysSinceRelease": 44,
+        "weeklyDownloads": 33787344,
+        "archived": false,
+        "deprecated": false,
+        "repoUrl": "https://github.com/moment/moment",
+        "lifecycle": {
+          "status": "maintenance",
+          "source": "curated",
+          "quote": "Moment.js is a legacy project, now in maintenance mode. New features are not being accepted.",
+          "url": "https://momentjs.com/docs/#/-project-status/"
+        }
+      },
+      "epitaph": "moment is in maintenance mode: still patched, no longer evolving. Plan your exit while it is calm."
     },
     {
       "dep": {
@@ -4538,23 +4567,6 @@
         "lastCommitAt": "2026-10-20T05:41:16.000Z",
         "daysSinceCommit": 7
       }
-    },
-    {
-      "dep": {
-        "ecosystem": "npm",
-        "name": "moment"
-      },
-      "score": 0,
-      "band": "alive",
-      "vitals": {
-        "daysSinceCommit": 21,
-        "daysSinceRelease": 44,
-        "weeklyDownloads": 33787344,
-        "archived": false,
-        "deprecated": false,
-        "repoUrl": "https://github.com/moment/moment"
-      },
-      "epitaph": "moment still has a pulse. Long may it commit."
     },
     {
       "dep": {

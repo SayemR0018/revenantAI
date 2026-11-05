@@ -150,11 +150,15 @@ manifest ──► parse ──► resolve repo ──► signals ──► ghos
 
 The pipeline resolves each dependency to its repository through
 [ecosyste.ms](https://ecosyste.ms) open data (no key required), enriched by npm/PyPI
-registry APIs and the GitHub API. Signals — commit cadence, release gaps, archive
-status, deprecation flags, contributor counts, download/dependent curves — feed a
-**TabPFN** prior-data network served from a FastAPI service (`ml/`). When the ML
-service isn't configured, a fully transparent **heuristic scorer** with per-signal
-point attribution takes over — the same `ScoredDep` shape, labeled honestly.
+registry APIs, the GitHub API, and a **declared-lifecycle detector** (`lib/lifecycle.ts`)
+that checks a verified curated registry (`data/lifecycle.json`), scans the README and
+repository description for maintenance-mode / legacy / unmaintained / sunset declarations
+(with strict false-positive guards), and optionally runs an LLM second-opinion check
+requiring a verbatim substring quote. Signals — commit cadence, release gaps, archive
+status, deprecation flags, declared lifecycle status, contributor counts,
+download/dependent curves — feed a **TabPFN** prior-data network served from a FastAPI
+service (`ml/`) with a post-model lifecycle floor, or a fully transparent **heuristic
+scorer** with per-signal point attribution — the same `ScoredDep` shape, labeled honestly.
 
 **Mastra** agents drive the prose layer: dignified autopsies, grounded seance
 answers, and the resurrection workflow, all validated with Zod and falling back to
@@ -162,12 +166,13 @@ labeled rule-based output when no model key exists. A **Temporal** `ExhumeWorkfl
 makes scans durable and queryable; without a Temporal server, the identical pipeline
 runs in-process — the app always tells you which mode it's in.
 
-**Why open models:** a tool that detects abandonment shouldn't itself depend on a
-service that can be deprecated out from under it. Every model on the product path is
-open-weight — Gemma 4 (autopsy/seance/arena), TabPFN (ghost-risk prediction), a
+**Why open models by default:** a tool that detects abandonment shouldn't itself depend on a
+service that can be deprecated out from under it. The product path is open-weight by default —
+Gemma 4 (autopsy/seance/arena), TabPFN (ghost-risk prediction), a
 Tinker LoRA on Qwen3 (epitaphs) — and `revenant-cli scan --offline` runs with the
-lights and the internet off. The one closed model (Ultramarine) appears only as a
-clearly labelled comparison baseline.
+lights and the internet off. Optional closed-weight providers (**OpenAI**, **Ultramarine**) are
+strictly opt-in via environment variables, never part of any default candidate list, and
+visibly labelled with a `closed-weight` badge everywhere they appear.
 
 ---
 
@@ -230,7 +235,7 @@ node cli/bin/revenant.js grave npm/left-pad   # ASCII tombstone for one package
 | Metric | Value |
 |---|---|
 | Seed index | **180** unique npm + PyPI packages, snapshot 2026-10-30 |
-| Band split | **11** Departed · **16** Haunted · **17** Fading · **136** Alive (15.0% Haunted or worse) |
+| Band split | **12** Departed · **15** Haunted · **18** Fading · **135** Alive (15.0% Haunted or worse) |
 | Showcase tombstones | **20** pre-warmed with real epitaphs, commit pulses, contributor records |
 | Accessibility | **0 axe-core violations** across all 8 routes; `scrollWidth ≤ clientWidth` at 390px |
 | Integrations | **5 PASS** in [receipts.json](receipts.json) (Gemma, Mastra, ecosyste.ms, Copilot/Actions, Entire) — missing keys report SKIPPED, never faked |
