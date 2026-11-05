@@ -7,7 +7,14 @@ export interface ArenaCandidate {
   epitaph: string;
   cause: string;
   latencyMs: number;
+  closed?: boolean;
   error?: string;
+}
+
+export interface ExtraClosedContestant {
+  provider: string;
+  model: string;
+  closed: boolean;
 }
 
 export interface PrecomputedBout {
@@ -88,10 +95,38 @@ const PRECOMPUTED_BOUTS: Record<string, PrecomputedBout> = {
   },
 };
 
-export function ArenaClient() {
+function withExtraContestants(
+  base: ArenaCandidate[],
+  extras: ExtraClosedContestant[] = [],
+  pkgName: string,
+): ArenaCandidate[] {
+  if (!extras.length) return base;
+  const out = [...base];
+  for (const ex of extras) {
+    if (!out.some((c) => c.provider === ex.provider && c.model === ex.model)) {
+      out.push({
+        provider: ex.provider,
+        model: ex.model,
+        epitaph: `${pkgName} stepped aside with a note pinned to the door. It told you where to go next — that is a kind of care.`,
+        cause: 'deprecated_official',
+        latencyMs: 640,
+        closed: true,
+      });
+    }
+  }
+  return out;
+}
+
+export function ArenaClient({
+  extraClosedContestants = [],
+}: {
+  extraClosedContestants?: ExtraClosedContestant[];
+} = {}) {
   const [name, setName] = useState('request');
   const [eco, setEco] = useState<'npm' | 'pypi'>('npm');
-  const [cands, setCands] = useState<ArenaCandidate[]>(PRECOMPUTED_BOUTS['npm/request'].candidates);
+  const [cands, setCands] = useState<ArenaCandidate[]>(() =>
+    withExtraContestants(PRECOMPUTED_BOUTS['npm/request'].candidates, extraClosedContestants, 'request'),
+  );
   const [snapshotDate, setSnapshotDate] = useState<string>('2026-10-30');
   const [liveConfigured, setLiveConfigured] = useState<boolean | null>(null);
   const [busy, setBusy] = useState(false);
@@ -103,7 +138,7 @@ export function ArenaClient() {
     const bout = PRECOMPUTED_BOUTS[presetKey];
     setEco(bout.eco);
     setName(bout.name);
-    setCands(bout.candidates);
+    setCands(withExtraContestants(bout.candidates, extraClosedContestants, bout.name));
     setSnapshotDate(bout.snapshotDate);
     setVoted(null);
     setVotedLabel(null);
@@ -246,13 +281,26 @@ export function ArenaClient() {
           const key = `${c.provider}:${c.model}`;
           const isVoted = voted === key;
           const pct = Math.max(8, Math.round((c.latencyMs / maxLatency) * 100));
+          const isClosed = Boolean(
+            c.closed || c.provider === 'openai' || c.provider === 'ultramarine',
+          );
           return (
             <div key={i} className="card flex flex-col justify-between p-5">
               <div>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-mono-data text-xs font-semibold" style={{ color: 'var(--marigold)' }}>
-                    {c.provider}
-                  </span>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <span className="font-mono-data text-xs font-semibold" style={{ color: 'var(--marigold)' }}>
+                      {c.provider}
+                    </span>
+                    {isClosed && (
+                      <span
+                        className="font-mono-data rounded border border-[#35305c] bg-[#1d1936] px-2 py-0.5 text-[10px] font-semibold uppercase"
+                        style={{ color: 'var(--haunted)' }}
+                      >
+                        closed-weight
+                      </span>
+                    )}
+                  </div>
                   <span className="font-mono-data text-xs" style={{ color: 'var(--violet-mute)' }}>
                     {c.latencyMs} ms
                   </span>

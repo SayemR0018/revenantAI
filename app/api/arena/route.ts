@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { listArenaProviders, chatJson, AutopsySchema } from '@/lib/llm';
+import { listArenaProviders, chatJson, AutopsySchema, isClosedProvider, resolveProvider } from '@/lib/llm';
 import { getTombstone } from '@/lib/tombstones';
 import { classifyCause, fallbackEpitaph } from '@/lib/epitaph';
 import { Ecosystem } from '@/lib/types';
@@ -79,22 +79,31 @@ export async function POST(req: NextRequest) {
   const candidates = await Promise.all(
     providers.map(async (spec) => {
       const start = Date.now();
+      const closed = isClosedProvider(spec);
+      let defaultModel = spec.split(':').slice(1).join(':') || 'default';
+      try {
+        defaultModel = resolveProvider(spec).model();
+      } catch {
+        /* ignore */
+      }
       try {
         const { data, result } = await chatJson(spec, prompt, AutopsySchema);
         return {
           provider: spec.split(':')[0],
-          model: result?.model ?? (spec.split(':').slice(1).join(':') || 'default'),
+          model: result?.model ?? defaultModel,
           epitaph: data?.epitaph ?? fallbackEpitaph(name, cause, vitals),
           cause: data?.causeOfDeath ?? cause,
           latencyMs: result?.latencyMs ?? Date.now() - start,
+          closed,
         };
       } catch (e) {
         return {
           provider: spec.split(':')[0],
-          model: spec.split(':').slice(1).join(':') || 'default',
+          model: defaultModel,
           epitaph: fallbackEpitaph(name, cause, vitals),
           cause,
           latencyMs: Date.now() - start,
+          closed,
           note: e instanceof Error ? e.message.slice(0, 120) : 'provider fallback',
         };
       }

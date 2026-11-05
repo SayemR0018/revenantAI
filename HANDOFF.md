@@ -53,6 +53,7 @@ missing piece has a graceful fallback already shipped.
 - ELEVENLABS_API_KEY — **you have an unclaimed MLH offer**: 3 months Creator free via
   hacktoberfest.com/my (DevRelay found it — claim it, then set the key)
 - DO_MODEL_URL + DO_MODEL_TOKEN — DigitalOcean Gradient serverless inference (check cost first)
+- OPENAI_API_KEY + OPENAI_MODEL (`gpt-5.4-mini` default) — optional closed-weight provider (opt-in only via `LLM_LIFECYCLE_PROVIDER=openai`, `LLM_AUTOPSY_PROVIDER=gemma-aistudio,openai`, `LLM_ARENA_PROVIDERS`, or `MASTRA_MODEL_PROVIDER=openai`; never on the default path)
 - ULTRAMARINE_API_KEY + ULTRAMARINE_BASE_URL — paperinstruments.com (closed baseline only)
 - SENTRY_DSN — sentry.io agent monitoring
 - AUTH0_DOMAIN/CLIENT_ID/CLIENT_SECRET — Auth0 "for AI Agents" tenant (Token Vault)

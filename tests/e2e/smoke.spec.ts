@@ -12,13 +12,33 @@ test('scan → report → tombstone → OG → badge → 404 → 390px overflow 
   expect(homeOgRes.status()).toBe(200);
   expect(homeOgRes.headers()['content-type']).toContain('image/png');
 
-  // Scan a single well-known package
-  await page.getByRole('tab', { name: 'one package' }).click();
-  await page.getByLabel('Package name').fill('left-pad');
+  // Scan a manifest containing moment, left-pad, and react -> moment shows Fading + MAINTENANCE MODE chip
+  await page.getByLabel('Manifest contents').fill(
+    JSON.stringify({
+      dependencies: {
+        'left-pad': '^1.3.0',
+        moment: '^2.30.1',
+        react: '^19.0.0',
+      },
+    }),
+  );
   await page.getByRole('button', { name: /exhume/ }).click();
   await page.waitForURL(/\/r\//);
   const reportUrl = new URL(page.url()).pathname;
   await expect(page.getByRole('heading', { name: 'Haunting Report' })).toBeVisible();
+  await expect(page.getByText(/MAINTENANCE MODE/i).first()).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByText('Fading').first()).toBeVisible();
+
+  // moment tombstone page shows lifecycle evidence, cause "Maintenance mode", successors, and migration drawer
+  await page.goto('/grave/npm/moment');
+  await expect(page.getByText('Maintenance mode', { exact: true })).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByText('Declared lifecycle status')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'dayjs' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'date-fns' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'luxon' })).toBeVisible();
+  await page.getByRole('button', { name: /Resurrect this dependency/i }).click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await page.getByRole('button', { name: /Close resurrection drawer/i }).click();
 
   // Tombstone page renders vital signs, ofrenda, and real badge snippet URL
   await page.goto('/grave/npm/left-pad');
@@ -50,6 +70,11 @@ test('scan → report → tombstone → OG → badge → 404 → 390px overflow 
 
   await page.goto('/receipts');
   await expect(page.getByText('ecosyste.ms')).toBeVisible();
+
+  if (process.env.LLM_ARENA_PROVIDERS?.includes('openai')) {
+    await page.goto('/arena');
+    await expect(page.getByText('closed-weight').first()).toBeVisible();
+  }
 
   // Axe accessibility check on key desktop routes (0 critical / serious violations)
   for (const route of ['/', reportUrl, '/grave/npm/request', '/cementerio', '/arena', '/science', '/receipts']) {

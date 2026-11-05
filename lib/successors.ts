@@ -21,6 +21,9 @@ const CURATED: Record<string, Successor[]> = {
   'npm/tslint': [
     { ecosystem: 'npm', name: 'eslint', reason: 'TSLint was deprecated in favor of ESLint + typescript-eslint', url: 'https://github.com/eslint/eslint', source: 'curated' },
   ],
+  'npm/babel-eslint': [
+    { ecosystem: 'npm', name: '@babel/eslint-parser', reason: 'babel-eslint was deprecated in favor of @babel/eslint-parser', url: 'https://github.com/babel/babel', source: 'curated' },
+  ],
   'npm/request-promise': [
     { ecosystem: 'npm', name: 'undici', reason: 'Successor path after request deprecation', url: 'https://github.com/nodejs/undici', source: 'curated' },
   ],

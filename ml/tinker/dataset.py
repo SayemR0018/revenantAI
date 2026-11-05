@@ -20,7 +20,7 @@ EVAL_OUT = DATA / "tinker-eval.jsonl"
 BANNED = re.compile(r"\b(lazy|abandoned by|didn'?t care|negligent|blame|at fault|incompetent)\b", re.I)
 
 RUBRIC = """Write an epitaph record for this project as strict JSON:
-{"causeOfDeath": one of maintainer_burnout|superseded|archived_by_author|ecosystem_shift|company_pulled|deprecated_official|slow_decay|alive|unknown,
+{"causeOfDeath": one of maintainer_burnout|superseded|archived_by_author|ecosystem_shift|company_pulled|deprecated_official|maintenance_mode|slow_decay|alive|unknown,
  "evidenceIds": [only ids present in the evidence],
  "epitaph": "max 2 sentences, warm, dignified; honors what the project gave; never blames or mocks maintainers"}
 Rules: cite only given evidence ids; no invented facts; no accusatory language; "signals, not verdicts"."""
@@ -63,7 +63,7 @@ def valid(target: dict, ev_ids: set[str]) -> bool:
     try:
         assert target["causeOfDeath"] in {
             "maintainer_burnout", "superseded", "archived_by_author", "ecosystem_shift",
-            "company_pulled", "deprecated_official", "slow_decay", "alive", "unknown"}
+            "company_pulled", "deprecated_official", "maintenance_mode", "slow_decay", "alive", "unknown"}
         assert all(i in ev_ids for i in target["evidenceIds"])
         assert len(target["epitaph"]) <= 400 and not BANNED.search(target["epitaph"])
         return True

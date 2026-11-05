@@ -32,6 +32,7 @@ async function loadEval(): Promise<EvalResults | null> {
 const HEURISTIC_WEIGHTS = [
   { signal: 'Repository archived (read-only)', points: '+70 pts', kind: 'risk' },
   { signal: 'Official registry deprecation flag', points: '+65 pts', kind: 'risk' },
+  { signal: 'Declared lifecycle status (maintenance / legacy / unmaintained)', points: '+35 to +50 pts', kind: 'risk' },
   { signal: 'No commits in >2 years (>730d)', points: '+40 pts', kind: 'risk' },
   { signal: 'No release in >2 years (>730d)', points: '+15 pts', kind: 'risk' },
   { signal: 'Zero active authors in last 365 days', points: '+10 pts', kind: 'risk' },
@@ -204,6 +205,7 @@ export default async function SciencePage() {
           {(
             ev?.limitations ?? [
               'The label is a proxy: "no commits in 12 months" can conflate small feature-complete libraries with abandoned ones.',
+              'The TabPFN training label is commit-based and cannot see maintainer-declared maintenance or legacy status, so a post-model lifecycle floor (30–55) is applied when a declared lifecycle signal is present.',
               'Issue/PR response history reconstruction is dropped when GitHub API rate limits are constrained — disclosed here rather than silently imputed.',
               'Absence of a linked GitHub repository renders as UNKNOWN, never ALIVE.',
               'A high ghost score is a signal to inspect your dependency tree, never a verdict on a maintainer.',

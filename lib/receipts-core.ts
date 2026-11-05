@@ -147,6 +147,25 @@ export async function runReceiptChecks(opts: Opts = {}): Promise<ReceiptCheck[]>
     notes: 'Labelled baseline column in Tinker eval + arena. Never on product path.',
   });
 
+  const openaiKey = has('OPENAI_API_KEY');
+  const openaiBase = (process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
+  let openaiOk = false;
+  if (openaiKey) {
+    openaiOk = await ping(`${openaiBase}/models`, {
+      headers: { authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
+    });
+  }
+  add({
+    id: 'openai',
+    partner: 'OpenAI (closed-weight, optional)',
+    category: 'Open-Weight AI & Agents',
+    status: openaiKey ? (openaiOk ? 'PASS' : 'FAIL') : 'SKIPPED',
+    role: 'Optional closed-weight provider (closed-weight, opt-in, never default) for README lifecycle second-opinion classification, autopsies, and Arena comparisons.',
+    evidence: `${REPO}/lib/llm.ts`,
+    enableHint: 'Set OPENAI_API_KEY (and opt in via LLM_LIFECYCLE_PROVIDER=openai or LLM_ARENA_PROVIDERS).',
+    notes: 'closed-weight, opt-in, never default.',
+  });
+
   // 2. Data, Durable Execution & Cloud
   add({
     id: 'ecosystems',

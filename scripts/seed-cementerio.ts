@@ -6,6 +6,9 @@ import { Ecosystem, ScoredDep } from '../lib/types';
 import { scoreOne } from '../lib/pipeline';
 import { fetchJson } from '../lib/fetch';
 import { CementerioRow, dedupeCementerioRows } from '../lib/cementerio';
+import { curatedLifecycle } from '../lib/lifecycle';
+import { heuristicScore } from '../lib/score';
+import { classifyCause, fallbackEpitaph } from '../lib/epitaph';
 
 // Curated candidates: scored via the real pipeline; only packages actually reported
 // by their registry/GitHub are kept with their real computed scores and bands.
@@ -83,6 +86,79 @@ async function main() {
   const tombDir = path.join(seedDir, 'tombstones');
   await fs.mkdir(tombDir, { recursive: true });
 
+  // Keep cli/data/lifecycle.json in sync with data/lifecycle.json
+  const lcSrc = path.join(process.cwd(), 'data', 'lifecycle.json');
+  const lcDest = path.join(process.cwd(), 'cli', 'data', 'lifecycle.json');
+  await fs.mkdir(path.dirname(lcDest), { recursive: true });
+  await fs.copyFile(lcSrc, lcDest);
+
+  if (process.argv.includes('--lifecycle-only')) {
+    const files = await fs.readdir(tombDir);
+    for (const file of files) {
+      if (!file.endsWith('.json')) continue;
+      const full = path.join(tombDir, file);
+      const tomb = JSON.parse(await fs.readFile(full, 'utf8')) as ScoredDep;
+      const v = tomb.vitals;
+      if (!v.deprecated && !v.archived) {
+        const lc = curatedLifecycle(tomb.dep);
+        if (lc) {
+          v.lifecycle = lc;
+          const s = heuristicScore(v);
+          const { cause, evidence } = classifyCause(v);
+          tomb.score = s.score;
+          tomb.band = s.band;
+          tomb.confidence = s.confidence;
+          tomb.contributions = s.contributions;
+          tomb.model = s.model;
+          tomb.evidence = evidence;
+          tomb.autopsy = {
+            ...tomb.autopsy,
+            causeOfDeath: cause,
+            epitaph: fallbackEpitaph(tomb.dep.name, cause, v),
+            evidenceIds: evidence.map((e) => e.id),
+            generatedBy: 'fallback-rules',
+          };
+          await fs.writeFile(full, JSON.stringify(tomb, null, 2) + '\n');
+          console.log(`Updated tombstone ${file}: score=${tomb.score} (${tomb.band}) cause=${cause}`);
+        }
+      }
+    }
+
+    const seedFile = path.join(seedDir, 'cementerio.json');
+    const cliFile = path.join(process.cwd(), 'cli', 'data', 'index-snapshot.json');
+    const cem = JSON.parse(await fs.readFile(seedFile, 'utf8')) as {
+      generatedAt: string;
+      count: number;
+      rows: CementerioRow[];
+    };
+    for (const row of cem.rows) {
+      const v = row.vitals;
+      if (!v.deprecated && !v.archived) {
+        const lc = curatedLifecycle(row.dep);
+        if (lc) {
+          const prev = `${row.score}/${row.band}`;
+          v.lifecycle = lc;
+          const s = heuristicScore(v);
+          const { cause } = classifyCause(v);
+          row.score = s.score;
+          row.band = s.band;
+          row.epitaph = fallbackEpitaph(row.dep.name, cause, v);
+          console.log(`Updated cementerio row ${row.dep.ecosystem}/${row.dep.name}: ${prev} -> ${row.score}/${row.band}`);
+        }
+      }
+    }
+    cem.rows.sort((a, b) => b.score - a.score);
+    const out = JSON.stringify(cem, null, 2) + '\n';
+    await fs.writeFile(seedFile, out);
+    await fs.writeFile(cliFile, out);
+    const byBand = cem.rows.reduce<Record<string, number>>((acc, r) => {
+      acc[r.band] = (acc[r.band] || 0) + 1;
+      return acc;
+    }, {});
+    console.log('Band counts:', byBand);
+    return;
+  }
+
   const existing = await loadExistingRows();
   const rows: CementerioRow[] = [...existing];
 
@@ -109,11 +185,17 @@ async function main() {
           archived: s.vitals.archived,
           deprecated: s.vitals.deprecated,
           deprecationMessage: s.vitals.deprecationMessage,
+          ...(s.vitals.lifecycle ? { lifecycle: s.vitals.lifecycle } : {}),
           repoUrl: s.vitals.repoUrl,
         },
         epitaph: s.autopsy?.epitaph,
       });
-      if (cand.showcase || s.band === 'departed' || s.band === 'haunted') {
+      if (
+        cand.showcase ||
+        s.band === 'departed' ||
+        s.band === 'haunted' ||
+        (s.band === 'fading' && s.vitals.lifecycle)
+      ) {
         await fs.writeFile(
           path.join(tombDir, safeKey(cand.ecosystem, cand.name)),
           JSON.stringify(s, null, 2),

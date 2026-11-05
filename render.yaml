@@ -21,6 +21,14 @@ services:
         sync: false
       - key: GOOGLE_API_KEY
         sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        sync: false
+      - key: LLM_LIFECYCLE_PROVIDER
+        sync: false
+      - key: MASTRA_MODEL_PROVIDER
+        sync: false
       - key: ML_SERVICE_URL
         value: https://revenant-ml.onrender.com
       - key: TABPFN_MODE

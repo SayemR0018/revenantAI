@@ -15,6 +15,14 @@ export function classifyCause(v: VitalSigns): { cause: CauseOfDeath; evidence: E
     push({ kind: 'repo_meta', label: 'Repository archived', detail: 'Read-only on GitHub', url: v.repoUrl });
     return { cause: 'archived_by_author', evidence: ev };
   }
+  if (v.lifecycle) {
+    push({
+      kind: 'readme',
+      label: 'Declared in maintenance mode',
+      detail: v.lifecycle.quote,
+      url: v.lifecycle.url ?? v.repoUrl,
+    });
+  }
   const dc = v.daysSinceCommit;
   if (dc !== undefined && Number.isFinite(dc) && dc > 730) {
     push({
@@ -28,7 +36,10 @@ export function classifyCause(v: VitalSigns): { cause: CauseOfDeath; evidence: E
       push({ kind: 'issue', label: 'Issues unanswered', detail: `${v.openIssues} open, close rate near zero` });
       return { cause: 'maintainer_burnout', evidence: ev };
     }
-    return { cause: 'slow_decay', evidence: ev };
+    return { cause: v.lifecycle ? 'maintenance_mode' : 'slow_decay', evidence: ev };
+  }
+  if (v.lifecycle) {
+    return { cause: 'maintenance_mode', evidence: ev };
   }
   if (dc !== undefined && Number.isFinite(dc) && dc > 365) {
     push({ kind: 'commit', label: `No commits in ${Math.floor(dc / 30)} months`, detail: `Last commit ${v.lastCommitAt ?? v.pushedAt ?? 'not enough data'}`, url: v.repoUrl });
@@ -68,6 +79,8 @@ const CAUSE_EPITAPH: Record<CauseOfDeath, (name: string, v: VitalSigns) => strin
   superseded: (n) => `The world moved on from ${n}. What it taught us moved with it.`,
   company_pulled: (n) => `${n} outlived its sponsors. The code remains; the organization does not.`,
   ecosystem_shift: (n) => `${n} belonged to a platform era that ended. The commit log is its monument.`,
+  maintenance_mode: (n) =>
+    `${n} is in maintenance mode: still patched, no longer evolving. Plan your exit while it is calm.`,
   slow_decay: (n) => `${n} did not die — it faded, release by release, until the pulse went flat.`,
   alive: (n) => `${n} still has a pulse. Long may it commit.`,
   unknown: (n) => `Of ${n}, the records are unclear. Absence of evidence is not evidence of absence.`,

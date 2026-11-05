@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:00:04.148Z",
+  "generatedAt": "2026-11-05T19:12:39.061Z",
   "baseUrl": "http://localhost:3000",
   "checks": [
     {
@@ -72,6 +72,16 @@
       "notes": "Labelled baseline column in Tinker eval + arena. Never on product path."
     },
     {
+      "id": "openai",
+      "partner": "OpenAI (closed-weight, optional)",
+      "category": "Open-Weight AI & Agents",
+      "status": "SKIPPED",
+      "role": "Optional closed-weight provider (closed-weight, opt-in, never default) for README lifecycle second-opinion classification, autopsies, and Arena comparisons.",
+      "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/llm.ts",
+      "enableHint": "Set OPENAI_API_KEY (and opt in via LLM_LIFECYCLE_PROVIDER=openai or LLM_ARENA_PROVIDERS).",
+      "notes": "closed-weight, opt-in, never default."
+    },
+    {
       "id": "ecosystems",
       "partner": "ecosyste.ms (open data)",
       "category": "Data, Durable Execution & Cloud",
@@ -94,11 +104,11 @@
       "id": "mongodb",
       "partner": "MongoDB Atlas",
       "category": "Data, Durable Execution & Cloud",
-      "status": "SKIPPED",
+      "status": "PASS",
       "role": "Persistent store for scan reports, tombstones, corpus chunks, and Arena votes (JSON file-store + seed snapshot fallback active).",
       "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/store.ts",
       "enableHint": "Set MONGODB_URI to a MongoDB Atlas cluster.",
-      "notes": "Local file-store and committed data/seed/ snapshot fallback active."
+      "notes": "Tombstones, reports, corpus, memory, caches, arena votes."
     },
     {
       "id": "tiger",
@@ -162,7 +172,7 @@
       "id": "serpapi",
       "partner": "SerpApi",
       "category": "Developer Workflow & Partner Integrations",
-      "status": "SKIPPED",
+      "status": "PASS",
       "role": "Budget-gated obituary and living-successor discovery search for Haunted/Departed packages.",
       "evidence": "https://github.com/SayemR0018/revenantAI/blob/main/lib/successors.ts",
       "enableHint": "Set SERPAPI_KEY.",

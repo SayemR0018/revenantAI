@@ -13,6 +13,7 @@ export function tombstone(r, verbose = false) {
   if (v.daysSinceCommit !== undefined) lines.push(`  │      last commit ${String(v.daysSinceCommit).padStart(5)}d ago`.padEnd(48) + '│');
   if (v.archived) lines.push(`  │      archived ✝`.padEnd(48) + '│');
   if (v.deprecated) lines.push(`  │      deprecated ⚠`.padEnd(48) + '│');
+  if (v.lifecycle) lines.push(`  │      ${v.lifecycle.status.replace(/_/g, ' ')} ⚑`.padEnd(48) + '│');
   if (r.offline && r.unknown) lines.push(`  │      not in bundled index`.padEnd(48) + '│');
   if (verbose && r.epitaph) lines.push(`  │      “${r.epitaph.slice(0, 40)}…"`.padEnd(48) + '│');
   lines.push(`  └${RULE}┘`);

@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { Ecosystem, Successor } from '@/lib/types';
 import { getTombstone } from '@/lib/tombstones';
 import { findSuccessors } from '@/lib/successors';
-import { chatJson, providerFor } from '@/lib/llm';
+import { chatJson, providersFor } from '@/lib/llm';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -119,11 +119,12 @@ export async function POST(req: NextRequest) {
   let plan = buildDeterministicPlan(eco, name, target, vitals.deprecationMessage);
   let generatedBy = 'deterministic-rules';
 
-  const provider = providerFor('autopsy');
-  if (provider && target) {
+  const providers = providersFor('autopsy');
+  if (providers.length && target) {
     try {
+      const chainSpec = providers.map((p) => p.spec || p.id).join(',');
       const { data, result } = await chatJson(
-        provider.id,
+        chainSpec,
         [
           {
             role: 'system',
@@ -132,14 +133,14 @@ export async function POST(req: NextRequest) {
           },
           {
             role: 'user',
-            content: `Ecosystem: ${eco}\nPackage: ${name}\nChosen successor: ${target.name} (${target.reason})\nDeprecation note: ${vitals.deprecationMessage ?? 'none'}`,
+            content: `Ecosystem: ${eco}\nPackage: ${name}\nChosen successor: ${target.name} (${target.reason})\nDeprecation note: ${vitals.deprecationMessage ?? vitals.lifecycle?.quote ?? 'none'}`,
           },
         ],
         z.object({ steps: z.array(z.string()).min(2).max(6) }),
       );
       if (data?.steps?.length) {
         plan = data.steps;
-        generatedBy = `${result?.provider ?? provider.id}/${result?.model ?? 'default'}`;
+        generatedBy = `${result?.provider ?? providers[0].id}/${result?.model ?? 'default'}`;
       }
     } catch {
       /* keep deterministic plan */

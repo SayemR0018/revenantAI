@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import { Band, Ecosystem } from './types';
+import { Band, Ecosystem, LifecycleSignal } from './types';
 
 export interface CementerioRow {
   dep: { ecosystem: Ecosystem; name: string };
@@ -13,6 +13,7 @@ export interface CementerioRow {
     archived?: boolean;
     deprecated?: boolean;
     deprecationMessage?: string;
+    lifecycle?: LifecycleSignal;
     repoUrl?: string;
   };
   epitaph?: string;

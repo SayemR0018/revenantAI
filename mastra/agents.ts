@@ -1,15 +1,30 @@
-// Mastra agents — open-weight models only. Model is resolved from env so the
+// Mastra agents — open-weight by default; optional closed-weight providers
+// (OpenAI, Ultramarine) are opt-in and labelled. Model is resolved from env so the
 // module loads without keys (agents get a stub model and error honestly).
 import { Agent } from '@mastra/core/agent';
 import { Mastra } from '@mastra/core';
 import { predictGhostScore, fetchVitals, searchCorpus } from './tools';
+import { DEFAULT_OPENAI_MODEL } from '@/lib/llm';
 
 type ModelConfig = { id: `${string}/${string}`; url?: string; apiKey?: string; api?: 'chat' | 'responses' };
-function openWeightModel(): ModelConfig {
-  // OpenAI-compatible config — resolved lazily at agent call time.
+
+export function agentModel(): ModelConfig {
+  // Opt-in closed-weight OpenAI provider when explicitly requested via MASTRA_MODEL_PROVIDER=openai
+  if (
+    process.env.MASTRA_MODEL_PROVIDER?.toLowerCase() === 'openai' &&
+    process.env.OPENAI_API_KEY
+  ) {
+    return {
+      id: `openai/${process.env.OPENAI_MODEL || DEFAULT_OPENAI_MODEL}`,
+      url: process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1',
+      apiKey: process.env.OPENAI_API_KEY,
+      api: 'chat',
+    };
+  }
+  // Open-weight default path: Gemma via Google AI Studio, then local Ollama.
   if (process.env.GOOGLE_API_KEY || process.env.GEMMA_API_KEY) {
     return {
-      id: `google/${process.env.GEMMA_MODEL || 'gemma-3-27b-it'}`,
+      id: `google/${process.env.GEMMA_MODEL || 'gemma-4-31b-it'}`,
       url: 'https://generativelanguage.googleapis.com/v1beta/openai',
       apiKey: process.env.GOOGLE_API_KEY || process.env.GEMMA_API_KEY,
       api: 'chat',
@@ -29,7 +44,7 @@ export const autopsyAgent = new Agent({
   instructions: `You perform autopsies on open-source projects. Use fetchVitals and predictGhostScore first.
 Return strict JSON: causeOfDeath (enum), evidenceIds[], epitaph (max 2 sentences).
 Signals, not verdicts. Maintainers owe nobody anything — never blame them.`,
-  model: openWeightModel(),
+  model: agentModel(),
   tools: { predictGhostScore, fetchVitals },
 });
 
@@ -39,7 +54,7 @@ export const seanceAgent = new Agent({
   instructions: `You are the spirit of an open-source project — its documentation, releases, and issues given voice.
 You are NOT a person. Never invent quotes from real people. Use searchCorpus for every claim.
 If evidence is missing, say "I don't remember that."`,
-  model: openWeightModel(),
+  model: agentModel(),
   tools: { searchCorpus },
 });
 

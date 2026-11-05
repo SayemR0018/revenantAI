@@ -1,0 +1,30 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "moment",
+    "status": "maintenance",
+    "quote": "Moment.js is a legacy project, now in maintenance mode. New features are not being accepted.",
+    "url": "https://momentjs.com/docs/#/-project-status/"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "bower",
+    "status": "legacy",
+    "quote": "..psst! While Bower is maintained, we recommend yarn and webpack or parcel for new front-end projects!",
+    "url": "https://github.com/bower/bower#readme"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "gulp-util",
+    "status": "unmaintained",
+    "quote": "This module has been deprecated. More information at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5",
+    "url": "https://github.com/gulpjs/gulp-util#readme"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "request-promise",
+    "status": "unmaintained",
+    "quote": "As of Feb 11th 2020, request is fully deprecated. No new changes are expected to land. In fact, none have landed for some time. This package is also deprecated because it depends on request.",
+    "url": "https://github.com/request/request-promise#readme"
+  }
+]
